@@ -1,3 +1,17 @@
 first time:
 
-git init -- initial the git folder.
+git init # initial the git folder.
+
+# -- add remote repo (default name: origin)
+
+git add remote git@github.com:Xinyuan-L/Softwaregroupwork.git
+
+# update one commit to remote branch (not origin/main)
+
+git checkout -b <branchname> --track origin/<branch>
+
+git log  # then copy commit hash code
+
+git cherry-pick <hash code>
+
+
