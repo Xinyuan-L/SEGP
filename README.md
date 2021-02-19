@@ -1,4 +1,4 @@
-# Softwaregroupwork
+# Project Proposal
 ## Title 
 Today’s Chinese Food: Have no idea what cook? Use this app!
 
