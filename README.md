@@ -12,6 +12,6 @@ You input your mood (multiple choice), taste you want to eat today (multiple cho
 We mainly focus on the desktop and may adapt the mobile. 
 
 ## Difficulty
-1. The necessity of login system or just nickname (privacy problem)
-2. Personal information of users. (favorite, history, achievements)
-3. Source of recipe
+* The necessity of login system or just nickname (privacy problem)
+* Personal information of users. (favorite, history, achievements)
+* Source of recipe
