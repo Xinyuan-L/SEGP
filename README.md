@@ -15,3 +15,11 @@ We mainly focus on the desktop and may adapt the mobile.
 * The necessity of login system or just nickname (privacy problem)
 * Personal information of users. (favorite, history, achievements)
 * Source of recipe
+
+## Prototype
+### Link
+https://q4r9fc.axshare.com
+### Notes
+* The design and functions in the prototype may differ from the final project.
+* The ownership of the prototype belongs to the current team members and no one can violate it. If plagiarism is found, the copyist will bear the corresponding responsibility.
+
