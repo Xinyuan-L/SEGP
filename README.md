@@ -1,4 +1,4 @@
-# Software Engineering and Group Project
+# SEGP
 ## Title 
 Today’s Chinese Food: Have no idea what cook? Use this app!
 
