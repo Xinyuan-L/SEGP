@@ -1,4 +1,4 @@
-# Project Proposal
+# Software Engineering and Group Project
 ## Title 
 Today’s Chinese Food: Have no idea what cook? Use this app!
 
