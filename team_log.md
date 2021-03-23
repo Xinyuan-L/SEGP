@@ -59,6 +59,8 @@ We first built the prototype of the website with [axure](https://q4r9fc.axshare.
 |Xinyuan Li| Slot machine code implementation. |
 |Jie Li| Recipe data collection and database construction.|
 
+![SinoCook logo](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-logo.png "LOGO")
+
 ***
 ### March 18th:
 #### demand analysis
