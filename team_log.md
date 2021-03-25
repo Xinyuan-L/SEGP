@@ -1,68 +1,4 @@
 # **TEAM LOG**
----
-### February 11th:
-#### Brainstorming in the group
-According to the game-theme matrix method provided by the teachers, we discussed two main ideas:
-1. The first is the combination of Russian turntables and restaurant recommendations.
-
-2. The second is slot machines and Chinese recipe recommendations.
-
-All members of the group are interested in dining and love Chinese cuisine. And most of the members reported that they don't know what Chinese food to cook every day, and they want to discover new Chinese recipes.
-
-So we are more interested in the idea of a website about recommending Chinese recipes every day.But **Difficulties** are:  
-* The necessity of login system or just nickname (privacy problem)
-* Personal information of users. (favorite, history, achievements)
-* Source of recipe
-***
-### February 18 & 19th:
-#### Ideas for specific functions of the website
-
-We have discussed a lot about the specific functions of the daily recommended Chinese food website in the past two days.
-
-In general, the website should have the following functions:
-1. Showcase of Chinese cooking steps;
-
-2. Comment anonymously on Chinese recipes;
-3. Able to recommend daily Chinese dishes according to the needs of users;
-
-4. The user's final recommendation of today's Chinese food is selected by the slot machine.
-
-Regarding the anonymous comment function, our idea is that the user name of the comment displayed on the website is filled in every time the user submits a comment. This way, instead of using the login module, more users can use this website more conveniently without worrying about **privacy issues**.
-***
-### February 25th:
-#### Website prototype & layout
-According to the teacher’s request, the prototype of our website was discussed on this day.
-
-Our idea is:
-1. Put the Chinese dishes recommended today in the most prominent place on the homepage of the website.
-
-2. The homepage provides a button for users to answer some set questions. According to the answers, we recommend Chinese dishes to users today.
-
-3. The homepage shows some user comments.
-
-4. The recipe page is displayed according to the cooking steps. The user reviews of this dish are displayed at the end of the recipe, displayed in descending order of the number of likes.
-
-We first built the prototype of the website with [axure](https://q4r9fc.axshare.com).
-
-**Notes:**
-* The design and functions in the prototype may differ from the final project.
-* The ownership of the prototype belongs to the current team members and no one can violate it. If plagiarism is found, the copyist will bear the corresponding responsibility.
-***
-### March 11th:
-#### 1st time Group division
-
-| name | task |
-|:----:| :--- |
-|Yiyuan Chen| Website logo design, determination of UI style, document writing.|
-|Kang Zhao| Website building; Back-end design.|
-|Wanqing Zhang| Website building; Front-end design.|
-|Xinyuan Li| Slot machine code implementation. |
-|Jie Li| Recipe data collection and database construction.|
-
-#### LOGO
-![SinoCook logo](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-logo.png "LOGO")
-
-***
 ### March 18th:
 #### demand analysis
 
@@ -99,4 +35,71 @@ We will design a [questionnaire](https://www.surveymonkey.co.uk/r/VFX5QBK) to co
 3. Are you Asian?
 * Yes
 * No
+***
+
+### March 11th:
+#### 1st time Group division
+
+| name | task |
+|:----:| :--- |
+|Yiyuan Chen| Website logo design, determination of UI style, document writing.|
+|Kang Zhao| Website building; Back-end design.|
+|Wanqing Zhang| Website building; Front-end design.|
+|Xinyuan Li| Slot machine code implementation. |
+|Jie Li| Recipe data collection and database construction.|
+
+#### LOGO
+![SinoCook logo](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-logo.png "LOGO")
+***
+
+### February 25th:
+#### Website prototype & layout
+According to the teacher’s request, the prototype of our website was discussed on this day.
+
+Our idea is:
+1. Put the Chinese dishes recommended today in the most prominent place on the homepage of the website.
+
+2. The homepage provides a button for users to answer some set questions. According to the answers, we recommend Chinese dishes to users today.
+
+3. The homepage shows some user comments.
+
+4. The recipe page is displayed according to the cooking steps. The user reviews of this dish are displayed at the end of the recipe, displayed in descending order of the number of likes.
+
+We first built the prototype of the website with [axure](https://q4r9fc.axshare.com).
+
+**Notes:**
+* The design and functions in the prototype may differ from the final project.
+* The ownership of the prototype belongs to the current team members and no one can violate it. If plagiarism is found, the copyist will bear the corresponding responsibility.
+***
+
+### February 18 & 19th:
+#### Ideas for specific functions of the website
+
+We have discussed a lot about the specific functions of the daily recommended Chinese food website in the past two days.
+
+In general, the website should have the following functions:
+1. Showcase of Chinese cooking steps;
+
+2. Comment anonymously on Chinese recipes;
+3. Able to recommend daily Chinese dishes according to the needs of users;
+
+4. The user's final recommendation of today's Chinese food is selected by the slot machine.
+
+Regarding the anonymous comment function, our idea is that the user name of the comment displayed on the website is filled in every time the user submits a comment. This way, instead of using the login module, more users can use this website more conveniently without worrying about **privacy issues**.
+***
+
+
+### February 11th:
+#### Brainstorming in the group
+According to the game-theme matrix method provided by the teachers, we discussed two main ideas:
+1. The first is the combination of Russian turntables and restaurant recommendations.
+
+2. The second is slot machines and Chinese recipe recommendations.
+
+All members of the group are interested in dining and love Chinese cuisine. And most of the members reported that they don't know what Chinese food to cook every day, and they want to discover new Chinese recipes.
+
+So we are more interested in the idea of a website about recommending Chinese recipes every day.But **Difficulties** are:  
+* The necessity of login system or just nickname (privacy problem)
+* Personal information of users. (favorite, history, achievements)
+* Source of recipe
 ***
