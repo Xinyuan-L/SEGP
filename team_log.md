@@ -1,4 +1,12 @@
 # **TEAM LOG**
+### March 28th:
+#### update homepage prototype
+
+homepage prototype:
+
+![homepage-prototype](https://github.com/Xinyuan-L/SEGP/blob/main/homepage/homepage-prototype.jpg)
+
+***
 ### March 18th:
 #### demand analysis
 
