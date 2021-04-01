@@ -13,7 +13,7 @@ customize prototype:
 
 homepage prototype:
 
-![homepage-prototype](https://github.com/Xinyuan-L/SEGP/blob/main/homepage/homepage-prototype.jpg)
+![homepage-prototype](./homepage/homepage-prototype.jpg)
 
 ***
 ### March 18th:
@@ -66,7 +66,7 @@ We will design a [questionnaire](https://www.surveymonkey.co.uk/r/VFX5QBK) to co
 |Jie Li| Recipe data collection and database construction.|
 
 #### LOGO
-![SinoCook logo](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-logo.png "LOGO")
+![SinoCook logo](./SinoCook-logo.png "LOGO")
 ***
 
 ### February 25th:
