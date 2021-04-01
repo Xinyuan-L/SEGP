@@ -1,4 +1,13 @@
 # **TEAM LOG**
+### March 31st:
+#### update customize prototype
+
+customize prototype:
+
+![customize-prototype](./homepage/customize-page.jpg)
+
+***
+
 ### March 28th:
 #### update homepage prototype
 
