@@ -1,4 +1,12 @@
 # **TEAM LOG**
+### April 1st:
+#### update receipt prototype
+
+receipt prototype:
+
+![receipt-prototype](./homepage/receipt-page.jpg)
+
+***
 ### March 31st:
 #### update customize prototype
 
@@ -7,7 +15,6 @@ customize prototype:
 ![customize-prototype](./homepage/customize-page.jpg)
 
 ***
-
 ### March 28th:
 #### update homepage prototype
 
