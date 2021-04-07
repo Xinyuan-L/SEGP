@@ -1,4 +1,13 @@
 # **TEAM LOG**
+### April 7th
+#### update ER diagram
+ER diagram:
+![ER](./homepage/database.png)
+***
+### April 4th:
+#### update [homepage](./SinoCook/src/app/app.component.html)
+
+***
 ### April 1st:
 #### update receipt prototype
 
