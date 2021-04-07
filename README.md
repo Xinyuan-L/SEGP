@@ -16,7 +16,7 @@ We mainly focus on the desktop and may adapt the mobile.
 ## Team members
 |name|email|
 |:-: | :-- |
-|Jie Li| jie.li.2019@bristol.ac.uk|
+|Jie Li| nh20812@bristol.ac.uk|
 |Kang Zhao| mi20598@bristol.ac.uk|
 |Wanqing Zhang| um20379@bristol.ac.uk|
 |Xinyuan Li| ys20961@bristol.ac.uk|
