@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { HomeComponent } from './home/home.component';
 import { CustomizeComponent } from './customize/customize.component';
 import { SlotmachineComponent } from './slotmachine/slotmachine.component';
-import { DishesComponent } from './dishes/dishes.component';
-import {RouterModule} from '@angular/router';
+import { DishComponent } from './dish/dish.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    HomeComponent,
     CustomizeComponent,
     SlotmachineComponent,
-    DishesComponent
+    DishComponent
   ],
-    imports: [
-        BrowserModule,
-        RouterModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

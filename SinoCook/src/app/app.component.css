@@ -1,122 +1,130 @@
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-a,
-a:visited,
-a:hover {
-  /*color: #ffaa46;*/
-  text-decoration: none;
-}
-/*a:hover {*/
-/*  color: #d0a974;*/
-/*}*/
-
-h1,
-h2{
-  color: #ffaa46;
-  font-family: Calibri, sans-serif;
-  font-weight: bolder;
-  font-size: xxx-large;
-}
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
-}
-
-p {
-  margin: 0;
-}
-
-.spacer {
-  flex: 1;
-}
-
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  background-color: #21773e;
-  color: #ffaa46;
-  font-family: Calibri,sans-serif;
-  font-size: x-large;
-  font-weight: 600;
-}
-.toolbar a{
-  color: #ffaa46;
-}
-.toolbar a:hover{
-  color: #6f6f6f;
-}
-.toolbar img {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-.toolbar span{
-  font-family: Calibri, sans-serif;
-  font-size: x-large;
-  font-weight: bold;
-  margin-left: 10px;
-  margin-right: 50px;
-  text-shadow: 0 0 3px #000000;
-}
-.toolbar #aboutus{
-  font-family: Calibri, sans-serif;
-  font-size: x-large;
-  font-weight: bold;
-  margin-left: 10px;
-  margin-right: 500px;
-  text-shadow: 0 0 3px #000000;
-}
-.toolbar #home-logo {
-  height: 40px;
-  margin-left: 50px;
-  margin-right: 10px;
-}
-.toolbar #customize-logo {
-  height: 40px;
-  margin-left: 50px;
-  margin-right: 10px;
-}
-.toolbar #aboutus-logo {
-  height: 40px;
-  margin-left: 50px;
-  margin-right: 10px;
-}
-.toolbar #home-logo:hover,
-.toolbar #customize-logo:hover,
-.toolbar #aboutus-logo:hover{
-  fill-opacity: 0.8;
-}
-
-.bottom{
-  background-color: #ffaa46;
-  color: white;
-  position: absolute;
-  top: 2000px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  margin-top: 10px;
-  font-family: Calibri, sans-serif;
-  font-weight: normal;
-  font-size: 20px;
-  text-align: center;
-}
-.bottom a{
-  color: inherit;
-}
-.bottom a:hover{
-  color: #6f6f6f;
-}
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a,
+  a:visited,
+  a:hover {
+    /*color: #ffaa46;*/
+    text-decoration: none;
+  }
+  /*a:hover {*/
+  /*  color: #d0a974;*/
+  /*}*/
+  
+  h1,
+  h2{
+    color: #ffaa46;
+    font-family: Calibri, sans-serif;
+    font-weight: bolder;
+    font-size: xxx-large;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #21773e;
+    color: #ffaa46;
+    font-family: Calibri,sans-serif;
+    font-size: x-large;
+    font-weight: 600;
+  }
+  .toolbar a{
+    color: #ffaa46;
+  }
+  .toolbar a:hover{
+    color: #6f6f6f;
+  }
+  .toolbar img {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .toolbar span{
+    font-family: Calibri, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 50px;
+    text-shadow: 0 0 3px #000000;
+  }
+  .toolbar #aboutus{
+    font-family: Calibri, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 500px;
+    text-shadow: 0 0 3px #000000;
+  }
+  .toolbar #home-logo {
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .toolbar #customize-logo {
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .toolbar #aboutus-logo {
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 10px;
+  }
+  .toolbar #home-logo:hover,
+  .toolbar #customize-logo:hover,
+  .toolbar #aboutus-logo:hover{
+    fill-opacity: 0.8;
+  }
+  
+  .bottom{
+    background-color: #ffaa46;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    margin-top: 20px;
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+  }
+  .bottom a{
+    color: inherit;
+  }
+  .bottom a:hover{
+    color: #6f6f6f;
+  }
+  
+  .pages{
+    position: absolute;
+    top: 100px;
+    margin: 10px 10px;
+  }
 
