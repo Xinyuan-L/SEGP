@@ -1,4 +1,16 @@
 # **TEAM LOG**
+### April 8th
+#### 2nd team division
+|name|task|
+|:--:|:--:|
+|Jie|Data collection, database management;|
+|Xinyuan| Backend design & management; |
+|Kang| Frontend work & website build;|
+|Wanqing| website test, document writing, github maintenance;|
+|Yiyuan| Frontend work & website build, project management;|
+
+
+***
 ### April 7th
 #### update ER diagram
 ER diagram:
