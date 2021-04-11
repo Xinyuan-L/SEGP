@@ -1,4 +1,12 @@
 # **TEAM LOG**
+### April 10th
+#### Angular build
+
+* Set up 4 components: home, customize, slotmachine, dish;
+
+* Complete app.component.html & .css, home.component.html & css;
+
+***
 ### April 8th
 #### 2nd team division
 |name|task|
@@ -9,16 +17,25 @@
 |Wanqing| website test, document writing, github maintenance;|
 |Yiyuan| Frontend work & website build, project management;|
 
+#### Meeting
+1. The front end is developed using Angular CLI. The project is currently tentatively composed of 4 components: home page, custom page, slot machine page, and recipe page.
 
+2. It specifies the API used by the backend; specifies the data return format (json format) and the functional requirements of the API.
+
+3. Determine MySQL as the database of the project.
 ***
 ### April 7th
 #### update ER diagram
 ER diagram:
+
 ![ER](./homepage/database.png)
 ***
 ### April 4th:
-#### update [homepage](./SinoCook/src/app/app.component.html)
+#### initial homepage
 
+1. Complete the HTML layout and CSS settings of the homepage.
+
+2. Specifies the styles of the web navigation toolbar and the tail navigation bar.
 ***
 ### April 1st:
 #### update receipt prototype
