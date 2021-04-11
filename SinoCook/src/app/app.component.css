@@ -43,9 +43,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    height: 80px;
     display: flex;
     align-items: center;
     background-color: #21773e;
@@ -101,30 +99,10 @@
     fill-opacity: 0.8;
   }
   
-  .bottom{
-    background-color: #ffaa46;
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    margin-top: 20px;
-    font-family: Calibri, sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    text-align: center;
-  }
-  .bottom a{
-    color: inherit;
-  }
-  .bottom a:hover{
-    color: #6f6f6f;
-  }
-  
   .pages{
     position: absolute;
-    top: 100px;
-    margin: 10px 10px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin-top: 0;
   }
-

@@ -1,0 +1,187 @@
+  .bottom{
+    background-color: #ffaa46;
+    color: white;
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    height: 50px;
+    line-height: 5px;
+    padding: 10px;
+    width: inherit;
+    text-align: center;
+  }
+  .bottom a{
+    color: inherit;
+  }
+  .bottom a:hover{
+    color: #6f6f6f;
+  }
+  
+  .content {
+    background: #d6d6d6;
+    display: flex;
+    min-height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .content #slogan{
+    align-items: center;
+    color: #ffaa46;
+    font-family: Calibri, sans-serif;
+    font-weight: 1000;
+    font-size: 95px;
+    margin-left: 60px;
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 45%;
+    text-shadow: 5px 5px 1px white;
+  }
+  .content #slogan-last{
+    color: #21773e;
+  }
+  .content #intro{
+    color: #21773e;
+    font-size: 25px;
+    font-weight: 550;
+    line-height: 40px;
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 0 0 0 white;
+  }
+  .content #recommend{
+    color: #21773e;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 60px;
+    text-align: left;
+    text-shadow: 3px 3px 1px white;
+    width: 45%;
+  }
+  .content #recommend-img img{
+    border: solid 5px white;
+    height: 360px;
+    margin-top: 10px;
+  }
+  .content #dish-name{
+    color: white;
+    font-family: Perpetua, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-shadow: 2px 2px 1px #6f6f6f;
+  }
+  .content #recommend-des{
+    font-size: 20px;
+    text-indent: 40px;
+    text-shadow: 0 0 0 white;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 0 white;
+  }
+  .content .button{
+      margin-top: 20px;
+  }
+  .content #bt2{
+      margin-left: 50px;
+  }
+  
+  .dishes {
+    align-items: center;
+  }
+  .dishes .dishes-title{
+    color: #ffaa46;
+    margin-bottom: 20px;
+    font-family: Calibri, sans-serif;
+    font-weight: bolder;
+    font-size: 90px;
+    text-align: center;
+  }
+  .dishes .dishes-display{
+    align-content: center;
+    margin-left: 120px;
+    display: flex;
+  }
+  .dishes .dish{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .dishes .dish_info{
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+  }
+  .dish .dish_name{
+    color: black;
+    font-family: Perpetua, sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 1px #d6d6d6;
+  }
+  .dish_img{
+    width: 360px;
+    border: solid 5px #21773e;
+  }
+  .dishes #ds2 .dish_img{
+    border: solid 5px #ffaa46;
+  }
+  
+  .comment{
+    align-content: center;
+    align-items: center;
+    background-color: #d6d6d6;
+    height: 520px;
+    margin-top: 60px;
+    text-align: center;
+  }
+  .comment .title{
+    color: #21773e;
+    font-family: Calibri, sans-serif;
+    font-size: 80px;
+    font-weight: bolder;
+    text-shadow: 5px 3px 1px white;
+  }
+  .comment #top-comment{
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .comment #pic img{
+    border: solid 5px #21773e;
+    width: 420px;
+    margin-left: 200px;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  .comment #dish_name{
+    color: black;
+    font-family: Perpetua, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: -100px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 1px #d6d6d6;
+  }
+  .comment #detail{
+    font-family: Calibri, sans-serif;
+    font-size: large;
+    text-align: left;
+    width: 600px;
+  }
+  .comment .nickname{
+    color: #6f6f6f;
+    font-weight: bolder;
+    font-size: 200%;
+  }
+  .comment .detail{
+    color: #21773e;
+    font-size: 100%;
+    font-weight: bold;
+    margin-top: 30px;
+    line-height: 30px;
+    word-break: normal;
+  }
+  
