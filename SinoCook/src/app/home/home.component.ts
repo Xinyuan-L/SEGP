@@ -15,7 +15,7 @@ import { Comment } from "../Comment";
 
 @Injectable()
 export class HomeComponent implements OnInit {
-  public today: Dish ={
+  public today: any ={
     name: 'yuxiang rousi',
     pic: 'assets/麻婆豆腐.jpeg',
     description: 'hhhhhhhhhhhhhhhhhhhhhhhh',

@@ -5,5 +5,9 @@ export interface Dish {
     steps: null | [string, string][];
     likes: number;
     views: number;
+    time: number;
+    taste: string;
+    main: [string] | null;
+    other: [string] | null;
   }
   
