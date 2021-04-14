@@ -16,3 +16,50 @@
   .bottom a:hover{
     color: #6f6f6f;
   }
+
+  .survey{
+    width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px #eee;
+
+    text-align: center;
+
+    font-size: 100%;
+  }
+
+  .iconOfTitle{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #submit{
+    height: 30px;
+  }
+
+
+  table{
+    font-family: Calibri, sans-serif;
+    color: #22773e;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+  .question{
+    font-size: 1.875em;
+  }
+
+  .option{
+    font-size: 1.325em;
+    color: #ffaa46;
+  }
+
+  input{
+    color: #ffaa46;
+  }
