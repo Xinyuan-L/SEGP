@@ -7,8 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { CustomizeComponent } from './customize/customize.component';
 import { SlotmachineComponent } from './slotmachine/slotmachine.component';
 import { DishComponent } from './dish/dish.component';
-import { FormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
