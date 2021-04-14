@@ -13,19 +13,19 @@
             <img class="button" id="bt1" src="assets/customize-button.png" alt="button1">
           </a>
       </div>
-      
+
     </div>
-  
+
     <div id="recommend">
       <div>Today's Recommendation<br/></div>
-      <div id="recommend-img"><img [src]=(today.pic) [alt]=(today.name) /></div>
+      <div id="recommend-img"><img [src]="today.pic" [alt]=(today.name) /></div>
       <div id="dish-name">{{today.name | uppercase}}</div>
       <div id="recommend-des">{{today.description}}</div>
       <a routerLink="/dish">
         <img class="button" id="bt2" src="assets/that-is-it-button.png" alt="button2">
       </a>
     </div>
-  
+
 </div>
 
   <!-- dish display -->
@@ -50,7 +50,7 @@
           <span>&nbsp;{{today.views}}</span>
         </div>
       </div>
-  
+
       <div class="dish" id="ds2">
         <img class="dish_img" [src]="today.pic" [alt]="today.name">
         <div class="dish_info">
@@ -64,7 +64,7 @@
           <span>&nbsp;{{today.views}}</span>
         </div>
       </div>
-  
+
       <div class="dish" id="ds3">
         <img class="dish_img" [src]="today.pic" [alt]="today.name">
         <div class="dish_info">
@@ -94,7 +94,7 @@
       </div>
     </div>
 </div>
-  
+
 
 <!-- bottom -->
 <div class="bottom">
@@ -104,4 +104,3 @@
       <a href="https://github.com/Xinyuan-L/SEGP" target="_blank">About us<br/></a>
     </div>
   </div>
-  
