@@ -194,3 +194,34 @@ hr{
     width: 150px;
     margin-left: 50px;
   }
+  .comments .comment{
+    color: #595959;
+    font-family: Calibri, sans-serif;
+    margin-left: 100px;
+    margin-right: 60px;
+    width: 1000px;
+  }
+  .comment .nickname{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 5px;
+  }
+  .comment .time{
+    font-weight: lighter;
+    font-size: 18px;
+    margin-left: 40px;
+  }
+  .comment .reviews{
+    font-size: 24px;
+    font-weight: 200;
+    word-break: break-word;
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 800px;
+  }
+  .comment img{
+    margin-left: 50px;
+  }
+  .comment .likes{
+    font-size: 22px;
+  }

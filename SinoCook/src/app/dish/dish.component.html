@@ -88,16 +88,16 @@
       </label></div>
       <div id="submit"><input type="button" value="Submit" (click)='uploadComment()'></div>
     </div>
-    <hr>
+    <hr style="width: 1000px;margin-right: 250px">
   </div>
   <div class="comment" *ngFor="let comment of comments">
     <span class="nickname">{{comment.nickname}}&nbsp;</span>
     <i class="time">{{comment.time | date:'yyyy-MM-dd'}}</i>
+    <img src="assets/like-grey.png" alt="like" width="20">
+    <span class="likes">&nbsp;{{comment.likes}}</span>
     <br>
     <span class="reviews">{{comment.detail}}</span>
-    <img src="assets/like-grey.png" alt="like">
-    <span>{{comment.likes}}</span>
-    <hr>
+    <hr style="border: 1px solid #e0e0e0">
   </div>
 </div>
 
