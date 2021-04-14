@@ -1,4 +1,7 @@
-<p>slotmachine works!</p>
+<div *ngFor="let step of steps; index as i">
+  <img [src]="step.pic" [alt]="step.pic">
+  <div> {{step.detail}} <br></div>
+</div>
 
 <!-- bottom -->
 <div class="bottom">
@@ -8,4 +11,3 @@
       <a href="https://github.com/Xinyuan-L/SEGP" target="_blank">About us<br/></a>
     </div>
   </div>
-  

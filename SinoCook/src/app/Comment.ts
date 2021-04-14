@@ -4,7 +4,7 @@ export interface Comment {
   nickname: string;
   likes: number;
   detail: string;
-  time: string;
-  dish: Dish | null;
+  time: number;
+  dish: string;
 }
 
