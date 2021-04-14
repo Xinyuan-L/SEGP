@@ -1,4 +1,80 @@
-<p>customize works!</p>
+<!-- Survey -->
+<div class="survey">
+  <table>
+    <!-- q1 -->
+    <tr class="question">
+      <th><img class="iconOfTitle" src="assets/vegetable.svg" alt="vegetable"></th>
+      <th>Are you a vegetarian?</th>
+    </tr>
+    <tr class="option">
+      <th></th>
+      <th>
+        <input type="radio" (change)=toChange1($event) name="q1" id="q1_1"><label for="q1_1">Yes</label>
+        &nbsp;&nbsp;
+        <input type="radio" (change)=toChange1($event) name="q1" id="q1_2"><label for="q1_2">No</label>
+      </th>
+    </tr>
+    <br>
+    <!-- q2 -->
+    <tr class="question">
+      <th><img class="iconOfTitle" src="assets/meat.svg" alt="meat"></th>
+      <th>Do you have any restrictions on meats?</th>
+    </tr>
+    <tr class="option">
+      <th></th>
+      <th>
+       <input type="checkbox" id="q2_1" [(ngModel)]="data.q2.option1"><label for="q2_1">Beef</label>
+       &nbsp;&nbsp;
+       <input type="checkbox" id="q2_2" [(ngModel)]="data.q2.option2"><label for="q2_2">Lamb</label>
+       &nbsp;&nbsp;
+       <input type="checkbox" id="q2_3" [(ngModel)]="data.q2.option3"><label for="q2_3">Pork</label>
+       &nbsp;&nbsp;
+       <input type="checkbox" id="q2_4" [(ngModel)]="data.q2.option4"><label for="q2_4">No restriction</label>
+      </th>
+    </tr>
+    <br>
+    <!-- q3 -->
+    <tr class="question">
+      <th><img class="iconOfTitle" src="assets/chili.svg" alt="chili"></th>
+      <th>Do you want spicy food today?</th>
+    </tr>
+    <tr class="option">
+      <th></th>
+      <th>
+        <input type="radio" (change)=toChange3($event) name="q3" id="q3_1"><label for="q3_1">Yes</label>
+        &nbsp;&nbsp;
+        <input type="radio" (change)=toChange3($event) name="q3" id="q3_2"><label for="q3_2">No</label>
+      </th>
+    </tr>
+    <br>
+    <!-- q4 -->
+    <tr class="question">
+      <th><img class="iconOfTitle" src="assets/rice.svg" alt="rice"></th>
+      <th>Do you want cook a staple food today?</th>
+    </tr>
+    <tr class="option">
+      <th></th>
+      <th>
+        <input type="radio" name="q4" id="q4_1" (change)="toggleCheckbox($event)"><label for="q4_1">Rice</label>
+        &nbsp;&nbsp;
+        <input type="radio" name="q4" id="q4_2" (change)="toggleCheckbox($event)"><label for="q4_2">Noodles</label>
+        &nbsp;&nbsp;
+        <input type="radio" name="q4" id="q4_3" (change)="toggleCheckbox($event)"><label for="q4_3">Rice noodles</label>
+        &nbsp;&nbsp;
+        <input type="radio" name="q4" id="q4_4" (change)="toggleCheckbox($event)"><label for="q4_4">Not today</label>
+      </th>
+    </tr>
+    <br>
+  </table>
+  <br>
+  <a href="/slot">
+    <img (click)=doSubmit() src="assets/customize-button.png" alt="button" id="submit">
+  </a>
+</div>
+
+<!-- <pre>
+  {{data | json}}
+</pre> -->
 
 <!-- bottom -->
 <div class="bottom">
@@ -8,4 +84,3 @@
       <a href="https://github.com/Xinyuan-L/SEGP" target="_blank">About us<br/></a>
     </div>
   </div>
-  
