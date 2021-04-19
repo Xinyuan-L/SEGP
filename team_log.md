@@ -4,7 +4,7 @@
 
 * Build database with MySQL and deploy it on Tencent Cloud;
 
-* The database contains the information of dishes, tastes, ingredients, cooking steps and users' comments;
+* The database contains the information of dishes, tastes, ingredients, cooking steps, users' comments and the related pictures;
 
 ***
 ### April 10th
