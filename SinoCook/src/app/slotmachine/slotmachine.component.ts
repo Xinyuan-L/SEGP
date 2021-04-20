@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {Step} from '../Step';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-slotmachine',
@@ -7,14 +6,39 @@ import {Step} from '../Step';
   styleUrls: ['./slotmachine.component.css']
 })
 export class SlotmachineComponent implements OnInit {
-  public steps: Step[] = [
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'}
+  public start = 1;
+  public list: any[] = [
+    {
+      name: 'dish1',
+      address: ''
+    },
+    {
+      name: 'dish2',
+      address: ''
+    },
+    {
+      name: 'dish3',
+      address: ''
+    },
+    {
+      name: 'dish4',
+      address: ''
+    },
+    {
+      name: 'dish5',
+      address: ''
+    }
   ];
+  @ViewChild('')
+  list1 = document.getElementById('list1');
+  list2 = document.getElementById('list2');
+  list3 = document.getElementById('list3');
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  reverse(): void{
+    this.start = -this.start;
+  }
 }

@@ -1,8 +1,30 @@
-<div *ngFor="let step of steps; index as i">
-  <img [src]="step.pic" [alt]="step.pic">
-  <div> {{step.detail}} <br></div>
+<div class="slot">
+  <img id="up" src="assets/stick.png" alt="stick"
+       class="stick" *ngIf="start>0" on-click="reverse()">
+  <img id="down" src="assets/stick-down.png" alt="stick"
+       class="stick" *ngIf="start<0" on-click="reverse()">
+  <img src="assets/slot-machine.png" alt="slot-machine" id="machine">
+  <div class="list">
+    <div id="list1" #list1>
+      <div class="image" *ngFor="let dish of this.list">
+        {{dish.name}}
+      </div>
+    </div>
+    <div id="list2" #list2>
+      <div class="image" *ngFor="let dish of this.list">
+        {{dish.name}}
+      </div>
+    </div>
+    <div id="list3" #list3>
+      <div class="image" *ngFor="let dish of this.list">
+        {{dish.name}}
+      </div>
+    </div>
+  </div>
+
 </div>
 
+<div>{{start}}</div>
 <!-- bottom -->
 <div class="bottom">
     <div style="margin-top: 30px">

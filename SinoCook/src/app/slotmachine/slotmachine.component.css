@@ -16,3 +16,50 @@
   .bottom a:hover{
     color: #6f6f6f;
   }
+
+.slot{
+  background: #d6d6d6;
+  text-align: center;
+}
+  .slot #up{
+    cursor: pointer;
+    position: absolute;
+    top: 200px;
+    left: 1080px;
+  }
+  .slot #down{
+    cursor: pointer;
+    position: absolute;
+    top: 400px;
+    left: 1080px;
+  }
+  .slot #machine{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 700px;
+    position: relative;
+    z-index: 1;
+  }
+  .slot .image{
+    background: #ffaa46;
+    text-align: center;
+    line-height: 80px;
+    height: 220px;
+    width: 165px;
+    border: 2px solid black;
+  }
+  .slot #list1{
+    position: absolute;
+    top: 286px;
+    left: 496px;
+  }
+  .slot #list2{
+    position: absolute;
+    top: 286px;
+    left: 661px;
+  }
+  .slot #list3{
+    position: absolute;
+    top: 286px;
+    left: 826px;
+  }
