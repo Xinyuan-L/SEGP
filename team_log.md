@@ -1,4 +1,12 @@
 # **TEAM LOG**
+### April 19th
+#### Database build
+
+* Build database with MySQL and deploy it on Tencent Cloud;
+
+* The database contains information of dishes, tastes, ingredients, cooking steps, users' comments and the related pictures;
+
+***
 ### April 10th
 #### Angular build
 
