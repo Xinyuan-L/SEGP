@@ -35,17 +35,17 @@
 用户A：
 王女士，23岁，布里斯托大学中国留学生，有宗教信仰，不吃猪肉。王女士平时比较喜欢健身，比较注重身材，周末经常会自己做减肥热量比较低的菜。
 
-![image](https://user-images.githubusercontent.com/45390078/115631415-ad215300-a2fd-11eb-8ae0-1f213dfa4cc8.png)
+![image](https://user-images.githubusercontent.com/45390078/115632607-038f9100-a300-11eb-9c69-8748b18ac307.png)
 
 用户B：
 Anne，24岁，对中国美食感兴趣的美国人，喜欢分享自己做好的美食到食谱网站上。
 
-![image](https://user-images.githubusercontent.com/45390078/115631430-b5798e00-a2fd-11eb-8d4f-efc02e776dac.png)
+![image](https://user-images.githubusercontent.com/45390078/115632779-61bc7400-a300-11eb-947d-8981376a9d44.png)
 
 用户C：
 Titus，24岁，英国籍华裔，非常喜欢中国菜，但有“选择困难症”，永远不知道今天吃什么。
  
-![image](https://user-images.githubusercontent.com/45390078/115631443-bf02f600-a2fd-11eb-8cc3-6735d2b42865.png)
+![image](https://user-images.githubusercontent.com/45390078/115632450-a7c50800-a2ff-11eb-9694-771c49d73b71.png)
 
 用户D：
 张先生，24岁，布里斯托大学中国留学生，由于过度肥胖，有脂肪肝趋势，医生建议多吃蔬菜，少吃肉。
