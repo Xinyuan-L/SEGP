@@ -2,7 +2,7 @@
 最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
 我们首先通过思维导图初步确定了功能。
 
-![image](https://user-images.githubusercontent.com/45390078/115631733-46506980-a2fe-11eb-881a-e3d2efe7886c.png)
+![image](https://user-images.githubusercontent.com/45390078/115632326-5f0d4f00-a2ff-11eb-84d9-de662149768b.png)
 
 1.菜谱分类
 根据菜谱的类型进行分类，方便用户查找，例如：肉类、鱼类、蔬菜、菜式、菜系、特色等等，让用户可以轻松依据分类找到自己想做的任何菜。
