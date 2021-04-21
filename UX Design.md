@@ -2,7 +2,7 @@
 最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
 我们首先通过思维导图初步确定了功能。
 
-![image](https://user-images.githubusercontent.com/45390078/115631348-8d8a2a80-a2fd-11eb-906d-9a7cb50345ea.png)
+![image](https://user-images.githubusercontent.com/45390078/115631733-46506980-a2fe-11eb-881a-e3d2efe7886c.png)
 
 1.菜谱分类
 根据菜谱的类型进行分类，方便用户查找，例如：肉类、鱼类、蔬菜、菜式、菜系、特色等等，让用户可以轻松依据分类找到自己想做的任何菜。
@@ -20,6 +20,7 @@
 确定了主要功能后，我们使用[axure](https://q4r9fc.axshare.com/)构建了网站的原型。
 
 ![image](https://user-images.githubusercontent.com/45390078/115631402-a72b7200-a2fd-11eb-8145-11205ec7db40.png)
+
 主logo设计釆用具有中国特色的美食相关元素“碗”、“筷”，结合英文字母进行图形创意，组合成一个具有一定幽默、趣味成分的图形。
 餐具在这里点明美食主题，在视觉表现上，遵循视觉潮流，釆用立体扁平化处理，符合目标用户人群的审美特征、追求新鲜有趣的事物，引领潮流的心理特点。
 
