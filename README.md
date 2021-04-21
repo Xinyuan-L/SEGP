@@ -52,9 +52,9 @@ Also, We want to make use of gamified design to improve the user experience of t
 
 ## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Background%20and%20Motivation.md)
 
-## System Implementation
+## [System Implementation](https://github.com/Xinyuan-L/SEGP/blob/main/System%20Implementation.md)
 
-## UX Design
+## [UX Design](https://github.com/Xinyuan-L/SEGP/blob/main/UX%20Design.md)
 
 ## Sprints & Project Management
 
