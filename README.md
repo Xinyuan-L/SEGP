@@ -50,7 +50,7 @@ First of all, we hope to apply game thinking and game mechanics to the design pr
 
 Also, We want to make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
 
-## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Introduction.md)
+## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Background and Motivation.md)
 
 ## System Implementation
 
