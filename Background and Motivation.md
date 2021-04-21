@@ -3,7 +3,8 @@
 根据面向30人的问卷调查，我们发现在英中国留学生群体有86.67%存在“不知道今天吃什么”的选择困难症，有83.33%希望有一个网站教他们如何烹饪正宗的中国美食。
 
 ![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
-![image](https://user-images.githubusercontent.com/45390078/115630995-e60cf800-a2fc-11eb-9fe8-b27bd0b2092d.png)
+![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
+
 
 
 因此我们初步拟定了the overarching aim of this project：菜谱推荐。
