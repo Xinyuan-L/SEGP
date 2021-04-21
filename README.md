@@ -21,3 +21,15 @@ We mainly focus on the desktop and may adapt the mobile.
 |Wanqing Zhang| um20379@bristol.ac.uk|
 |Xinyuan Li| ys20961@bristol.ac.uk|
 |Yiyuan Chen| rf20401@bristol.ac.uk|
+
+## Background and Motivation
+
+## System Implementation
+
+## UX Design
+
+## Sprints & Project Management
+
+## Evaluation
+
+## Conclusion
