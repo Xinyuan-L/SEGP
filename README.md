@@ -22,7 +22,7 @@ We mainly focus on the desktop and may adapt the mobile.
 |Xinyuan Li| ys20961@bristol.ac.uk|
 |Yiyuan Chen| rf20401@bristol.ac.uk|
 
-## Introduction
+## [Introduction](https://github.com/Xinyuan-L/SEGP/blob/main/Introduction.md)
 
 ## Background and Motivation
 
