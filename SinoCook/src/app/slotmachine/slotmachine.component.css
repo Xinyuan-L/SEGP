@@ -1,65 +1,190 @@
-.bottom{
-    background-color: #ffaa46;
-    color: white;
-    font-family: Perpetua, sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    height: 50px;
-    line-height: 5px;
-    padding: 10px;
-    width: inherit;
-    text-align: center;
-  }
-  .bottom a{
-    color: inherit;
-  }
-  .bottom a:hover{
-    color: #6f6f6f;
-  }
-
-.slot{
-  background: #d6d6d6;
+.bottom {
+  background-color: #ffaa46;
+  color: white;
+  font-family: Perpetua, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  height: 50px;
+  line-height: 5px;
+  padding: 10px;
+  width: inherit;
   text-align: center;
 }
-  .slot #up{
-    cursor: pointer;
-    position: absolute;
-    top: 200px;
-    left: 1080px;
-  }
-  .slot #down{
-    cursor: pointer;
-    position: absolute;
-    top: 400px;
-    left: 1080px;
-  }
-  .slot #machine{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 700px;
-    position: relative;
-    z-index: 1;
-  }
-  .slot .image{
-    background: #ffaa46;
-    text-align: center;
-    line-height: 80px;
-    height: 220px;
-    width: 165px;
-    border: 2px solid black;
-  }
-  .slot #list1{
-    position: absolute;
-    top: 286px;
-    left: 496px;
-  }
-  .slot #list2{
-    position: absolute;
-    top: 286px;
-    left: 661px;
-  }
-  .slot #list3{
-    position: absolute;
-    top: 286px;
-    left: 826px;
-  }
+.bottom a {
+  color: inherit;
+}
+.bottom a:hover {
+  color: #6f6f6f;
+}
+.machine-image {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.start-button {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn {
+  height: 50px;
+  width: 100px;
+}
+
+.rotary-table {
+  text-align: center;
+  margin: 0 auto;
+  background-image: url("../../assets/slot-machine.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 400px;
+  width: 500px;
+  position: relative;
+  top: 10px;
+}
+
+.screen {
+  width: 113px;
+  height: 154px;
+  overflow: hidden;
+  float: left;
+  border: 1px solid #000000;
+  position: relative;
+  left: 58px;
+}
+.images {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  height: 154px;
+  line-height: 154px;
+  font-size: 30px;
+  background-color: wheat;
+  border: 1px solid #6f6f6f;
+}
+
+.all-screen{
+  height: 154px;
+  width: 400px;
+  position: relative;
+  top: 175px;
+  left: 0px;
+}
+.transtion{
+  transition: all ease 2s;
+}
+.stick{
+  height: 200px;
+  width: 100px;
+  background-image: url("../../assets/stick.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 850px;
+  top: 120px;
+  z-index: 1;
+}
+
+#button{
+  height: 50px;
+  width: 100px;
+  background-color: #ffaa46;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #000000;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+}
+
+#button:hover{
+  background-color: #f5890d;
+}
+
+.button{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.window{
+  height: 200px;
+  width: 400px;
+  background-color: #fff;
+  border: 1px solid #6f6f6f;
+  text-align: center;
+  margin:0 auto;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1500;
+  display: none;
+}
+
+.buttons{
+  text-align: center;
+  margin: 0 auto ;
+  position: relative;
+  top: 70px;
+  height: 40px;
+}
+
+#left-button{
+  float: left;
+  position: relative;
+  left: 40px;
+  height: 35px;
+  width: 100px;
+  background-color: #027438;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #afafaf;
+  font-size: 15px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  color: #fff;
+
+}
+
+#right-button{
+  float: right;
+  position: relative;
+  right: 40px;
+  height: 35px;
+  width: 110px;
+  background-color: #ffaa46;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #afafaf;
+  font-size: 15px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+}
+
+h2{
+  position: relative;
+  top: 20px;
+}
+
+.shadow{
+ text-align: center;
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ background-color: rgb(90, 90, 90,0.5);
+ z-index: 1000;
+ display: none;
+}
