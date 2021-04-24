@@ -60,4 +60,4 @@ Also, We want to make use of gamified design to improve the user experience of t
 
 ## Evaluation
 
-## Conclusion
+## [Conclusion](https://github.com/Xinyuan-L/SEGP/blob/main/Conclusion.md)
