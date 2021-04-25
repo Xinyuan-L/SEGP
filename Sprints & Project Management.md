@@ -68,7 +68,9 @@ Prototype Development
 
 Prototype development is defined by a rapid development pace for iterating and testing. Oftentimes a prototype is created as a simplified version of the desired final product or feature that is used to test concepts before fully committing to them. Prototypes are a great way to get stakeholders on board with a new project or changes to an existing project without making costly upfront investments. Early prototypes can be simple sketches and drawings, but in this article I'm going to focus specifically on coded prototypes.
 
-In terms of software like Drupal, an open source CMS, here’s a stepwise approach that can be executed to design a software prototype:
+![image](https://user-images.githubusercontent.com/45390078/116005839-a26a0500-a600-11eb-9875-a5670caea885.png)
+
+Here’s a stepwise approach that can be executed to design a software prototype:
 
 Step 1: Requirement Identification
 As a starting point, gather the basic requirements from the technology to the user interface preferences. This basic knowledge is the pillar of your prototype which will eventually determine the internal and intricate design. It will also affect performance and security while representing your business.  
@@ -82,9 +84,15 @@ Once the initial prototype is presented to the users, stakeholders and to the ta
 Step 4: Revise and Repeat
 With the accumulated feedback, the review committee discusses the stages where suggested changes can be incorporated based on various factors. Those changes are then implemented and again tested for the prototype cycle to run as a feedback loop. 
 
+优点：
+1）通过向用户提供原型获取用户的反馈，使开发出的软件能够真正反映用户的需求。
+2）采用逐步求精的方法完善原型，使得原型能够“快速”开发，避免了像瀑布模型一样在冗长的开发过程中难以对用户的反馈作出快速的响应。
+3）相对瀑布模型而言，原型模型更符合人们开发软件的习惯，是目前较流行的一种实用软件生存期模型。
+缺点：
+1）需要工具支持，否则开发工作量大。
+2）原型法不能用于解决复杂系统和开发大型系统。
+3）对用户的管理水平要求高。适用范围：适用于小型、简单、处理过程比较明确、没有大量运算和逻辑处理的系统。
 
-
-![image](https://user-images.githubusercontent.com/45390078/116005839-a26a0500-a600-11eb-9875-a5670caea885.png)
 
 
 考虑到这是一个有明确截止时间的小型项目，我们采用原型化模型+瀑布模型。
