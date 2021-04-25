@@ -84,7 +84,7 @@ With the accumulated feedback, the review committee discusses the stages where s
 
 
 
-![image](https://user-images.githubusercontent.com/45390078/115992771-53ec4480-a5c7-11eb-99ec-566a51a2a584.png)
+![image](https://user-images.githubusercontent.com/45390078/116005839-a26a0500-a600-11eb-9875-a5670caea885.png)
 
 
 考虑到这是一个有明确截止时间的小型项目，我们采用原型化模型+瀑布模型。
