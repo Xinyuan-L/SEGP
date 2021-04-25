@@ -46,20 +46,35 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 
 为核心实体对象设计的E-R图如下。
 
-创建的数据库名为……，其中包含……共8张数据表。下面将对重要的数据表进行介绍。
+![image](https://user-images.githubusercontent.com/45390078/116004130-464fb280-a5f9-11eb-8e5c-2069fac7700e.png)
 
-（1）Taste
+
+创建的数据库名为sinocook，其中包含taste , steps , dishes , comments共4张数据表。下面将对数据表进行介绍。
+
+（1）dishes
+
+该表用于保存菜谱的主要信息，其结构如表所示。
+
+![image](https://user-images.githubusercontent.com/45390078/116004400-7f3c5700-a5fa-11eb-8a4e-d9071a7c62b8.png)
+
+
+（2）Taste
 
 该表用于保存食物的味道，其结构如表所示。
 
 ![image](https://user-images.githubusercontent.com/45390078/116003106-8fe9ce80-a5f4-11eb-8b47-c444389a7030.png)
 
 
-（2）steps
+（3）steps
 
 该表用于保存菜谱的具体步骤，其结构如表所示。
 
 ![image](https://user-images.githubusercontent.com/45390078/116003616-9c6f2680-a5f6-11eb-892a-b5573b449605.png)
 
 
+（4）comments
+
+该表用于保存菜谱的评论，其结构如表所示。
+
+![image](https://user-images.githubusercontent.com/45390078/116004666-ab0c0c80-a5fb-11eb-847d-a4ddeed95f1f.png)
 
