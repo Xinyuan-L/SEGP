@@ -55,4 +55,11 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 ![image](https://user-images.githubusercontent.com/45390078/116003106-8fe9ce80-a5f4-11eb-8b47-c444389a7030.png)
 
 
-（2）
+（2）steps
+
+该表用于保存菜谱的具体步骤，其结构如表所示。
+
+![image](https://user-images.githubusercontent.com/45390078/116003532-4601e800-a5f6-11eb-8ced-476e75bdfdda.png)
+
+
+
