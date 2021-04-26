@@ -10,46 +10,46 @@ import { CommunicateService } from '../communicate.service';
 export class SlotmachineComponent implements OnInit {
   public initList: any[] = [
     {
-      name: 'dish1',
+      name: 'Mapo Tofu',
       address: 'assets/麻婆豆腐.jpeg'
     },
     {
-      name: 'dish2',
+      name: 'Yuxiang Pork',
       address: 'assets/鱼香肉丝.jpg'
     },
     {
-      name: 'dish3',
-      address: '/dish'
+      name: 'Braised Pork',
+      address: 'assets/红烧肉.jpg'
     },
     {
-      name: 'dish4',
-      address: '/dish'
+      name: 'Toon scrambled eggs',
+      address: 'assets/香椿炒鸡蛋.jpeg'
     },
     {
-      name: 'dish5',
-      address: '/dish'
+      name: 'Braised Fish Nuggets',
+      address: 'assets/红烧鱼块.jpeg'
     }
   ];
   public list: any[] = [
     {
-      name: 'mapo tofu',
+      name: 'Mapo Tofu',
       address: 'assets/麻婆豆腐.jpeg'
     },
     {
-      name: 'dish2',
-      address: 'assets/麻婆豆腐.jpeg'
+      name: 'Yuxiang Pork',
+      address: 'assets/鱼香肉丝.jpg'
     },
     {
-      name: 'dish3',
-      address: 'assets/麻婆豆腐.jpeg'
+      name: 'Braised Pork',
+      address: 'assets/红烧肉.jpg'
     },
     {
-      name: 'mapo tof',
-      address: 'assets/麻婆豆腐.jpeg'
+      name: 'Toon scrambled eggs',
+      address: 'assets/香椿炒鸡蛋.jpeg'
     },
     {
-      name: 'dish5',
-      address: 'assets/麻婆豆腐.jpeg'
+      name: 'Braised Fish Nuggets',
+      address: 'assets/红烧鱼块.jpeg'
     }
   ];
   public firstImagesList: any;
@@ -60,6 +60,9 @@ export class SlotmachineComponent implements OnInit {
   public window: any;
   public shadow: any;
   public index: number;
+  public button:any;
+  public disbutton:any;
+
   public stickPic = 'assets/stick.png';
   public stick = 1;
   constructor(public request: RequestsService,
@@ -74,6 +77,8 @@ export class SlotmachineComponent implements OnInit {
     this.thirdImagesList = (document.getElementsByClassName('images')[2] as HTMLImageElement);
     this.window = (document.getElementsByClassName('window')[0] as HTMLImageElement);
     this.shadow = (document.getElementsByClassName('shadow')[0] as HTMLImageElement);
+    this.button = (document.getElementById('button')as HTMLImageElement);
+    this.disbutton = (document.getElementById('disabled-button')as HTMLImageElement);
     this.finalDish = this.list[4];
     this.longList();
 
@@ -107,13 +112,12 @@ export class SlotmachineComponent implements OnInit {
  }
 
   start(resultNum: number): void {
-  // let timeout1;
-  // let timeout2;
-  // let timeout3;
   let isEnd = false;
   let random: number;
   const imageHeight = 156;
   this.reserve();
+  this.button.style.display = 'none';
+  this.disbutton.style.display = 'block';
   this.addTranstion();
   do{
     random = Math.floor(Math.random() * resultNum);
@@ -158,11 +162,14 @@ export class SlotmachineComponent implements OnInit {
   this.window.style.display = 'none';
   this.shadow.style.display = 'none';
   this.reserve();
+  this.button.style.display = 'block';
+  this.disbutton.style.display = 'none';
 }
 
   jumpToDish(): void {
     this.comm.sendMessage(this.finalDish.name);
-  // window.location.href = this.finalDish.address;
+    //where to jump?
+    window.location.href = '/dish';
 }
 
   longList(): void {

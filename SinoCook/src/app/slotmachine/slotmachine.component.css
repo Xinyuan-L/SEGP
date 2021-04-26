@@ -65,19 +65,21 @@ li {
 #stick-up{
   width: 100px;
   cursor: pointer;
-  position: absolute;
-  left: 980px;
-  top: 120px;
-  z-index: 1;
+  position: relative;
+  top: 0px;
 }
 #stick-down{
   width: 100px;
-  position: absolute;
-  top: 250px;
-  left: 980px;
-  z-index: 1;
+  position:relative;
+  top: 150px;
 }
-
+.stick{
+  width: 100px;
+  position: absolute;
+  top: 120px;
+  left: 850px;
+  z-index: 3;
+}
 #button{
   height: 50px;
   width: 100px;
@@ -90,6 +92,7 @@ li {
   font-weight: bold;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 10px;
+  display: block;
 }
 
 #button:hover{
@@ -103,7 +106,7 @@ li {
 
 .window{
   height: 200px;
-  width: 400px;
+  width: 450px;
   background-color: #fff;
   border: 1px solid #6f6f6f;
   text-align: center;
@@ -173,4 +176,27 @@ h2{
  background-color: rgba(90, 90, 90, 0.5);
  z-index: 1000;
  display: none;
+}
+
+.dish-picture{
+  text-align: center;
+  margin:0 auto;
+  object-fit: cover;
+  width: 113px;
+  height: 154px;
+}
+
+#disabled-button{
+  height: 50px;
+  width: 100px;
+  background-color: #afafaf;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #000000;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  display: none;
 }
