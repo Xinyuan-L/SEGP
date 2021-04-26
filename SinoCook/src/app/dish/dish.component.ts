@@ -96,18 +96,18 @@ export class DishComponent implements OnInit {
   }
   addDishLike(): void {
     this.dish.likes += 1;
-    this.request.post('/addDishLike', this.dishID);
+    this.request.put('/addDishLike', this.dishID);
   }
   addLike(comment: Comment): void {
-    this.request.post('/addLike', comment.time);
     comment.likes += 1;
+    this.request.put('/addLike', comment.time);
     // const httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
     // const api = '';
     // this.http.post(api, {likes: this.dish.likes + 1}, httpOptions).subscribe();
   }
   cancelLike(comment: Comment): void {
-    this.request.post('/cancelLike', comment.time);
     comment.likes -= 1;
+    this.request.put('/cancelLike', comment.time);
   }
   updateTime(comment: Comment): Comment {
     comment.time = new Date().getTime() as unknown as number;
