@@ -14,6 +14,10 @@
         <input type="radio" (change)=toChange1($event) name="q1" id="q1_2"><label for="q1_2">No</label>
       </th>
     </tr>
+    <tr>
+      <th></th>
+      <th class="prompt" id="prompt1">Required option!</th>
+    </tr>
     <br>
     <!-- q2 -->
     <tr class="question">
@@ -46,6 +50,10 @@
         <input type="radio" (change)=toChange3($event) name="q3" id="q3_2"><label for="q3_2">No</label>
       </th>
     </tr>
+    <tr>
+      <th></th>
+      <th class="prompt" id="prompt3">Required option!</th>
+    </tr>
     <br>
     <!-- q4 -->
     <tr class="question">
@@ -64,12 +72,14 @@
         <input type="radio" name="q4" id="q4_4" (change)="toggleCheckbox($event)"><label for="q4_4">Not today</label>
       </th>
     </tr>
+    <tr>
+      <th></th>
+      <th class="prompt" id="prompt4">Required option!</th>
+    </tr>
     <br>
   </table>
   <br>
-  <a href="/slot">
-    <img (click)=doSubmit() src="assets/customize-button.png" alt="button" id="submit">
-  </a>
+  <img (click)=doSubmit() src="assets/customize-button.png" alt="button" id="submit">
 </div>
 
 <!-- <pre>
