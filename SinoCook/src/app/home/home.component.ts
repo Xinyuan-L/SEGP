@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { Dish } from '../Dish';
-import { Comment } from '../Comment';
 
+import { RequestsService } from '../requests.service';
+import { CommunicateService } from '../communicate.service';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +20,26 @@ export class HomeComponent implements OnInit {
     likes: 1234,
     views: 2345
   };
-
+  public popDish: any = {
+    dish1: {
+      name: this.today.name,
+      address: this.today.pic,
+      likes: 9999,
+      views: 9999
+    },
+    dish2: {
+      name: this.today.name,
+      address: this.today.pic,
+      likes: 9999,
+      views: 9999
+    },
+    dish3: {
+      name: this.today.name,
+      address: this.today.pic,
+      likes: 9999,
+      views: 9999
+    }
+  };
   public topComment: any = {
     nickname: 'nickname',
     detail: 'blablabla l lab lab lba lbaldb labdskl abdlab d kjabd djab labf ljbfb jafb la l lab lab lba lbaldb labdskl abdlab d kjabd djab labf ljbfb jafb la l lab lab lba lbaldb labdskl abdlab d kjabd djab labf ljbfb jafb l',
@@ -31,31 +47,32 @@ export class HomeComponent implements OnInit {
     dishName: this.today.name
   };
 
-  constructor(private http: HttpClient) {
-    this.getTodayFood();
+  constructor(private request: RequestsService,
+              public comm: CommunicateService) {
   }
 
   ngOnInit(): void {
     this.getTodayFood();
-    // this.getTopComment();
+    this.getPopular();
+    this.getTopComment();
   }
 
-  // imgReplace(): string {
-  //   return 'url(' + this.today.pic + ')' ;
-  // }
-
   getTodayFood(): void {
-    const api = 'http://localhost:9090/getTodayFood';
-    this.http.get(api).subscribe((response: any) => {
+    this.request.get('getTodayFood').subscribe((response: any) => {
       this.today.name = response.name;
       this.today.description = response.description;
       this.today.pic = response.address;
     });
   }
-
+  getPopular(): void {
+    this.request.get('getPopular').subscribe((response: Array<any>) => {
+      this.popDish.dish1 = response[0];
+      this.popDish.dish2 = response[1];
+      this.popDish.dish3 = response[2];
+    });
+  }
   getTopComment(): void {
-    const api = 'http://localhost:9090/getTopComment';
-    this.http.get(api).subscribe((response: any) => {
+    this.request.get('getTopComment').subscribe((response: any) => {
       this.topComment.nickname = response.nickname;
       this.topComment.detail = response.details;
       this.topComment.pic = response.picAddress;

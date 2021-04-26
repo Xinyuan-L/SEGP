@@ -1,23 +1,4 @@
-  .bottom{
-    background-color: #ffaa46;
-    color: white;
-    font-family: Perpetua, sans-serif;
-    font-weight: normal;
-    font-size: 20px;
-    height: 50px;
-    line-height: 5px;
-    padding: 10px;
-    width: inherit;
-    text-align: center;
-  }
-  .bottom a{
-    color: inherit;
-  }
-  .bottom a:hover{
-    color: #6f6f6f;
-  }
-
-  .content {
+.content {
     background: #d6d6d6;
     display: flex;
     min-height: 500px;

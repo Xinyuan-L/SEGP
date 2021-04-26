@@ -15,7 +15,9 @@
         </div>
         <div class="screen">
           <ul class="images">
-            <li class="image-index" *ngFor="let item of list">{{item.name}}</li>
+            <li class="image-index" *ngFor="let item of list">
+              {{item.name}}
+            </li>
           </ul>
         </div>
       </div>
@@ -26,7 +28,9 @@
   <div class="button">
     <button id="button" (click)=start(100)>Play</button>
   </div>
-  <div class="stick" (click)=start(100)></div>
+<!--  <div class="stick" (click)=start(100)></div>-->
+  <img [src]="stickPic" alt="stick" id="stick-up" (click)=start(100) *ngIf="stick>0">
+  <img [src]="stickPic" alt="stick" id="stick-down" *ngIf="stick<0">
   <div class="window">
     <h2>You have gotten {{finalDish.name}}!</h2>
     <div class="buttons">
@@ -36,11 +40,6 @@
   </div>
 </div>
 <br>
+
 <!-- bottom -->
-<div class="bottom">
-    <div style="margin-top: 30px">
-      <a routerLink='/home'>Home</a>
-      &nbsp;|&nbsp;
-      <a href="https://github.com/Xinyuan-L/SEGP" target="_blank">About us<br/></a>
-    </div>
-  </div>
+<app-footer></app-footer>

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { CustomizeComponent } from './customize/customize.component';
 import { SlotmachineComponent } from './slotmachine/slotmachine.component';
 import { DishComponent } from './dish/dish.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DishComponent } from './dish/dish.component';
     HomeComponent,
     CustomizeComponent,
     SlotmachineComponent,
-    DishComponent
+    DishComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,21 +1,3 @@
-.bottom {
-  background-color: #ffaa46;
-  color: white;
-  font-family: Perpetua, sans-serif;
-  font-weight: normal;
-  font-size: 20px;
-  height: 50px;
-  line-height: 5px;
-  padding: 10px;
-  width: inherit;
-  text-align: center;
-}
-.bottom a {
-  color: inherit;
-}
-.bottom a:hover {
-  color: #6f6f6f;
-}
 .machine-image {
   text-align: center;
   margin: 0 auto;
@@ -41,6 +23,7 @@
   width: 500px;
   position: relative;
   top: 10px;
+  z-index: 2;
 }
 
 .screen {
@@ -61,7 +44,6 @@
 li {
   margin: 0;
   padding: 0;
-  border: 0;
   text-align: center;
   height: 154px;
   line-height: 154px;
@@ -75,20 +57,24 @@ li {
   width: 400px;
   position: relative;
   top: 175px;
-  left: 0px;
+  left: 0;
 }
 .transtion{
   transition: all ease 2s;
 }
-.stick{
-  height: 200px;
+#stick-up{
   width: 100px;
-  background-image: url("../../assets/stick.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  cursor: pointer;
   position: absolute;
-  left: 850px;
+  left: 980px;
   top: 120px;
+  z-index: 1;
+}
+#stick-down{
+  width: 100px;
+  position: absolute;
+  top: 250px;
+  left: 980px;
   z-index: 1;
 }
 
@@ -184,7 +170,7 @@ h2{
  position: absolute;
  height: 100%;
  width: 100%;
- background-color: rgb(90, 90, 90,0.5);
+ background-color: rgba(90, 90, 90, 0.5);
  z-index: 1000;
  display: none;
 }

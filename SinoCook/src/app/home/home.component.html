@@ -21,7 +21,7 @@
       <div id="recommend-img"><img [src]="today.pic" [alt]=(today.name) /></div>
       <div id="dish-name">{{today.name | uppercase}}</div>
       <div id="recommend-des">{{today.description}}</div>
-      <a routerLink="/dish">
+      <a routerLink="/dish" (click)="comm.sendMessage(today.name)">
         <img class="button" id="bt2" src="assets/that-is-it-button.png" alt="button2">
       </a>
     </div>
@@ -38,44 +38,50 @@
     </div>
     <div class="dishes-display">
       <div class="dish" id="ds1">
-        <img class="dish_img" [src]="today.pic" [alt]="today.name">
+        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish1.name)">
+          <img class="dish_img" [src]="popDish.dish1.address" [alt]="popDish.dish1.name">
+        </a>
         <div class="dish_info">
-          <div class="dish_name">{{today.name | uppercase}}</div>
+          <div class="dish_name">{{popDish.dish1.name | uppercase}}</div>
           <img src="assets/like-grey.png" alt="like" width="20">
-          <span>&nbsp;{{today.likes}}&nbsp;</span>
+          <span>&nbsp;{{popDish.dish1.likes}}&nbsp;</span>
           <svg class="icon" viewBox="0 0 1578 1024" xmlns="http://www.w3.org/2000/svg" width="30">\
             <defs><style type="text/css"></style></defs>
             <path d="M789.333333 0c315.946667 0 598.912 198.613333 789.333334 512-190.421333 313.386667-473.386667 512-789.333334 512-315.946667 0-598.912-198.613333-789.333333-512C190.421333 198.613333 473.386667 0 789.333333 0z m0 64C519.125333 64 264.426667 224.554667 80.746667 504.021333L75.541333 512l5.205334 8c181.482667 276.096 432.256 436.117333 698.837333 439.936L789.333333 960c270.208 0 524.885333-160.533333 708.586667-440L1503.146667 512l-5.205334-7.978667C1316.437333 227.904 1065.685333 67.882667 799.082667 64.064L789.333333 64z m0 170.666667c153.173333 0 277.333333 124.16 277.333334 277.333333s-124.16 277.333333-277.333334 277.333333-277.333333-124.16-277.333333-277.333333 124.16-277.333333 277.333333-277.333333z m0 64c-117.824 0-213.333333 95.509333-213.333333 213.333333s95.509333 213.333333 213.333333 213.333333 213.333333-95.509333 213.333334-213.333333-95.509333-213.333333-213.333334-213.333333z" fill="#6f6f6f"></path>
           </svg>
-          <span>&nbsp;{{today.views}}</span>
+          <span>&nbsp;{{popDish.dish1.views}}</span>
         </div>
       </div>
 
       <div class="dish" id="ds2">
-        <img class="dish_img" [src]="today.pic" [alt]="today.name">
+        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish2.name)">
+          <img class="dish_img" [src]="popDish.dish2.address" [alt]="popDish.dish2.name">
+        </a>
         <div class="dish_info">
-          <div class="dish_name">{{today.name | uppercase}}</div>
+          <div class="dish_name">{{popDish.dish2.name | uppercase}}</div>
           <img src="assets/like-grey.png" alt="like" width="20">
-          <span>&nbsp;{{today.likes}}&nbsp;</span>
+          <span>&nbsp;{{popDish.dish2.likes}}&nbsp;</span>
           <svg class="icon" viewBox="0 0 1578 1024" xmlns="http://www.w3.org/2000/svg" width="30">\
             <defs><style type="text/css"></style></defs>
             <path d="M789.333333 0c315.946667 0 598.912 198.613333 789.333334 512-190.421333 313.386667-473.386667 512-789.333334 512-315.946667 0-598.912-198.613333-789.333333-512C190.421333 198.613333 473.386667 0 789.333333 0z m0 64C519.125333 64 264.426667 224.554667 80.746667 504.021333L75.541333 512l5.205334 8c181.482667 276.096 432.256 436.117333 698.837333 439.936L789.333333 960c270.208 0 524.885333-160.533333 708.586667-440L1503.146667 512l-5.205334-7.978667C1316.437333 227.904 1065.685333 67.882667 799.082667 64.064L789.333333 64z m0 170.666667c153.173333 0 277.333333 124.16 277.333334 277.333333s-124.16 277.333333-277.333334 277.333333-277.333333-124.16-277.333333-277.333333 124.16-277.333333 277.333333-277.333333z m0 64c-117.824 0-213.333333 95.509333-213.333333 213.333333s95.509333 213.333333 213.333333 213.333333 213.333333-95.509333 213.333334-213.333333-95.509333-213.333333-213.333334-213.333333z" fill="#6f6f6f"></path>
           </svg>
-          <span>&nbsp;{{today.views}}</span>
+          <span>&nbsp;{{popDish.dish2.views}}</span>
         </div>
       </div>
 
       <div class="dish" id="ds3">
-        <img class="dish_img" [src]="today.pic" [alt]="today.name">
+        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish3.name)">
+          <img class="dish_img" [src]="popDish.dish3.address" [alt]="popDish.dish3.name">
+        </a>
         <div class="dish_info">
-          <div class="dish_name">{{today.name | uppercase}}</div>
+          <div class="dish_name">{{popDish.dish3.name | uppercase}}</div>
           <img src="assets/like-grey.png" alt="like" width="20">
-          <span>&nbsp;{{today.likes}}&nbsp;</span>
+          <span>&nbsp;{{popDish.dish3.likes}}&nbsp;</span>
           <svg class="icon" viewBox="0 0 1578 1024" xmlns="http://www.w3.org/2000/svg" width="30">\
             <defs><style type="text/css"></style></defs>
             <path d="M789.333333 0c315.946667 0 598.912 198.613333 789.333334 512-190.421333 313.386667-473.386667 512-789.333334 512-315.946667 0-598.912-198.613333-789.333333-512C190.421333 198.613333 473.386667 0 789.333333 0z m0 64C519.125333 64 264.426667 224.554667 80.746667 504.021333L75.541333 512l5.205334 8c181.482667 276.096 432.256 436.117333 698.837333 439.936L789.333333 960c270.208 0 524.885333-160.533333 708.586667-440L1503.146667 512l-5.205334-7.978667C1316.437333 227.904 1065.685333 67.882667 799.082667 64.064L789.333333 64z m0 170.666667c153.173333 0 277.333333 124.16 277.333334 277.333333s-124.16 277.333333-277.333334 277.333333-277.333333-124.16-277.333333-277.333333 124.16-277.333333 277.333333-277.333333z m0 64c-117.824 0-213.333333 95.509333-213.333333 213.333333s95.509333 213.333333 213.333333 213.333333 213.333333-95.509333 213.333334-213.333333-95.509333-213.333333-213.333334-213.333333z" fill="#6f6f6f"></path>
           </svg>
-          <span>&nbsp;{{today.views}}</span>
+          <span>&nbsp;{{popDish.dish3.views}}</span>
         </div>
       </div>
     </div>
@@ -85,8 +91,10 @@
     <div class="title">Top&nbsp;Comments</div>
     <div id="top-comment">
       <div id="pic">
-        <img [src]="topComment.pic" [alt]="topComment.dishName|uppercase">
-        <div id="dish_name">{{topComment.dishName|uppercase}}</div>
+        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish1.name)">
+          <img [src]="topComment.pic" [alt]="topComment.dishName | uppercase">
+        </a>
+        <div id="dish_name">{{topComment.dishName | uppercase}}</div>
       </div>
       <div id="detail">
         <div class="nickname">{{topComment.nickname}}</div>
@@ -97,10 +105,4 @@
 
 
 <!-- bottom -->
-<div class="bottom">
-    <div style="margin-top: 30px">
-      <a routerLink='/home'>Home</a>
-      &nbsp;|&nbsp;
-      <a href="https://github.com/Xinyuan-L/SEGP" target="_blank">About us<br/></a>
-    </div>
-  </div>
+<app-footer></app-footer>
