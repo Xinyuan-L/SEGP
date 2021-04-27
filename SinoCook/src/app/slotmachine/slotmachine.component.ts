@@ -60,8 +60,8 @@ export class SlotmachineComponent implements OnInit {
   public window: any;
   public shadow: any;
   public index: number;
-  public button:any;
-  public disbutton:any;
+  public button: any;
+  public disbutton: any;
 
   public stickPic = 'assets/stick.png';
   public stick = 1;
@@ -168,7 +168,6 @@ export class SlotmachineComponent implements OnInit {
 
   jumpToDish(): void {
     this.comm.sendMessage(this.finalDish.name);
-    //where to jump?
     window.location.href = '/dish';
 }
 

@@ -70,7 +70,7 @@ export class DishComponent implements OnInit {
   ngOnInit(): void {
     this.getInfo();
     this.dish.views += 1;
-    this.request.post('addViews', this.dishID);
+    this.request.put('addViews', this.dishID);
   }
 
   getInfo(): void {

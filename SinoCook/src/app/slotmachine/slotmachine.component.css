@@ -77,8 +77,8 @@ li {
   width: 100px;
   position: absolute;
   top: 120px;
-  left: 850px;
-  z-index: 3;
+  left: 980px;
+  z-index: 1;
 }
 #button{
   height: 50px;
@@ -118,7 +118,9 @@ li {
   z-index: 1500;
   display: none;
 }
-
+button{
+  cursor: pointer;
+}
 .buttons{
   text-align: center;
   margin: 0 auto ;
