@@ -24,11 +24,11 @@ We mainly focus on the desktop and may adapt the mobile.
 
 ## Introduction
 
-* [Abstract.]{#index1}
+* [Abstract.](#abstract.)
 * [Project Objectives.](#index2)
 * Video.
 
-### [Abstract.]{#index1}
+### [Abstract.]
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
 
 In China, people attach great importance to food culture.
