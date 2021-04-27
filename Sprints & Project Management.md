@@ -1,3 +1,10 @@
+## Contents
+
+* [**Group working methods**](#group-working-methods)
+* [**Interacting users and broader stakeholders**](#interacting-users-and-broader-stakeholders)
+* [**Team roles**](#team-roles)
+* [**Documentation of sprints**](#documentation-of-sprints)
+* [**Team use of Git**](#team-use-of-git)
 
 The waterfall model
 
