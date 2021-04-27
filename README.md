@@ -22,7 +22,7 @@ We mainly focus on the desktop and may adapt the mobile.
 |Xinyuan Li| ys20961@bristol.ac.uk|
 |Yiyuan Chen| rf20401@bristol.ac.uk|
 
-[TOC]
+## Table of contents
 
 ## Introduction
 
@@ -31,6 +31,7 @@ We mainly focus on the desktop and may adapt the mobile.
 * [**Video**](#abstract)
 
 ## Abstract
+
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
 
 In China, people attach great importance to food culture.
