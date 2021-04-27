@@ -25,7 +25,7 @@ We mainly focus on the desktop and may adapt the mobile.
 ## Introduction
 
 * [Abstract.](#abstract.)
-* [Project Objectives.](#project objectives.)
+* [Project Objectives.](#project-objectives.)
 * Video.
 
 ### Abstract.
