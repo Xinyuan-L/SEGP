@@ -25,10 +25,10 @@ We mainly focus on the desktop and may adapt the mobile.
 ## Introduction
 
 * [Abstract.](#abstract.)
-* [Project Objectives.](#index2)
+* [Project Objectives.](#project objectives.)
 * Video.
 
-### [Abstract.]
+### Abstract.
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
 
 In China, people attach great importance to food culture.
@@ -49,7 +49,7 @@ You can also select a diet preference and receive personalized recommendations, 
 
 The site also includes a comment section where users can post their comments anonymously.
 
-### Project Objectives.{#index2}
+### Project Objectives.
 
 First of all, we hope to apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
 
