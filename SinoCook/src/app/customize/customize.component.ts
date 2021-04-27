@@ -16,12 +16,12 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
       option3: false,
       option4: false,
     },
-    q3: true,
+    q3: false,
     q4: {
       option1: false,
       option2: false,
       option3: false,
-      option4: true,
+      option4: false,
     }
   };
 
@@ -34,14 +34,35 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
   }
 
   doSubmit(): void {
-    console.log(this.data);
-    this.comm.sendMessage(this.data);
-    // const httpOptions = {headers : new HttpHeaders({'Content-Type' : 'application | json'})};
-    //
-    // let api = "http://localhost:9090/customize";
-    // this.http.post(api,this.data,httpOptions).subscribe((response) =>{
-    //   console.log(response);
-    // });
+    let check1 = (document.getElementById('prompt1') as HTMLElement);
+    let check3 = (document.getElementById('prompt3') as HTMLElement);
+    let check4 = (document.getElementById('prompt4') as HTMLElement);
+
+    if(!(this.isChecked1() && this.isChecked3() && this.isChecked4())){
+
+    if(!this.isChecked1()){
+      check1.style.display = 'block';
+    }else{
+      check1.style.display = 'none';
+    }
+
+    if(!this.isChecked3()){
+      check3.style.display = 'block';
+    }else{
+      check3.style.display = 'none';
+    }
+
+    if(!this.isChecked4()){
+      check4.style.display = 'block';
+    }else{
+      check4.style.display = 'none';
+    }
+
+    }else{
+      console.log(this.data);
+      this.comm.sendMessage(this.data);
+      window.location.href = '/slot';
+    }
   }
 
   toChange1(event: any): void {
@@ -79,6 +100,25 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
         this.data.q4.option4 = true;
         break;
     }
+  }
+  isChecked1():boolean{
+    let checked1 = (document.getElementById('q1_1') as HTMLInputElement);
+    let checked2 = (document.getElementById('q1_2') as HTMLInputElement);
+    return checked1.checked || checked2.checked;
+  }
+
+  isChecked3():boolean{
+    let checked1 = (document.getElementById('q3_1') as HTMLInputElement);
+    let checked2 = (document.getElementById('q3_2') as HTMLInputElement);
+    return checked1.checked || checked2.checked;
+  }
+
+  isChecked4():boolean{
+    let checked1 = (document.getElementById('q4_1') as HTMLInputElement);
+    let checked2 = (document.getElementById('q4_2') as HTMLInputElement);
+    let checked3 = (document.getElementById('q4_3') as HTMLInputElement);
+    let checked4 = (document.getElementById('q4_4') as HTMLInputElement);
+    return checked1.checked || checked2.checked || checked3.checked || checked4.checked;
   }
 
 }

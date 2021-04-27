@@ -45,3 +45,9 @@
   input{
     color: #ffaa46;
   }
+
+  .prompt{
+    font-size: 1.2em;
+    color: #FF0000;
+    display: none;
+  }
