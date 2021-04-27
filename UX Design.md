@@ -1,3 +1,11 @@
+## Contents
+
+* [**Design Process and Early prototyping and ideation**](#design-process-and-early-prototyping-and-ideation)
+* [**Interacting users and broader stakeholders**](#interacting-users-and-broader-stakeholders)
+* [**UX approach**](#ux-approach)
+* [**Understanding of user group**](#understanding-of-user-group)
+* [**Additional elements and components**](#additional-elements-and-components)
+* [**Wireframes and interaction flow diagrams for final key subsystems**](#wireframes-and-interaction-flow-diagrams-for-final-key-subsystems)
 
 最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
 我们首先通过思维导图初步确定了功能。
