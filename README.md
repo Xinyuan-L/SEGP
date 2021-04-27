@@ -22,6 +22,8 @@ We mainly focus on the desktop and may adapt the mobile.
 |Xinyuan Li| ys20961@bristol.ac.uk|
 |Yiyuan Chen| rf20401@bristol.ac.uk|
 
+[TOC]
+
 ## Introduction
 
 * [Abstract.](#abstract.)
