@@ -26,11 +26,11 @@ We mainly focus on the desktop and may adapt the mobile.
 
 ## Introduction
 
-* [Abstract.](#abstract.)
-* [Project Objectives.](#project-objectives.)
-* Video.
+* [**Abstract**](#abstract)
+* [**Project Objectives**](#project-objectives)
+* [**Video**](#abstract)
 
-### Abstract.
+## Abstract
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
 
 In China, people attach great importance to food culture.
@@ -51,11 +51,13 @@ You can also select a diet preference and receive personalized recommendations, 
 
 The site also includes a comment section where users can post their comments anonymously.
 
-### Project Objectives.
+## Project Objectives
 
 First of all, we hope to apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
 
 Also, We want to make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
+
+## Video
 
 ## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Background%20and%20Motivation.md)
 
