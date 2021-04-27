@@ -38,10 +38,6 @@ We mainly focus on the desktop and may adapt the mobile.
 
 ## Introduction
 
-* [**Abstract**](#abstract)
-* [**Project Objectives**](#project-objectives)
-* [**Video**](#abstract)
-
 ### Abstract
 
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
