@@ -4,7 +4,7 @@
 * [**Reflective discussion of the success of the project**](#unit-testing-/-functional-testing)
 * [**How coronavirus has affected your project**](#how-coronavirus-has-affected-your-project)
 * [**Discussion of Social and Ethical implications**](#discussion-of-social-and-ethical-implications)
-* [**Discussion of future work**](#discussion of future work)
+* [**Discussion of future work**](#discussion-of-future-work)
 
 经过用户测试和反馈，我们预计未来增加问答功能。
 增加问答社区，促进用户之间的交流。会给用户带来简单和便利的参与感，用户参与时可发布问题，仅需发布美食类困惑即可。也可回答问题，对问题输入自己的看法。不需要创作华丽的词藻以及图片视频等，并且用户交流度高，可以显著提高用户在社区的活跃度和交流时获得的认同感。
