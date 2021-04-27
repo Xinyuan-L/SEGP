@@ -1,5 +1,5 @@
 
-## Table of contents
+## Contents
 
 * [**Background literature**](#background-literature)
 
