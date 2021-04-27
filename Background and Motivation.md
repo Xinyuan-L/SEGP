@@ -20,16 +20,9 @@ WEB产品信息构建师从功能层面和情感层面提出产品的用户体�
 但是，这些美食社区网站的用户体验有待提高，其社区化所具备的交流、互动性没有得到充分的发展，用户使用起来依然存在着一些问题。
 易观国际月活跃用户数据排名显示，好豆菜谱移动端用户数超过2 000万，月活跃用户377.6万，位居第一；位列第二的下厨房移动端用户数超过1 300万，月活跃用户356.7万[4]。[4] 邹声瑞，蔡阅林，赵越，等.美食类APP发展模式及盈利方式研究——以“美食地图”为例[J].科学导报，2015(20):201.
 选取比较有代表性的是xiachufang和haodou来分析。
-![image](https://user-images.githubusercontent.com/45390078/115630873-b100a580-a2fc-11eb-875e-3bfd723e4c33.png)
 
-|             | Content  |  Functions  |
-| --------    | -----:   | :----: |
-| haodou      |1. Menu classification is simple while the classification is not perfect.      |   1. The release function entry is easy to find;     
-2. The menu interface is simple and easy to understand.    |
-| xiachufang   |1.The video menu interface is messy, which affects the viewing;
-2. The menu classification is overstaffed;
-     | 1. The release entry is not obvious;
-2. Lack of personalized customization services.    |
+![image](https://user-images.githubusercontent.com/45390078/116252836-d6136f00-a767-11eb-88b4-a1552ae2c7dc.png)
+
 
 
 通过对现存的中国菜谱网站设计现状进行分析可以发现，其在用户体验、用户互动性、趣味性方面还有待加强，缺乏个性化推荐服务，用户的情感需求得不到满足。
