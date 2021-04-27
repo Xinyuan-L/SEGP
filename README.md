@@ -13,6 +13,20 @@ We mainly focus on the desktop and may adapt the mobile.
 ## Project progress and [log](https://github.com/Xinyuan-L/SEGP/blob/main/team_log.md)
 ***
 
+## Contents
+
+* [**Team members**](#team-members)
+* [**Introduction**](#introduction)
+   * [Abstract](#abstract)
+   * [Defining key terms](#defining-key-terms)
+   * [Public health concerns](#public-health-concerns)
+* [**Background and Motivation**](#background-and-motivation)
+* [**System Implementation**](#system-implementation)
+* [**UX Design**](#ux-design)
+* [**Sprints & Project Management**](#sprints-&-project-management)
+* [**Evaluation**](#evaluation)
+* [**Conclusion**](#conclusion)
+
 ## Team members
 |name|email|
 |:-: | :-- |
@@ -22,15 +36,13 @@ We mainly focus on the desktop and may adapt the mobile.
 |Xinyuan Li| ys20961@bristol.ac.uk|
 |Yiyuan Chen| rf20401@bristol.ac.uk|
 
-## Contents
-
 ## Introduction
 
 * [**Abstract**](#abstract)
 * [**Project Objectives**](#project-objectives)
 * [**Video**](#abstract)
 
-## Abstract
+### Abstract
 
 As a Chinese proverb spread for a long time,'Bread is the staff of life.'
 
@@ -52,13 +64,13 @@ You can also select a diet preference and receive personalized recommendations, 
 
 The site also includes a comment section where users can post their comments anonymously.
 
-## Project Objectives
+### Project Objectives
 
 First of all, we hope to apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
 
 Also, We want to make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
 
-## Video
+### Video
 
 ## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Background%20and%20Motivation.md)
 
