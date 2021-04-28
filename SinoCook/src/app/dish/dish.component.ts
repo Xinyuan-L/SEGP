@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Comment } from '../Comment';
 import { Step } from '../Step';
 import { Dish } from '../Dish';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpParams} from '@angular/common/http';
 import { CommunicateService } from '../communicate.service';
 import { RequestsService } from '../requests.service';
 
@@ -65,18 +67,22 @@ export class DishComponent implements OnInit {
     }
   ];
   constructor(public comm: CommunicateService,
-              private request: RequestsService) { }
+              private request: RequestsService,
+              private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getInfo();
     this.dish.views += 1;
-    this.request.put('addViews', this.dishID);
+    this.request.put('addViews',
+      {Did: this.dishID, views: this.dish.views});
   }
 
   getInfo(): void {
     this.comm.getMessage().subscribe((msg: any) => {
       console.log(msg);
-      this.request.get('getDish', msg).subscribe((response: any) => {
+      msg = msg.trim();
+      let data: any = {name: msg};
+      this.request.get('getDish', data).subscribe((response: any) => {
         this.dishID = response.id;
         this.dish.name = msg;
         this.dish.pic = response.address;
@@ -89,25 +95,27 @@ export class DishComponent implements OnInit {
         this.dish.main = response.main;
         this.dish.other = response.other;
       });
-      this.request.get('/getComments', this.dishID).subscribe((response: any) => {
+      data = {Did: `${this.dishID}`};
+      this.request.get('/getComments', data).subscribe((response: any) => {
         this.comments = response;
       });
     });
   }
   addDishLike(): void {
     this.dish.likes += 1;
-    this.request.put('/addDishLike', this.dishID);
+    this.request.put('/addDishLike', {Did: this.dishID, likes: this.dish.likes});
+  }
+  cancelDishLike(): void {
+    this.dish.likes -= 1;
+    this.request.put('/addDishLike', {Did: this.dishID, likes: this.dish.likes});
   }
   addLike(comment: Comment): void {
     comment.likes += 1;
-    this.request.put('/addLike', comment.time);
-    // const httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
-    // const api = '';
-    // this.http.post(api, {likes: this.dish.likes + 1}, httpOptions).subscribe();
+    this.request.put('/addLike', {time: comment.time, likes: comment.likes});
   }
   cancelLike(comment: Comment): void {
     comment.likes -= 1;
-    this.request.put('/cancelLike', comment.time);
+    this.request.put('/cancelLike', {time: comment.time, likes: comment.likes});
   }
   updateTime(comment: Comment): Comment {
     comment.time = new Date().getTime() as unknown as number;
@@ -123,13 +131,22 @@ export class DishComponent implements OnInit {
     return false;
   }
   postComment(): void {
+    console.log('posting');
     if (this.newComment.nickname === '') {
       alert('Your nickname can\'t be empty.');
     } else if (this.newComment.detail === '' &&
       !this.isValidComment(this.newComment.detail)) {
       alert('Your comment is not valid.');
     } else {
-      this.request.post('/postComments', this.updateTime(this.newComment));
+      console.log(this.newComment.nickname);
+      console.log(this.newComment.detail);
+      console.log(this.updateTime(this.newComment));
+      const api = 'http://localhost:9090/postComments';
+      const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
+      this.http.post(api, JSON.stringify(this.newComment), options).subscribe((res: any) => {
+        console.log('ok');
+      });
+      // this.request.post('/postComments', this.updateTime(this.newComment));
     }
   }
 

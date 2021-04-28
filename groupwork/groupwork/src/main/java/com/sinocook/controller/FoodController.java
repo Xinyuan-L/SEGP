@@ -5,10 +5,7 @@ package com.sinocook.controller;
 import com.sinocook.mapper.FoodMapper;
 import com.sinocook.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.ArrayList;
@@ -32,9 +29,10 @@ public class FoodController {
         return food;
     }
 
+    // @RequestMapping("/getDish")
     @GetMapping("/getDish")
     @CrossOrigin
-    public Dish getDish(@RequestParam(value = "msg", required = false) String name){
+    public Dish getDish(@RequestParam(value = "name", required = false) String name){
         // String name="Purple cabbage yogurt salad";
         DishPart1 dishPart1=foodMapper.getDishPart1(name);
         System.out.println(name);
@@ -107,5 +105,11 @@ public class FoodController {
         Comments comments=new Comments(total,commentArrayList);
         return comments;
     }
+/*
+    @RequestMapping("/getDish")
+    public void getParam(@RequestParam(value = "name", required = false) String name){
+        System.out.println(name);
+    }
+    */
 
 }

@@ -34,25 +34,25 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
   }
 
   doSubmit(): void {
-    let check1 = (document.getElementById('prompt1') as HTMLElement);
-    let check3 = (document.getElementById('prompt3') as HTMLElement);
-    let check4 = (document.getElementById('prompt4') as HTMLElement);
+    const check1 = (document.getElementById('prompt1') as HTMLElement);
+    const check3 = (document.getElementById('prompt3') as HTMLElement);
+    const check4 = (document.getElementById('prompt4') as HTMLElement);
 
-    if(!(this.isChecked1() && this.isChecked3() && this.isChecked4())){
+    if (!(this.isChecked1() && this.isChecked3() && this.isChecked4())){
 
-    if(!this.isChecked1()){
+    if (!this.isChecked1()){
       check1.style.display = 'block';
     }else{
       check1.style.display = 'none';
     }
 
-    if(!this.isChecked3()){
+    if (!this.isChecked3()){
       check3.style.display = 'block';
     }else{
       check3.style.display = 'none';
     }
 
-    if(!this.isChecked4()){
+    if (!this.isChecked4()){
       check4.style.display = 'block';
     }else{
       check4.style.display = 'none';
@@ -101,23 +101,23 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
         break;
     }
   }
-  isChecked1():boolean{
-    let checked1 = (document.getElementById('q1_1') as HTMLInputElement);
-    let checked2 = (document.getElementById('q1_2') as HTMLInputElement);
+  isChecked1(): boolean{
+    const checked1 = (document.getElementById('q1_1') as HTMLInputElement);
+    const checked2 = (document.getElementById('q1_2') as HTMLInputElement);
     return checked1.checked || checked2.checked;
   }
 
-  isChecked3():boolean{
-    let checked1 = (document.getElementById('q3_1') as HTMLInputElement);
-    let checked2 = (document.getElementById('q3_2') as HTMLInputElement);
+  isChecked3(): boolean{
+    const checked1 = (document.getElementById('q3_1') as HTMLInputElement);
+    const checked2 = (document.getElementById('q3_2') as HTMLInputElement);
     return checked1.checked || checked2.checked;
   }
 
-  isChecked4():boolean{
-    let checked1 = (document.getElementById('q4_1') as HTMLInputElement);
-    let checked2 = (document.getElementById('q4_2') as HTMLInputElement);
-    let checked3 = (document.getElementById('q4_3') as HTMLInputElement);
-    let checked4 = (document.getElementById('q4_4') as HTMLInputElement);
+  isChecked4(): boolean{
+    const checked1 = (document.getElementById('q4_1') as HTMLInputElement);
+    const checked2 = (document.getElementById('q4_2') as HTMLInputElement);
+    const checked3 = (document.getElementById('q4_3') as HTMLInputElement);
+    const checked4 = (document.getElementById('q4_4') as HTMLInputElement);
     return checked1.checked || checked2.checked || checked3.checked || checked4.checked;
   }
 

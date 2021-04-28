@@ -91,7 +91,7 @@ export class SlotmachineComponent implements OnInit {
     // 获取问卷页面的表单信息；
     this.comm.getMessage().subscribe((msg: any) => {
       // 将表单发给后端，获取响应；
-      this.request.get('/customize', msg).subscribe((response: any) => {
+      this.request.post('/customize', msg).subscribe((response: any) => {
         this.initList = response;
       });
     });

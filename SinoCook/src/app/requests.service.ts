@@ -9,7 +9,7 @@ import {
   HttpErrorResponse,
   HttpEvent,
   HttpResponse,
-  HttpInterceptor,
+  HttpInterceptor, HttpParams,
 } from '@angular/common/http';
 import Config from '../config/index';
 
@@ -29,19 +29,18 @@ export class RequestsService implements HttpInterceptor {
    * @param data 数据提交
    */
   public get(url: string, data?: any): Observable<any> {
-    let param: any = {};
-    for (const key in data) {
-      if (data[key] !== null && data[key] !== undefined && data[key] !== '') {
-        param[key] = data[key];
+    const option = data ? {params: new HttpParams()} : {params: undefined};
+    let p = option.params;
+    if (p !== undefined) {
+      for (const [key, value] of Object.entries(data)) {
+        p = p.set(key, value as string);
       }
     }
-    if (!data) {
-      param = '';
-    }
-    const item: string = this.getParamsFormatter(param);
+    option.params = p;
+    // console.log(option);
     return this.http
-      .get(`${this.baseUrl}${url}${item}`, {})
-      .pipe(map(this.extractData), catchError(this.handleError));
+      .get(`${this.baseUrl}${url}`, option)
+      .pipe(catchError(this.handleError));
   }
 
   /**
@@ -49,11 +48,12 @@ export class RequestsService implements HttpInterceptor {
    * @param url 后台接口api
    * @param data 参数
    */
-  public post(url: string, data = {}): Observable<any> {
-    console.log(data, 'http1');
+  public post(url: string, data: any): Observable<any> {
+    const option = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
+    console.log('posted');
     return this.http
-      .post(`${this.baseUrl}${url}`, data)
-      .pipe(map(this.extractData), catchError(this.handleError));
+      .post(`${this.baseUrl}${url}`, data, option)
+      .pipe(catchError(this.handleError));
   }
 
   /**
@@ -61,49 +61,49 @@ export class RequestsService implements HttpInterceptor {
    * @param url 后台接口api 例如：/api/test/6
    * @param data 参数
    */
-  public put(url: string, data = {}): Observable<any> {
+  public put(url: string, data: any): Observable<any> {
     return this.http
       .put(`${this.baseUrl}${url}`, data)
-      .pipe(map(this.extractData), catchError(this.handleError));
+      .pipe(catchError(this.handleError));
   }
 
   /**
    * DELETE请求处理（一般用于删除数据）
    * @param url 后台接口api 例如：/api/test/6
    */
-  public delete(url: string): Observable<{}> {
-    return this.http
-      .delete(`${this.baseUrl}${url}`)
-      .pipe(map(this.extractData), catchError(this.handleError));
-  }
+  // public delete(url: string): Observable<{}> {
+  //   return this.http
+  //     .delete(`${this.baseUrl}${url}`)
+  //     .pipe(map(this.extractData), catchError(this.handleError));
+  // }
 
   /**
    * get方式过滤自动拼接数据
    * @param data Object
    */
-  private getParamsFormatter(data: object): string {
-    if (typeof data === 'object') {
-      const value = Object.assign({}, data);
-      let params = '?';
-      Object.entries(value).forEach((el, i) => {
-        if (i > 0) {
-          params += `&${el[0]}=${el[1]}`;
-        } else {
-          params += `${el[0]}=${el[1]}`;
-        }
-      });
-      return params;
-    }
-    return '';
-  }
+  // private getParamsFormatter(data: object): string {
+  //   if (typeof data === 'object') {
+  //     const value = Object.assign({}, data);
+  //     let params = '?';
+  //     Object.entries(value).forEach((el, i) => {
+  //       if (i > 0) {
+  //         params += `&${el[0]}=${el[1]}`;
+  //       } else {
+  //         params += `${el[0]}=${el[1]}`;
+  //       }
+  //     });
+  //     return params;
+  //   }
+  //   return '';
+  // }
 
   /**
    *  提取数据
    * @param res 返回结果
    */
-  private extractData(res: any): any {
-    return res || {};
-  }
+  // private extractData(res: any): any {
+  //   return res || {};
+  // }
 
   /**
    * 错误消息类
