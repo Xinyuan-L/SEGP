@@ -62,9 +62,17 @@ The site also includes a comment section where users can post their comments ano
 
 ### Project Objectives
 
-First of all, we hope to apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
+Primary Objectives:
 
-Also, We want to make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
+建立一个中国菜谱推荐的网站，帮助“有选择恐惧症”的留学生解决一日三餐的选择问题。
+
+传播并发扬中国美食文化，为对中国美食文化感兴趣的外国人讲解中国菜肴的做法。
+
+Secondary Objectives:
+
+Apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
+
+Make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
 
 ### Video
 

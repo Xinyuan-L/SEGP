@@ -4,11 +4,12 @@
 * [**Interacting users and broader stakeholders**](#interacting-users-and-broader-stakeholders)
 * [**UX approach**](#ux-approach)
 * [**Understanding of user group**](#understanding-of-user-group)
-* [**Additional elements and components**](#additional-elements-and-components)
 * [**Wireframes and interaction flow diagrams for final key subsystems**](#wireframes-and-interaction-flow-diagrams-for-final-key-subsystems)
 
+## Design Process and Early prototyping and ideation
+
 最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
-我们首先通过思维导图初步确定了功能。
+我们首先通过头脑风暴初步确定了功能。
 
 ![image](https://user-images.githubusercontent.com/45390078/115632326-5f0d4f00-a2ff-11eb-84d9-de662149768b.png)
 
@@ -36,31 +37,94 @@
 主logo设计釆用具有中国特色的美食相关元素“碗”、“筷”，结合英文字母进行图形创意，组合成一个具有一定幽默、趣味成分的图形。
 餐具在这里点明美食主题，在视觉表现上，遵循视觉潮流，釆用立体扁平化处理，符合目标用户人群的审美特征、追求新鲜有趣的事物，引领潮流的心理特点。
 
-在进行功能分析过程中，我们确定了我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人。
-我们对30名布里斯托大学在读学生进行了问卷调查，并选择其中五名有代表性的用户进行访谈调研。
-这三个用户组确保我们的产品以用户为中心，并定义了测试用例和需求，这些需求是我们系统开发的基础。
+## Interacting users and broader stakeholders
+
+在进行功能分析过程中，我们首先初步确定了我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人。
+
+为了进一步分析，我们对haodou这个菜谱网站进行了调研。
+
+1.haodou网站用户数据分析
+
+从haodou网站的用户性别上可以看出：用户类型主要为女性，占比达到63.73%。
+
+在传统观念及习惯的影响下，大多中国家庭中，仍是女性下厨为主。女性相较男性更为细致、更加关注生活细节的特点也决定了菜谱网站的主流用户会是女性。
+
+随着经济的发展，也有越来越多的男性不再“远庖厨”，注重饮食品质、享受烹饪过程的男性也占据了好豆用户的36.27%。
+
+![image](https://user-images.githubusercontent.com/45390078/116471365-7b177000-a86c-11eb-9da2-9124fea2ddb4.png)
+
+从haodou的年龄层来看，用户年龄主要分布在25-40岁之间，占比达到83.76%。在此年龄区间的用户拥有家庭及子女，工作基本稳定，在观念上更倾向于经济健康的饮食，并且厨房设备完善，追求下厨体验，愿意钻研厨艺，因而使用产品的比例较高。
+
+在25岁以下的用户基本是95后，大多为学生或刚步入社会群体，在校学生由于学校的烹饪条件不足，或烹饪技巧不足基本上不会自己动手做菜。刚步入社会的群体大多租房或与父母同住，做菜所需的条件不足以及没必要做饭，主要通过外卖、食堂、餐馆以及父母做饭来解决用餐。
+
+在40岁以上用户由于对APP具有一定的学习成本，不太适应边看APP内容边做菜而且也有自己的烹饪经验，不太需要通过美食类软件来提升厨艺，故而用户占比最少。
+
+![image](https://user-images.githubusercontent.com/45390078/116472898-663bdc00-a86e-11eb-9607-93f280b44294.png)
+
+从好豆的用户使用地域分布来看，东部和南部沿海城市以及中部地区使用占比较高。在中国，这部分城市经济水平较为发达，人们的生活水平较高，比较追求生活质量。
+
+![image](https://user-images.githubusercontent.com/45390078/116476969-e3b61b00-a873-11eb-976e-6124f200f7db.png)
+
+2.留学生群体数据分析
+
+考虑到我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人，我们又对留学生群体的年龄和户籍所在地进行调研。
+
+![image](https://user-images.githubusercontent.com/45390078/116475608-fdeef980-a871-11eb-9324-cc7c75bf54c6.png)
+
+根据《2020中国留学生白皮书》，我们得到结论，目前出国留学的主力人群年龄分布于18-28岁，来自于北上广深、江浙等经济发达的地区。
+
+根据以上数据，我们进一步细化了用户群体。据此，我们打算数据库中存储的菜谱更多迎合北上广深、江浙地区18-28岁学生群体的口味。
+
+## UX approach
+
+我们对30名布里斯托大学在读学生进行了[问卷调查](https://www.surveymonkey.co.uk/r/VFX5QBK)。
+调查和问卷调查可以让研究人员获得更多的反馈，这可以为更详细的分析提供基础。这种类型的研究成本相对较低。这种方法的缺点是与受访者没有直接的互动，因此不可能更深入地探究他们提出的答案。
+调查结果如下：
+
+![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
+![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
+![image](https://user-images.githubusercontent.com/45390078/116478380-e0bc2a00-a875-11eb-8637-bf859b20f9a7.png)
+![image](https://user-images.githubusercontent.com/45390078/116478392-e6197480-a875-11eb-841f-41b2845a36e3.png)
+![image](https://user-images.githubusercontent.com/45390078/116478404-ea459200-a875-11eb-8cf9-99b76f9a9243.png)
+
+通过初步调研，我们发现很多人都存在对今天吃什么的“选择恐惧症”，并希望有一个网站可以推荐今日食谱。
+
+绝大多数人不希望有登录功能，他们认为这很麻烦而且存在暴露隐私的危险，更倾向于在desktop端使用我们的网站。
+
+为了对问卷调查进行补充，我们选择其中四名有代表性的用户进行访谈调研。
+
+这确保我们的产品以用户为中心，并定义了测试用例和需求，这些需求是我们系统开发的基础。
+
+## Understanding of user group
 
 用户A：
 王女士，23岁，布里斯托大学中国留学生，有宗教信仰，不吃猪肉。王女士平时比较喜欢健身，比较注重身材，周末经常会自己做减肥热量比较低的菜。
+当谈到为什么不需要登录功能，王女士表示，每次都要登录，这会很麻烦。
 
 ![image](https://user-images.githubusercontent.com/45390078/115634131-e27b7000-a300-11eb-9431-5f8fcbce83bf.png)
 
 用户B：
 Anne，24岁，对中国美食感兴趣的美国人，喜欢分享自己做好的美食到食谱网站上。
+Anne也不需要登录功能，她希望能通过匿名分享自己做好的美食到食谱网站上获得关注。
 
 ![image](https://user-images.githubusercontent.com/45390078/115632779-61bc7400-a300-11eb-947d-8981376a9d44.png)
 
 用户C：
 Titus，24岁，英国籍华裔，非常喜欢中国菜，但有“选择困难症”，永远不知道今天吃什么。
+考虑到隐私问题，Titus也表示不需要登录功能。
 
  ![image](https://user-images.githubusercontent.com/45390078/115634098-d2fc2700-a300-11eb-8856-429fab4c3551.png)
 
 用户D：
 张先生，24岁，布里斯托大学中国留学生，由于过度肥胖，有脂肪肝趋势，医生建议多吃蔬菜，少吃肉。
+当谈到为什么不需要登录功能，张先生表示，他不希望被网站收集数据，这会个人隐私。
 
 ![image](https://user-images.githubusercontent.com/45390078/115632397-87954900-a2ff-11eb-9045-d9a9bf23996d.png)
 
-根据用户提出的需求点，我们确定了网站的主要功能。
+## Wireframes and interaction flow diagrams for final key subsystems
+
+根据用户提出的需求点，我们确定了网站的主要功能，并设计出网站[原型](https://q4r9fc.axshare.com/)。
+
 1.展示中式烹饪步骤；
 2.匿名评论中式食谱；
 3.能够根据用户需求推荐中式菜肴；
