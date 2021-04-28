@@ -7,6 +7,8 @@
 * [**Additional elements and components**](#additional-elements-and-components)
 * [**Wireframes and interaction flow diagrams for final key subsystems**](#wireframes-and-interaction-flow-diagrams-for-final-key-subsystems)
 
+## Design Process and Early prototyping and ideation
+
 最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
 我们首先通过思维导图初步确定了功能。
 
@@ -35,6 +37,8 @@
 
 主logo设计釆用具有中国特色的美食相关元素“碗”、“筷”，结合英文字母进行图形创意，组合成一个具有一定幽默、趣味成分的图形。
 餐具在这里点明美食主题，在视觉表现上，遵循视觉潮流，釆用立体扁平化处理，符合目标用户人群的审美特征、追求新鲜有趣的事物，引领潮流的心理特点。
+
+## Interacting users and broader stakeholders
 
 在进行功能分析过程中，我们确定了我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人。
 我们对30名布里斯托大学在读学生进行了问卷调查，并选择其中五名有代表性的用户进行访谈调研。
