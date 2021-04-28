@@ -4,7 +4,6 @@
 * [**Interacting users and broader stakeholders**](#interacting-users-and-broader-stakeholders)
 * [**UX approach**](#ux-approach)
 * [**Understanding of user group**](#understanding-of-user-group)
-* [**Additional elements and components**](#additional-elements-and-components)
 * [**Wireframes and interaction flow diagrams for final key subsystems**](#wireframes-and-interaction-flow-diagrams-for-final-key-subsystems)
 
 ## Design Process and Early prototyping and ideation
