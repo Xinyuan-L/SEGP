@@ -11,17 +11,15 @@
 
 The history of traditional Chinese food can be traced back to the Peking Man around 400,000 years ago. Some other accounts of the history of Chinese cuisine take the beginning to the Chinese stone age, where the cultivation of rice and the production of noodles began, both of them are typical representations of Chinese cuisine as we know today originated from archaeological findings. 
 
-China covers a large territory and has has a very diverse landscape including deserts, mountains, plateaus and fertile river basins and each region has its own regional climates. These differences of geography and climate give rise to the various regional cultural and culinary practices among people in the whole nation , hence a variety of Chinese food with different but fantastic and mouthwatering flavor. [[**1**]](#references). 
+China covers a large territory and has has a very diverse landscape including deserts, mountains, plateaus and fertile river basins and each region has its own regional climates. These differences of geography and climate give rise to the various regional cultural and culinary practices among people in the whole nation , hence a variety of Chinese food with different but fantastic and mouthwatering flavor. 
 
-Since China's local dishes have their own typicalcharacteristics, generally, Chinese people have named eight major cuisines according to their geographical locations , including the Su System (Jiangsu province) , the Wan System (Anhui province), the Min System (Fujian province),  the Xiang System (Hunan province), the Yue System (Cantonese province) , the Chuan System (Sichuan province) , the Lu System (Shandong province) and the Zhe System (Zhejiang province).
+Since China's local dishes have their own typicalcharacteristics, generally, Chinese people have named eight major cuisines according to their geographical locations , including the Su System (Jiangsu province) , the Wan System (Anhui province), the Min System (Fujian province),  the Xiang System (Hunan province), the Yue System (Cantonese province) , the Chuan System (Sichuan province) , the Lu System (Shandong province) and the Zhe System (Zhejiang province). [[**1**]](#references).
 
 ![image](https://user-images.githubusercontent.com/45390078/116443451-958d2180-a84b-11eb-8bc9-7ad490eaa89f.png)
 
-
+There were so many cuisines to choose from that the Chinese student was confused about what to eat or how to cook it today.
 
 ## State of the art survey
-
-## Problem definition
 
 据调查，随着人们对健康饮食及视频安全问题的广泛关注，相比点外卖和外出就餐，人们开始注重于在家下厨，因此对于不会做饭但是有做饭需求的用户群体来说，菜谱的需求越来越强烈。
 根据面向30人的问卷调查，我们发现在英中国留学生群体有86.67%存在“不知道今天吃什么”的选择困难症，有83.33%希望有一个网站教他们如何烹饪正宗的中国美食。
@@ -47,10 +45,11 @@ WEB产品信息构建师从功能层面和情感层面提出产品的用户体�
 ![image](https://user-images.githubusercontent.com/45390078/116252836-d6136f00-a767-11eb-88b4-a1552ae2c7dc.png)
 
 
-
 通过对现存的中国菜谱网站设计现状进行分析可以发现，其在用户体验、用户互动性、趣味性方面还有待加强，缺乏个性化推荐服务，用户的情感需求得不到满足。
 为了提高网站的用户体验、互动性，我们将游戏化设计概念贯穿于整个美食社区网站的设计过程中，在统计完用户的需求后，使用老虎机的形式将菜单推荐给用户。
 力图通过设计实践将游戏化设计所具有的趣味性、激励性、互动性融入美食社区网站中，以提高其用户体验，帮助用户更好、更快乐的使用美食网站，最终实现提髙用户粘性，产生稳定用户群的目的。
+
+## Problem definition
 
 ## References
 
