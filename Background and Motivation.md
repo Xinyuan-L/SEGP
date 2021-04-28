@@ -9,6 +9,16 @@
 
 ## Background literature
 
+The history of traditional Chinese food can be traced back to the Peking Man around 400,000 years ago. Some other accounts of the history of Chinese cuisine take the beginning to the Chinese stone age, where the cultivation of rice and the production of noodles began, both of them are typical representations of Chinese cuisine as we know today originated from archaeological findings. 
+
+China covers a large territory and has has a very diverse landscape including deserts, mountains, plateaus and fertile river basins and each region has its own regional climates. These differences of geography and climate give rise to the various regional cultural and culinary practices among people in the whole nation , hence a variety of Chinese food with different but fantastic and mouthwatering flavor. [[**1**]](#references). 
+
+Since China's local dishes have their own typicalcharacteristics, generally, Chinese people have named eight major cuisines according to their geographical locations , including the Su System (Jiangsu province) , the Wan System (Anhui province), the Min System (Fujian province),  the Xiang System (Hunan province), the Yue System (Cantonese province) , the Chuan System (Sichuan province) , the Lu System (Shandong province) and the Zhe System (Zhejiang province).
+
+![image](https://user-images.githubusercontent.com/45390078/116443451-958d2180-a84b-11eb-8bc9-7ad490eaa89f.png)
+
+
+
 ## State of the art survey
 
 ## Problem definition
@@ -24,8 +34,8 @@
 因此我们初步拟定了the overarching aim of this project：菜谱推荐。
 为解决这一问题，文章设计了一种菜谱个性化推荐系统，提供每日三餐菜谱的推荐，来帮助用户解决他们对于三餐的纠结。
 考虑到不同群体有不同的饮食偏好，为了充分满足用户的喜好，我们设计了一些问题用于统计饮食偏好，并依据用户的回答进行菜单推荐。
-WEB产品信息构建师从功能层面和情感层面提出产品的用户体验是“可用性用户期望值的超越（情感）” [[**1**]](#references)。
-唐纳诺曼（从本能的、行为的及反思的三种设计水平的基础上，提出产品的情感价值可以使人们在使用产品中更加快乐、更富有创造性，他强调情感价值在产品设计中的重要性[[**2**]](#references)。
+WEB产品信息构建师从功能层面和情感层面提出产品的用户体验是“可用性用户期望值的超越（情感）” [[**2**]](#references)。
+唐纳诺曼（从本能的、行为的及反思的三种设计水平的基础上，提出产品的情感价值可以使人们在使用产品中更加快乐、更富有创造性，他强调情感价值在产品设计中的重要性[[**3**]](#references)。
 
 考虑到人性化的设计与服务将大大提高用户的使用体验，我们以老虎机游戏的形式针自动给出相应菜谱的推荐。
 目前分享中国菜谱的美食网站主要有美食社区、美食天下、美食杰、豆果网、天天美食、好豆网等一些具有中餐特色的食谱网站。
@@ -44,6 +54,8 @@ WEB产品信息构建师从功能层面和情感层面提出产品的用户体�
 
 ## References
 
-[1]朱征字等,网站界面设计用户体验[J],2010年,08:20-21。
 
-[2](美)唐纳德.A:诺曼.情感化设计[M]。北京:电子工业出版社, 2005.
+
+[2]朱征字等,网站界面设计用户体验[J],2010年,08:20-21。
+
+[3](美)唐纳德.A:诺曼.情感化设计[M]。北京:电子工业出版社, 2005.
