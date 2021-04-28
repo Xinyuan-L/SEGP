@@ -75,8 +75,8 @@ export class DishComponent implements OnInit {
 
   getInfo(): void {
     this.comm.getMessage().subscribe((msg: any) => {
-      // console.log(msg);
-      this.request.get('/getDish', msg).subscribe((response: any) => {
+      console.log(msg);
+      this.request.get('getDish', msg).subscribe((response: any) => {
         this.dishID = response.id;
         this.dish.name = msg;
         this.dish.pic = response.address;

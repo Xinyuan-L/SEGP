@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinocook.mapper.FoodMapper">
+
+    <select id="getTodayFood" resultType="Food">
+        select Dname as name,Daddress as address,Ddescription as description from dishes where Did=#{id}
+    </select>
+
+    <select id="getTopComment" resultType="TopComment">
+        SELECT Cnickname AS nickname,Cdetail AS details,dishes.Daddress AS picAddress ,dishes.`Dname` AS dishname FROM comments INNER JOIN dishes WHERE comments.Did=dishes.`Did` AND comments.`Cid`=(SELECT Cid FROM comments ORDER BY Clikes DESC LIMIT 1);
+    </select>
+
+    <select id="getDishPart1" resultType="DishPart1">
+        SELECT Did AS id, Dname AS 'name',taste.`Taste` AS taste,Dtime AS 'time',Daddress AS address,Ddescription AS description,Dlikes AS likes,Dviews AS views,Main AS main,others AS other FROM dishes INNER JOIN taste WHERE taste.`Tid`=dishes.`Dtaste` AND Dname=#{name}
+    </select>
+
+    <select id="getStep" resultType="Step">
+        SELECT Step1 as step1,Step2 as step2,Step3 as step3,Step4 as step4,Step5 as step5,Step6 as step6 FROM steps INNER JOIN dishes WHERE dishes.Did=steps.`Did` AND dishes.`Dname`=#{name}
+    </select>
+
+    <select id="getStepPicture" resultType="StepPicture">
+        SELECT Spic_address1 as spic_address1,Spic_address2 as spic_address2,Spic_address3 as spic_address3,Spic_address4 as spic_address4,Spic_address5 as spic_address5,Spic_address6 as spic_address6 FROM steps INNER JOIN dishes WHERE dishes.Did=steps.`Did` AND dishes.`Dname`=#{name}
+    </select>
+
+    <select id="getPopular" resultType="Popular">
+        SELECT Dname AS 'name',Daddress AS 'address',Dlikes AS likes,Dviews AS views FROM dishes ORDER BY Dviews DESC LIMIT 3
+    </select>
+
+    <select id="getTotalComments" resultType="Integer">
+        SELECT COUNT(Cid) FROM comments INNER JOIN dishes WHERE dishes.Did=comments.`Did` AND dishes.`Dname`=#{name} GROUP BY comments.Did
+    </select>
+
+    <select id="getComments" resultType="Comment">
+       SELECT Cnickname AS nickName,Cdetail AS details FROM comments INNER JOIN dishes WHERE dishes.Did=comments.`Did` AND dishes.`Dname`=#{name}
+    </select>
+
+</mapper>
