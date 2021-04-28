@@ -84,8 +84,8 @@
 
 ![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
 ![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
-![image](https://user-images.githubusercontent.com/45390078/116477290-50c9b080-a874-11eb-87d5-55d2b4363626.png)
-![image](https://user-images.githubusercontent.com/45390078/116477388-722a9c80-a874-11eb-8450-6665687e27bf.png)
+![image](https://user-images.githubusercontent.com/45390078/116478119-7f945680-a875-11eb-9672-70d8193b5ad4.png)
+![image](https://user-images.githubusercontent.com/45390078/116478164-920e9000-a875-11eb-940d-ca0af79bdab0.png)
 ![image](https://user-images.githubusercontent.com/45390078/116477878-21677380-a875-11eb-978e-4ae333263e5f.png)
 
 为了对问卷调查进行补充，我们选择其中四名有代表性的用户进行访谈调研。
