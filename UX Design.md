@@ -83,9 +83,9 @@
 
 ![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
 ![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
-![image](https://user-images.githubusercontent.com/45390078/116478119-7f945680-a875-11eb-9672-70d8193b5ad4.png)
-![image](https://user-images.githubusercontent.com/45390078/116478164-920e9000-a875-11eb-940d-ca0af79bdab0.png)
-![image](https://user-images.githubusercontent.com/45390078/116477878-21677380-a875-11eb-978e-4ae333263e5f.png)
+![image](https://user-images.githubusercontent.com/45390078/116478380-e0bc2a00-a875-11eb-8637-bf859b20f9a7.png)
+![image](https://user-images.githubusercontent.com/45390078/116478392-e6197480-a875-11eb-841f-41b2845a36e3.png)
+![image](https://user-images.githubusercontent.com/45390078/116478404-ea459200-a875-11eb-8cf9-99b76f9a9243.png)
 
 为了对问卷调查进行补充，我们选择其中四名有代表性的用户进行访谈调研。
 这确保我们的产品以用户为中心，并定义了测试用例和需求，这些需求是我们系统开发的基础。
