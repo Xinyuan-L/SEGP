@@ -54,7 +54,7 @@ WEB产品信息构建师从功能层面和情感层面提出产品的用户体�
 
 ## References
 
-
+[1]https://www.chinahighlights.com/travelguide/chinese-food/eight-cuisine.htm
 
 [2]朱征字等,网站界面设计用户体验[J],2010年,08:20-21。
 
