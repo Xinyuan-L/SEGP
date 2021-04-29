@@ -126,9 +126,18 @@ public class FoodController {
     @ResponseBody
     public void postComments(@RequestBody JSONObject s){
         Com com = (Com)JSONObject.toJavaObject(s,Com.class);
-        System.out.println(com);
         HashMap<String, Object> map = new HashMap<String, Object>();
-        //map.put()
+        map.put("nickname",com.getNickname());
+        map.put("likes",com.getLikes());
+        map.put("detail",com.getDetail());
+        String cTime=Integer.toString(com.getTime());
+        map.put("time",cTime);
+        map.put("dish",com.getDish());
+        String name=com.getDish();
+        map.put("Did", foodMapper.getDid(name));
+        int cid=foodMapper.getCid()+1;
+        map.put("Cid",cid);
+        foodMapper.postComments(map);
     }
 
 }

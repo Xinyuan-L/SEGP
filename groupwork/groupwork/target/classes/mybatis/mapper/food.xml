@@ -55,4 +55,16 @@
     <update id="reduceComLike">
         UPDATE comments SET Clikes=Clikes-1 WHERE Ctime=#{ctime}
     </update>
+
+    <select id="getDid" resultType="Integer" parameterType="String">
+        SELECT dishes.`Did` FROM dishes WHERE dishes.`Dname`=#{name}
+    </select>
+
+    <select id="getCid" resultType="Integer">
+        SELECT Cid FROM comments ORDER BY Cid DESC LIMIT 1
+    </select>
+
+    <insert id="postComments" parameterType="map">
+        insert into comments (Cid,Did,Cnickname,Ctime,Clikes,Cdetail) values (#{Cid},#{Did},#{nickname},#{time},#{likes},#{detail})
+    </insert>
 </mapper>

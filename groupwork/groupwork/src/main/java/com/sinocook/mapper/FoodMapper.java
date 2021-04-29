@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -25,5 +26,7 @@ public interface FoodMapper {
     void addViews(int id);
     void addComLike(String ctime);
     void reduceComLike(String ctime);
-    void postComments();
+    void postComments(Map<String,Object> map);
+    Integer getCid();
+    Integer getDid(String name);
 }
