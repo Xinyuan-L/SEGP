@@ -3,8 +3,8 @@ import {Dish} from './Dish';
 export interface Comment {
   nickname: string;
   likes: number;
-  detail: string;
+  details: string;
   time: number;
-  dish: string;
+  id: number;
 }
 

@@ -62,7 +62,12 @@ export class SlotmachineComponent implements OnInit {
   public index: number;
   public button: any;
   public disbutton: any;
-
+  public requestData = {
+    q1: false,
+    q2: [1, 2, 3],
+    q3: false,
+    q4: 3
+  };
   public stickPic = 'assets/stick.png';
   public stick = 1;
   constructor(public request: RequestsService,
