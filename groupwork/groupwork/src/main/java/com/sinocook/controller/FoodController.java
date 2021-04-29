@@ -2,6 +2,7 @@ package com.sinocook.controller;
 
 
 
+import com.alibaba.fastjson.JSON;
 import com.sinocook.mapper.FoodMapper;
 import com.sinocook.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -141,7 +142,9 @@ public class FoodController {
 
     @GetMapping("/postComments")
     @CrossOrigin
-    public void postComments(){
-        foodMapper.postComments();
+    public void postComments(@RequestBody String s){
+//        foodMapper.postComments();
+        Object obj = JSON.parse(s);
     }
+
 }
