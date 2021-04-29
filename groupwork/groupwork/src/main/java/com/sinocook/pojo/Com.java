@@ -7,6 +7,6 @@ public class Com {
     String nickname;
     int likes;
     String detail;
-    int time;
+    long time;
     String dish;
 }

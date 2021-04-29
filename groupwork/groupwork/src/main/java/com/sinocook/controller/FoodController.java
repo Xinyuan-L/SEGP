@@ -130,7 +130,7 @@ public class FoodController {
         map.put("nickname",com.getNickname());
         map.put("likes",com.getLikes());
         map.put("detail",com.getDetail());
-        String cTime=Integer.toString(com.getTime());
+        String cTime=Long.toString(com.getTime());
         map.put("time",cTime);
         map.put("dish",com.getDish());
         String name=com.getDish();
@@ -138,6 +138,12 @@ public class FoodController {
         int cid=foodMapper.getCid()+1;
         map.put("Cid",cid);
         foodMapper.postComments(map);
+    }
+
+    @GetMapping("/customize")
+    @CrossOrigin
+    public void getCustomize(){
+
     }
 
 }
