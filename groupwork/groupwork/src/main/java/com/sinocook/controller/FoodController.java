@@ -3,6 +3,7 @@ package com.sinocook.controller;
 
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.sinocook.mapper.FoodMapper;
 import com.sinocook.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,55 +31,33 @@ public class FoodController {
         return food;
     }
 
-    // @RequestMapping("/getDish")
+
     @GetMapping("/getDish")
     @CrossOrigin
     public Dish getDish(@RequestParam(value = "name", required = false) String name){
-        // String name="Purple cabbage yogurt salad";
         DishPart1 dishPart1=foodMapper.getDishPart1(name);
-        System.out.println(name);
-        ArrayList<String> descList=new ArrayList<>();
-        ArrayList<String> picAddList=new ArrayList<>();
+        ArrayList<ComStep> comSteps=new ArrayList<>();
         Step step=foodMapper.getStep(name);
+        StepPicture stepPicture=foodMapper.getStepPicture(name);
         if(step.getStep1()!=null){
-            descList.add(step.getStep1());
+            comSteps.add(new ComStep(stepPicture.getSpic_address1(),step.getStep1()));
         }
         if(step.getStep2()!=null){
-            descList.add(step.getStep2());
+            comSteps.add(new ComStep(stepPicture.getSpic_address2(),step.getStep2()));
         }
         if(step.getStep3()!=null){
-            descList.add(step.getStep3());
+            comSteps.add(new ComStep(stepPicture.getSpic_address3(),step.getStep3()));
         }
         if(step.getStep4()!=null){
-            descList.add(step.getStep4());
+            comSteps.add(new ComStep(stepPicture.getSpic_address4(),step.getStep4()));
         }
         if(step.getStep5()!=null){
-            descList.add(step.getStep5());
+            comSteps.add(new ComStep(stepPicture.getSpic_address5(),step.getStep5()));
         }
         if(step.getStep6()!=null){
-            descList.add(step.getStep6());
+            comSteps.add(new ComStep(stepPicture.getSpic_address6(),step.getStep6()));
         }
-        StepPicture stepPicture=foodMapper.getStepPicture(name);
-        if(stepPicture.getSpic_address1()!=null){
-            picAddList.add(stepPicture.getSpic_address1());
-        }
-        if(stepPicture.getSpic_address2()!=null){
-            picAddList.add(stepPicture.getSpic_address2());
-        }
-        if(stepPicture.getSpic_address3()!=null){
-            picAddList.add(stepPicture.getSpic_address3());
-        }
-        if(stepPicture.getSpic_address4()!=null){
-            picAddList.add(stepPicture.getSpic_address4());
-        }
-        if(stepPicture.getSpic_address5()!=null){
-            picAddList.add(stepPicture.getSpic_address5());
-        }
-        if(stepPicture.getSpic_address6()!=null){
-            picAddList.add(stepPicture.getSpic_address6());
-        }
-        Steps steps=new Steps(descList,picAddList);
-        Dish dish=new Dish(dishPart1,steps);
+        Dish dish=new Dish(dishPart1,comSteps);
         return dish;
     }
 
@@ -140,11 +119,12 @@ public class FoodController {
         foodMapper.reduceComLike(ctime);
     }
 
-    @GetMapping("/postComments")
+    @PostMapping("/postComments")
     @CrossOrigin
-    public void postComments(@RequestBody String s){
-//        foodMapper.postComments();
-        Object obj = JSON.parse(s);
+    @ResponseBody
+    public void postComments(@RequestBody JSONObject s){
+        Com com = (Com)JSONObject.toJavaObject(s,Com.class);
+
     }
 
 }

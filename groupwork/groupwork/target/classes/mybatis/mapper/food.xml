@@ -36,4 +36,23 @@
        SELECT Cnickname AS nickName,Cdetail AS details FROM comments INNER JOIN dishes WHERE dishes.Did=comments.`Did` AND dishes.`Dname`=#{name}
     </select>
 
+    <update id="addDishLike">
+        UPDATE dishes SET Dlikes=Dlikes+1 WHERE Did=#{id}
+    </update>
+
+    <update id="addViews">
+        UPDATE dishes SET Dviews=Dviews+1 WHERE Did=#{id}
+    </update>
+
+    <update id="reduceDishLike">
+        UPDATE dishes SET Dlikes=Dlikes-1 WHERE Did=#{id}
+    </update>
+
+    <update id="addComLike">
+        UPDATE comments SET Clikes=Clikes+1 WHERE Ctime=#{ctime}
+    </update>
+
+    <update id="reduceComLike">
+        UPDATE comments SET Clikes=Clikes-1 WHERE Ctime=#{ctime}
+    </update>
 </mapper>
