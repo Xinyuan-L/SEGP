@@ -27,11 +27,11 @@
     <tr class="option" *ngIf="!data.q1">
       <th></th>
       <th>
-       <input type="checkbox" id="q2_1" name="restrict"><label for="q2_1">Beef</label>
+       <input type="checkbox" id="q2_1" name="restrict" (click)="setValue(1)"><label for="q2_1">Beef</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_2" name="restrict"><label for="q2_2">Lamb</label>
+       <input type="checkbox" id="q2_2" name="restrict" (click)="setValue(2)"><label for="q2_2">Lamb</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_3" name="restrict"><label for="q2_3">Pork</label>
+       <input type="checkbox" id="q2_3" name="restrict" (click)="setValue(3)"><label for="q2_3">Pork</label>
        &nbsp;&nbsp;
        <input type="checkbox" id="q2_4" (click)="noRestrict()"><label for="q2_4">No restriction</label>
       </th>
