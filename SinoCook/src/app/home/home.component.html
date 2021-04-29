@@ -38,7 +38,7 @@
     </div>
     <div class="dishes-display">
       <div class="dish" id="ds1">
-        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish1.name)">
+        <a routerLink="/dish" (click)="sendMsg(popDish.dish1.name)">
           <img class="dish_img" [src]="popDish.dish1.address" [alt]="popDish.dish1.name">
         </a>
         <div class="dish_info">
@@ -54,7 +54,7 @@
       </div>
 
       <div class="dish" id="ds2">
-        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish2.name)">
+        <a routerLink="/dish" (click)="sendMsg(popDish.dish2.name)">
           <img class="dish_img" [src]="popDish.dish2.address" [alt]="popDish.dish2.name">
         </a>
         <div class="dish_info">
@@ -70,7 +70,7 @@
       </div>
 
       <div class="dish" id="ds3">
-        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish3.name)">
+        <a routerLink="/dish" (click)="sendMsg(popDish.dish3.name)">
           <img class="dish_img" [src]="popDish.dish3.address" [alt]="popDish.dish3.name">
         </a>
         <div class="dish_info">
@@ -91,7 +91,7 @@
     <div class="title">Top&nbsp;Comments</div>
     <div id="top-comment">
       <div id="pic">
-        <a routerLink="/dish" (click)="comm.sendMessage(popDish.dish1.name)">
+        <a routerLink="/dish" (click)="sendMsg(topComment.dishName)">
           <img [src]="topComment.pic" [alt]="topComment.dishName | uppercase">
         </a>
         <div id="dish_name">{{topComment.dishName | uppercase}}</div>

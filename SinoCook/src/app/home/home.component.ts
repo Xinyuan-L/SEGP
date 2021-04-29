@@ -79,4 +79,7 @@ export class HomeComponent implements OnInit {
       this.topComment.dishName = response.dishname;
     });
   }
+  sendMsg(data: any): void {
+    this.comm.sendMessage(data);
+  }
 }

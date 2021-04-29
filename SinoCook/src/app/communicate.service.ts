@@ -23,6 +23,8 @@ export class CommunicateService {
    */
 
   public getMessage(): Observable<any> {
+    console.log('getting message...');
+    console.log(this.message.asObservable());
     return this.message.asObservable();
   }
 }
