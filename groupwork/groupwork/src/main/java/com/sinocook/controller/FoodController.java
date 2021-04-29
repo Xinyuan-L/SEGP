@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -39,22 +40,23 @@ public class FoodController {
         ArrayList<ComStep> comSteps=new ArrayList<>();
         Step step=foodMapper.getStep(name);
         StepPicture stepPicture=foodMapper.getStepPicture(name);
-        if(step.getStep1()!=null){
+        int n=step.getSNumber();
+        if(n>=1){
             comSteps.add(new ComStep(stepPicture.getSpic_address1(),step.getStep1()));
         }
-        if(step.getStep2()!=null){
+        if(n>=2){
             comSteps.add(new ComStep(stepPicture.getSpic_address2(),step.getStep2()));
         }
-        if(step.getStep3()!=null){
+        if(n>=3){
             comSteps.add(new ComStep(stepPicture.getSpic_address3(),step.getStep3()));
         }
-        if(step.getStep4()!=null){
+        if(n>=4){
             comSteps.add(new ComStep(stepPicture.getSpic_address4(),step.getStep4()));
         }
-        if(step.getStep5()!=null){
+        if(n>=5){
             comSteps.add(new ComStep(stepPicture.getSpic_address5(),step.getStep5()));
         }
-        if(step.getStep6()!=null){
+        if(n>=6){
             comSteps.add(new ComStep(stepPicture.getSpic_address6(),step.getStep6()));
         }
         Dish dish=new Dish(dishPart1,comSteps);
@@ -124,7 +126,9 @@ public class FoodController {
     @ResponseBody
     public void postComments(@RequestBody JSONObject s){
         Com com = (Com)JSONObject.toJavaObject(s,Com.class);
-
+        System.out.println(com);
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        //map.put()
     }
 
 }

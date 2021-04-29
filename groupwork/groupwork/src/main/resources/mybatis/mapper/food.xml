@@ -17,7 +17,7 @@
     </select>
 
     <select id="getStep" resultType="Step">
-        SELECT Step1 as step1,Step2 as step2,Step3 as step3,Step4 as step4,Step5 as step5,Step6 as step6 FROM steps INNER JOIN dishes WHERE dishes.Did=steps.`Did` AND dishes.`Dname`=#{name}
+        SELECT Snumber as sNumber,Step1 as step1,Step2 as step2,Step3 as step3,Step4 as step4,Step5 as step5,Step6 as step6 FROM steps INNER JOIN dishes WHERE dishes.Did=steps.`Did` AND dishes.`Dname`=#{name}
     </select>
 
     <select id="getStepPicture" resultType="StepPicture">

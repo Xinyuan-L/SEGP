@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Step {
+    private int sNumber;
     private String step1;
     private String step2;
     private String step3;
