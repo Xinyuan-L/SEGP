@@ -80,11 +80,14 @@ public class FoodController {
 
     @GetMapping("/getComments")
     @CrossOrigin
-    public Comments getComments(){
-        String name="Dry-fry green beans";
-        int total=foodMapper.getTotalComments(name);
-        ArrayList<Comment> commentArrayList=foodMapper.getComments(name);
-        Comments comments=new Comments(total,commentArrayList);
+    public Comments getComments((@RequestParam(value = "Did", required = false) int id){
+        int total=foodMapper.getTotalComments(id);
+        ArrayList<Comment> commentArrayList=foodMapper.getComments(id);
+        ArrayList<Comment2> comment2ArrayList=new ArrayList<>();
+        for (Comment comment : commentArrayList) {
+            comment2ArrayList.add(new Comment2(comment.getId(),comment.getNickname(),Long.parseLong(comment.getTime()),comment.getLikes(),comment.getDetails()));
+        }
+        Comments comments=new Comments(total,comment2ArrayList);
         return comments;
     }
 

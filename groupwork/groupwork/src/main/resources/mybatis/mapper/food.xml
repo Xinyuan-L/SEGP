@@ -29,11 +29,11 @@
     </select>
 
     <select id="getTotalComments" resultType="Integer">
-        SELECT COUNT(Cid) FROM comments INNER JOIN dishes WHERE dishes.Did=comments.`Did` AND dishes.`Dname`=#{name} GROUP BY comments.Did
+        SELECT COUNT(Cid) FROM comments WHERE Did=#{id} GROUP BY Did
     </select>
 
     <select id="getComments" resultType="Comment">
-       SELECT Cnickname AS nickName,Cdetail AS details FROM comments INNER JOIN dishes WHERE dishes.Did=comments.`Did` AND dishes.`Dname`=#{name}
+        SELECT Cid AS id, Cnickname AS nickname, Ctime AS `time`,Clikes AS `likes`,Cdetail AS details FROM comments WHERE Did=#{id}
     </select>
 
     <update id="addDishLike">

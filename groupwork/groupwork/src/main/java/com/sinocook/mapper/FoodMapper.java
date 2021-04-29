@@ -19,8 +19,8 @@ public interface FoodMapper {
     Step getStep(String name);
     StepPicture getStepPicture(String name);
     List<Popular> getPopular();
-    Integer getTotalComments(String name);
-    ArrayList<Comment> getComments(String name);
+    Integer getTotalComments(int id);
+    ArrayList<Comment> getComments(int id);
     void addDishLike(int id);
     void reduceDishLike(int id);
     void addViews(int id);
