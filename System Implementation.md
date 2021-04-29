@@ -9,6 +9,8 @@
 
 ## Stack architecture and system design
 
+所谓单页应用，指的是在一个页面上集成多种功能，甚至整个系统就只有一个页面，所有的业务功能都是它的子模块，通过特定的方式挂接到主界面上。
+
 在我们的单页应用程序中，我们使用Angular处理前端客户端应用程序，MySQL处理后端数据库，Springboot处理中间层服务器。
 
 SinoCook的开发环境如下。
@@ -41,9 +43,9 @@ SinoCook的开发环境如下。
 
 ## Back End
 
-数据库
-
 开发动态网站时数据库是必不可少的，它主要用来保存网站中需要的信息。考虑到网站的规模不大，我们选择MySQL。
+
+![image](https://user-images.githubusercontent.com/45390078/116626065-918ffb00-a942-11eb-8a97-8cbd5cfaa430.png)
 
 （1）	数据库
 
@@ -1192,6 +1194,28 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 </tbody></table>
 
 ## Middle Tier
+
+为了实现我们的程序开发更加简单，这里使用Springboot来帮助开发。
+
+![image](https://user-images.githubusercontent.com/45390078/116625981-745b2c80-a942-11eb-99e5-1ce9d14e0c8b.png)
+
+
+1. 什么是springBoot？
+2. 
+Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的创建、运行、调试、部署等。使用Spring Boot可以做到专注于Spring应用的开发，而无需过多关注XML的配置。Spring Boot使用“习惯优于配置”的理念，简单来说，它提供了一堆依赖打包，并已经按照使用习惯解决了依赖问题。使用Spring Boot可以不用或者只需要很少的Spring配置就可以让企业项目快速运行起来。
+Spring Boot是开发者和Spring 本身框架的中间层，帮助开发者统筹管理应用的配置，提供基于实际开发中常见配置的默认处理（即习惯优于配置），简化应用的开发，简化应用的运维；总的来说，其目的Spring Boot就是为了对Java web 的开发进行“简化”和加“快”速度，简化开发过程中引入或启动相关Spring 功能的配置。这样带来的好处就是降低开发人员对于框架的关注点，可以把更多的精力放在自己的业务代码上。
+
+2. SpringBoot的特点？
+
+a) 能够快速创建基于Spring的应用程序。（简化配置）
+b) 能够直接使用java的main方法启动内嵌的Tomcat，Jetty服务器运行Spring boot程序，不需要部署war包文件。
+c) 提供约定的starter POM来简化来简化Maven配置，让Maven配置变得简单。
+d) 根据项目的maven依赖配置，Spring boot自动配置Spring,SpringMVC等其它开源框架。
+e) 提供程序的健康检查等功能。（检查内部的运行状态等）
+f) 基本可以完全不使用xml配置文件，采用注解配置。（或者默认约定的配置，代码中已经实现）
+
+
+
 
 
 ## Front End
