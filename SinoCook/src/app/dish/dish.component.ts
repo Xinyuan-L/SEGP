@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Comment } from '../Comment';
 import { Step } from '../Step';
@@ -21,13 +21,7 @@ export class DishComponent implements OnInit {
     {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
     {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'}
   ];
-  public mater: any[] = [
-    'asddas',
-    'asddasdd',
-    'asdasdasdasdasd',
-    'd4as6d5',
-    'asdasd',
-    'asdcvsd'
+  public mater: any[] = ['asddas', 'asddasdd', 'asdasdasdasdasd', 'd4as6d5', 'asdasd', 'asdcvsd'
   ];
   private dishID: number | undefined;
   public dish: Dish = {
@@ -69,7 +63,8 @@ export class DishComponent implements OnInit {
   ];
   constructor(public comm: CommunicateService,
               private request: RequestsService,
-              private http: HttpClient) { }
+              private http: HttpClient,
+              private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.getInfo();
@@ -95,8 +90,17 @@ export class DishComponent implements OnInit {
         this.dish.steps = response.steps;
         this.dish.main = response.main;
         this.dish.other = response.other;
+        // const steps: Array<any> = [];
+        // this.dish.steps = steps.concat(response.steps);
+        // const main: Array<string> = [];
+        // this.dish.main = main.concat(response.main) ;
+        // const other: Array<string> = [];
+        // this.dish.other = other.concat(response.other);
         // console.log(this.dish.steps);
-        // console.log(this.dish.main);
+        console.log(this.dish.main);
+        console.log(this.mater);
+        this.cdr.markForCheck();
+        this.cdr.detectChanges();
         // console.log(this.dish.other);
       });
       data = {Did: `${this.dishID}`};
@@ -151,7 +155,9 @@ export class DishComponent implements OnInit {
       this.request.post('postComments', newCom).subscribe(() => {
         this.comments.concat(newCom);
         this.newComment.nickname = '';
+        console.log('renew name');
         this.newComment.detail = '';
+        console.log('renew detail');
       });
       // const api = 'http://localhost:9090/postComments';
       // const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};

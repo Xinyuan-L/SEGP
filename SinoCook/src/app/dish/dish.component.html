@@ -43,7 +43,7 @@
           </svg></div>
           <div> {{' main ' | uppercase}} </div>
         </div>
-        <div class="materials" *ngFor="let main of mater;">&nbsp;&nbsp;{{main}}&nbsp;&nbsp;</div>
+        <div class="materials" *ngFor="let main of dish.main;">&nbsp;&nbsp;{{main}}&nbsp;&nbsp;</div>
       </div>
       <div class="right">
         <div class="title_1">
@@ -59,7 +59,7 @@
           </svg></div>
           <div> {{' other ' | uppercase}} </div>
         </div>
-        <div class="materials" *ngFor="let other of mater;">&nbsp;&nbsp;{{other}}&nbsp;&nbsp;</div>
+        <div class="materials" *ngFor="let other of dish.other;">&nbsp;&nbsp;{{other}}&nbsp;&nbsp;</div>
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@
 
 <!--steps-->
 <div class="steps">
-  <div class="step" *ngFor="let step of steps; index as i">
+  <div class="step" *ngFor="let step of dish.steps; index as i">
     <div class="index">STEP<br><span>{{i+1}}</span></div>
     <div class="info">
       <img [src]="step.picture" [alt]="'step'+(i+1)">
