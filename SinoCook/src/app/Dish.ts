@@ -4,13 +4,13 @@ export interface Dish {
     name: string;
     pic: string;
     description: string;
-    steps: null | Array<Step>;
+    steps: null | Array<any>;
     likes: number;
     views: number;
     time: number;
     taste: string;
-    main: Array<string> | null;
-    other: Array<string> | null;
+    main: Array<any> | null;
+    other: Array<any> | null;
   }
 
 

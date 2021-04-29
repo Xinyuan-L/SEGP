@@ -20,6 +20,9 @@ hr{
     margin-left: 20px;
     margin-top: 10px;
   }
+  .dish_info .likes img{
+    cursor: pointer;
+  }
   .dish_info .info{
     margin-left: 40px;
   }

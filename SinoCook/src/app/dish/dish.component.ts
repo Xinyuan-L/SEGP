@@ -16,10 +16,10 @@ import { RequestsService } from '../requests.service';
 
 @Injectable()
 export class DishComponent implements OnInit {
-  public steps: Step[] = [
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
-    {pic: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'}
+  public steps: any[] = [
+    {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
+    {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
+    {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'}
   ];
   public mater: any[] = [
     'asddas',
@@ -42,6 +42,7 @@ export class DishComponent implements OnInit {
     main: this.mater,
     other: this.mater
   };
+  public dishLike = false;
   public newComment: Comment = {
     nickname: '',
     time: 0,
@@ -94,6 +95,9 @@ export class DishComponent implements OnInit {
         this.dish.steps = response.steps;
         this.dish.main = response.main;
         this.dish.other = response.other;
+        // console.log(this.dish.steps);
+        // console.log(this.dish.main);
+        // console.log(this.dish.other);
       });
       data = {Did: `${this.dishID}`};
       this.request.get('/getComments', data).subscribe((response: any) => {
@@ -103,19 +107,21 @@ export class DishComponent implements OnInit {
   }
   addDishLike(): void {
     this.dish.likes += 1;
-    this.request.put('/addDishLike', {Did: this.dishID, likes: this.dish.likes});
+    this.dishLike = true;
+    this.request.put('/addDishLike', {Did: this.dishID});
   }
   cancelDishLike(): void {
     this.dish.likes -= 1;
-    this.request.put('/addDishLike', {Did: this.dishID, likes: this.dish.likes});
+    this.dishLike = false;
+    this.request.put('/addDishLike', {Did: this.dishID});
   }
   addLike(comment: Comment): void {
     comment.likes += 1;
-    this.request.put('/addLike', {time: comment.time, likes: comment.likes});
+    this.request.put('/addLike', {time: comment.time});
   }
   cancelLike(comment: Comment): void {
     comment.likes -= 1;
-    this.request.put('/cancelLike', {time: comment.time, likes: comment.likes});
+    this.request.put('/cancelLike', {time: comment.time});
   }
   updateTime(comment: Comment): Comment {
     comment.time = new Date().getTime() as unknown as number;
@@ -141,9 +147,6 @@ export class DishComponent implements OnInit {
       !this.isValidComment(this.newComment.detail)) {
       alert('Your comment is not valid.');
     } else {
-      // console.log(this.newComment.nickname);
-      // console.log(this.newComment.detail);
-      // console.log(this.updateTime(this.newComment));
       const newCom = this.updateTime(this.newComment);
       this.request.post('postComments', newCom).subscribe(() => {
         this.comments.concat(newCom);

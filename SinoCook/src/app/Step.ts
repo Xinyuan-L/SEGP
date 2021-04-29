@@ -1,5 +1,5 @@
 
 export interface Step {
-    pic: string;
+    picture: string;
     detail: string;
 }
