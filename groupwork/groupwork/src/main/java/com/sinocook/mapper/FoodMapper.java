@@ -20,4 +20,10 @@ public interface FoodMapper {
     List<Popular> getPopular();
     Integer getTotalComments(String name);
     ArrayList<Comment> getComments(String name);
+    void addDishLike(int id);
+    void reduceDishLike(int id);
+    void addViews(int id);
+    void addComLike(String ctime);
+    void reduceComLike(String ctime);
+    void postComments();
 }

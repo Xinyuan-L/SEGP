@@ -105,11 +105,43 @@ public class FoodController {
         Comments comments=new Comments(total,commentArrayList);
         return comments;
     }
-/*
-    @RequestMapping("/getDish")
-    public void getParam(@RequestParam(value = "name", required = false) String name){
-        System.out.println(name);
-    }
-    */
 
+
+    @GetMapping("/addDishLike")
+    @CrossOrigin
+    public void addDishLike(@RequestParam(value = "Did", required = false) int id){
+        foodMapper.addDishLike(id);
+    }
+
+    @GetMapping("/reduceDishLike")
+    @CrossOrigin
+    public void reduceDishLike(@RequestParam(value = "Did", required = false) int id){
+        foodMapper.reduceDishLike(id);
+    }
+
+    @GetMapping("/addViews")
+    @CrossOrigin
+    public void addViews(@RequestParam(value = "Did", required = false) int id){
+        foodMapper.addViews(id);
+    }
+
+    @GetMapping("/addComLike")
+    @CrossOrigin
+    public void addComLike(@RequestParam(value = "time", required = false) long time){
+        String ctime=time+"";
+        foodMapper.addComLike(ctime);
+    }
+
+    @GetMapping("/reduceComLike")
+    @CrossOrigin
+    public void reduceComLike(@RequestParam(value = "time", required = false) long time){
+        String ctime=time+"";
+        foodMapper.reduceComLike(ctime);
+    }
+
+    @GetMapping("/postComments")
+    @CrossOrigin
+    public void postComments(){
+        foodMapper.postComments();
+    }
 }
