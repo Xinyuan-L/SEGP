@@ -7,32 +7,39 @@
 * [**Additional elements and components**](#additional-elements-and-components)
 * [**Deployment details**](#deployment-details)
 
+## Stack architecture and system design
+
+在我们的单页应用程序中，我们使用Angular处理前端客户端应用程序，MySQL处理后端数据库，Springboot处理中间层服务器。
+
 SinoCook的开发环境如下。
 
 （1）服务器端
 
 ❑ 操作系统：Windows 10。
 
-❑ Web框架：Angular11.2 。
+❑ Web框架：Angular CLI version 11.2.1。
 
-❑ Java开发包：JDK11。
+❑ Java开发包：JDK1.8。
 
 ❑ 开发工具：IntelliJ IDEA Community。
 
-❑ 浏览器：IE 8.0或者更高版本。
+❑ 浏览器：不支持IE 11。
 
 ❑ 显示器分辨率：最佳效果1024像素×768像素。
 
 （2）客户端
 
-❑ 浏览器：IE 8.0或者更高版本。
+❑ 浏览器：不支持IE 11。
 
 ❑ 分辨率：最佳效果1024像素×768像素。
 
 在编写项目代码之前，需要制定好项目的系统文件夹组织结构，这样不但可以保证团队开发的一致性，也可以规范系统的整体架构。创建完系统中可能用到的文件夹或者Java包之后，在开发时，只需将创建的类文件或者资源文件保存到相应的文件夹中即可。本项目的文件夹组织结构如图所示。
 
-系统编码规范
+系统编码规范:
 由于本次开发，每个人负责不同的业务模块，为了使程序的结构与代码风格统一标准化，增加代码的可读性，我们在编码之前制定了一套统一的编码规范。
+
+
+## Back End
 
 数据库
 
@@ -1184,3 +1191,13 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
  </tr>
 </tbody></table>
 
+## Middle Tier
+
+
+## Front End
+
+
+## Additional elements and components
+
+
+## Deployment details
