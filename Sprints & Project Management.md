@@ -1,10 +1,11 @@
 ## Contents
 
 * [**Group working methods**](#group-working-methods)
-* [**Interacting users and broader stakeholders**](#interacting-users-and-broader-stakeholders)
 * [**Team roles**](#team-roles)
 * [**Documentation of sprints**](#documentation-of-sprints)
 * [**Team use of Git**](#team-use-of-git)
+
+## Group working methods
 
 The waterfall model
 
@@ -107,5 +108,21 @@ With the accumulated feedback, the review committee discusses the stages where s
 ![image](https://user-images.githubusercontent.com/45390078/116005928-04c30580-a601-11eb-89cd-33bc188444f5.png)
 
 
+
+## Team roles
+
+|name|task|
+|:--:|:--:|
+|Jie|Data collection, database management;|
+|Xinyuan| Backend design & management; |
+|Kang| Frontend work & website build;|
+|Wanqing| website test, document writing, github maintenance;|
+|Yiyuan| Frontend work & website build, project management;|
+
+## Documentation of sprints
+
 ![image](https://user-images.githubusercontent.com/45390078/116006670-25408f00-a604-11eb-9a2e-e52ba8869606.png)
 
+开发被分为四个主要的sprint。
+
+## Team use of Git
