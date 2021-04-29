@@ -119,16 +119,19 @@ export class DishComponent implements OnInit {
   }
   updateTime(comment: Comment): Comment {
     comment.time = new Date().getTime() as unknown as number;
+    comment.detail = comment.detail.trim();
     return comment;
   }
   isValidComment(detail: any): boolean {
-    let char: any;
-    for (char in detail){
-      if (char !== ' '){
-        return true;
-      }
-    }
-    return false;
+    detail = detail.trim();
+    return detail !== '';
+    // let char: any;
+    // for (char in detail){
+    //   if (char !== ' '){
+    //     return true;
+    //   }
+    // }
+    // return false;
   }
   postComment(): void {
     console.log('posting');
@@ -138,14 +141,20 @@ export class DishComponent implements OnInit {
       !this.isValidComment(this.newComment.detail)) {
       alert('Your comment is not valid.');
     } else {
-      console.log(this.newComment.nickname);
-      console.log(this.newComment.detail);
-      console.log(this.updateTime(this.newComment));
-      const api = 'http://localhost:9090/postComments';
-      const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
-      this.http.post(api, JSON.stringify(this.newComment), options).subscribe((res: any) => {
-        console.log('ok');
+      // console.log(this.newComment.nickname);
+      // console.log(this.newComment.detail);
+      // console.log(this.updateTime(this.newComment));
+      const newCom = this.updateTime(this.newComment);
+      this.request.post('postComments', newCom).subscribe(() => {
+        this.comments.concat(newCom);
+        this.newComment.nickname = '';
+        this.newComment.detail = '';
       });
+      // const api = 'http://localhost:9090/postComments';
+      // const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
+      // this.http.post(api, JSON.stringify(this.newComment), options).subscribe((res: any) => {
+      //   console.log('ok');
+      // });
       // this.request.post('/postComments', this.updateTime(this.newComment));
     }
   }

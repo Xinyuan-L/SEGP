@@ -20,20 +20,20 @@
     </tr>
     <br>
     <!-- q2 -->
-    <tr class="question">
+    <tr class="question" *ngIf="!data.q1">
       <th><img class="iconOfTitle" src="assets/meat.svg" alt="meat"></th>
       <th>Do you have any restrictions on meats?</th>
     </tr>
-    <tr class="option">
+    <tr class="option" *ngIf="!data.q1">
       <th></th>
       <th>
-       <input type="checkbox" id="q2_1" [(ngModel)]="data.q2.option1"><label for="q2_1">Beef</label>
+       <input type="checkbox" id="q2_1" name="restrict"><label for="q2_1">Beef</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_2" [(ngModel)]="data.q2.option2"><label for="q2_2">Lamb</label>
+       <input type="checkbox" id="q2_2" name="restrict"><label for="q2_2">Lamb</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_3" [(ngModel)]="data.q2.option3"><label for="q2_3">Pork</label>
+       <input type="checkbox" id="q2_3" name="restrict"><label for="q2_3">Pork</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_4" [(ngModel)]="data.q2.option4"><label for="q2_4">No restriction</label>
+       <input type="checkbox" id="q2_4" (click)="noRestrict()"><label for="q2_4">No restriction</label>
       </th>
     </tr>
     <br>

@@ -52,7 +52,7 @@ export class RequestsService implements HttpInterceptor {
     const option = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
     console.log('posted');
     return this.http
-      .post(`${this.baseUrl}${url}`, data, option)
+      .post(`${this.baseUrl}${url}`, JSON.stringify(data), option)
       .pipe(catchError(this.handleError));
   }
 

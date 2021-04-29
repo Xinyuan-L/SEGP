@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommunicateService } from '../communicate.service';
+import {iterator} from 'rxjs/internal-compatibility';
 
 @Component({
   selector: 'app-customize',
@@ -39,25 +40,21 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
     const check4 = (document.getElementById('prompt4') as HTMLElement);
 
     if (!(this.isChecked1() && this.isChecked3() && this.isChecked4())){
-
-    if (!this.isChecked1()){
-      check1.style.display = 'block';
-    }else{
-      check1.style.display = 'none';
-    }
-
-    if (!this.isChecked3()){
-      check3.style.display = 'block';
-    }else{
-      check3.style.display = 'none';
-    }
-
-    if (!this.isChecked4()){
-      check4.style.display = 'block';
-    }else{
-      check4.style.display = 'none';
-    }
-
+      if (!this.isChecked1()){
+        check1.style.display = 'block';
+      }else{
+        check1.style.display = 'none';
+      }
+      if (!this.isChecked3()){
+        check3.style.display = 'block';
+      }else{
+        check3.style.display = 'none';
+      }
+      if (!this.isChecked4()){
+        check4.style.display = 'block';
+      }else{
+        check4.style.display = 'none';
+      }
     }else{
       console.log(this.data);
       this.comm.sendMessage(this.data);
@@ -72,7 +69,20 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
   toChange3(event: any): void {
     event.target.id === 'q3_1' ? this.data.q3 = true : this.data.q3 = false;
   }
-
+  noRestrict(): void {
+    console.log('ok');
+    const q24 = document.getElementById('q2_4') as HTMLInputElement;
+    if (q24.checked) {
+      const rs = document.getElementsByName('restrict');
+      // for (let i = 0; i < rs.length; i++){
+      //   const r = rs[i] as HTMLInputElement;
+      //   r.checked = false;
+      // }
+      for (const r of rs) {
+        (r as HTMLInputElement).checked = false;
+      }
+    }
+  }
   toggleCheckbox(event: any): void {
     switch (event.target.id){
       case 'q4_1':

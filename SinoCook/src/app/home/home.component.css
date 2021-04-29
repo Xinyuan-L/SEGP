@@ -44,6 +44,7 @@
   .content #recommend-img img{
     border: solid 5px white;
     height: 360px;
+    /*width: 520px;*/
     margin-top: 10px;
   }
   .content #dish-name{
