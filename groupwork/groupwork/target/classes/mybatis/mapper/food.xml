@@ -67,4 +67,23 @@
     <insert id="postComments" parameterType="map">
         insert into comments (Cid,Did,Cnickname,Ctime,Clikes,Cdetail) values (#{Cid},#{Did},#{nickname},#{time},#{likes},#{detail})
     </insert>
+
+    <select id="getCustomize" parameterType="map" resultType="Customize">
+        SELECT Dname AS `name`,Daddress AS address FROM dishes
+        <where>
+            <if test="vegetarian!=null">
+                Dname=#{vegetarian}
+            </if>
+            <if test="time1!=null">
+                and Dtime BETWEEN #{time1} AND #{time2}
+            </if>
+            <if test="restrictions!=null">
+                and Main NOT LIKE #{restrictions}
+            </if>
+            <if test="spicy!=null">
+                and Dtaste != 4
+            </if>
+        </where>
+        limit 5
+    </select>
 </mapper>

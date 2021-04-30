@@ -29,4 +29,5 @@ public interface FoodMapper {
     void postComments(Map<String,Object> map);
     Integer getCid();
     Integer getDid(String name);
+    List<Customize> getCustomize(Map<String,Object> map);
 }

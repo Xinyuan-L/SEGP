@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.io.BufferedWriter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -143,10 +144,50 @@ public class FoodController {
         foodMapper.postComments(map);
     }
 
-    @GetMapping("/customize")
+    @PostMapping("/customize")
     @CrossOrigin
-    public void getCustomize(){
-
+    @ResponseBody
+    public List<Customize> getCustomize(@RequestBody JSONObject s){
+        Question question=(Question)JSONObject.toJavaObject(s,Question.class);
+        /*Boolean q1=false;
+        int q2=1;
+        Boolean q3=false;
+        int q4=2;*/
+        Boolean q1=question.getQ1();
+        int q2=question.getQ2();
+        Boolean q3=question.getQ3();
+        int q4=question.getQ4();
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        if(q1==false) {
+            map.put("vegetarian", 0);
+        }else{
+            map.put("vegetarian", 1);
+        }
+        if(q2==1) {
+            map.put("restrictions", "%beef%");
+        }else if(q2==2){
+            map.put("restrictions", "%lamb%");
+        }else if(q2==3){
+            map.put("restrictions", "%pork%");
+        }
+        if(q3==false) {
+            map.put("spicy",true);
+        }
+        if(q4==1){
+            map.put("time1",0);
+            map.put("time2",10);
+        }else if(q4==2){
+            map.put("time1",10);
+            map.put("time2",15);
+        }else if(q4==3){
+            map.put("time1",15);
+            map.put("time2",30);
+        }else if(q4==4){
+            map.put("time1",30);
+            map.put("time2",200);
+        }
+        List<Customize> customizes=foodMapper.getCustomize(map);
+        return customizes;
     }
 
 }
