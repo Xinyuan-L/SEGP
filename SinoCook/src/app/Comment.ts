@@ -1,5 +1,3 @@
-import {Dish} from './Dish';
-
 export interface Comment {
   nickname: string;
   likes: number;
@@ -7,4 +5,5 @@ export interface Comment {
   time: number;
   id: number;
 }
+
 

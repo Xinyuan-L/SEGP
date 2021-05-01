@@ -106,8 +106,8 @@ export class SlotmachineComponent implements OnInit {
       console.log(this.requestData);
       this.request.post('/customize', this.requestData).subscribe((response: any) => {
         this.initList = response;
-        this.finalDish = this.list[4];
         this.longList();
+        this.finalDish = this.list[4];
       });
     });
   }

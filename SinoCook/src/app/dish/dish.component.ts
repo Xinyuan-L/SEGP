@@ -114,7 +114,6 @@ export class DishComponent implements OnInit {
       this.comments = response.comments;
       console.log(this.comments);
     });
-    console.log(this.comments);
   }
   addDishLike(): void {
     this.dish.likes += 1;
@@ -184,16 +183,25 @@ export class DishComponent implements OnInit {
       // this.comments = this.comments.concat(newCom);
       // this.newComment.nickname = '';
       // this.newComment.detail = '';
-      this.request.post('postComments', data).subscribe((response: any) => {
-        newCom.id = response.id;
+      this.request.post('postComments', data).subscribe((response: number) => {
+        newCom.id = response;
         this.comments = this.comments.concat(newCom);
-        this.newComment.nickname = '';
-        console.log('renew name');
-        this.newComment.details = '';
-        console.log('renew detail');
+        console.log(newCom);
+        console.log(this.comments);
       });
+      this.newInput();
     }
   }
 
+  newInput(): void {
+    // create a new Comment class for input;
+    this.newComment = {
+      nickname: '',
+      likes: 0,
+      details: '',
+      time: 0,
+      id: 0
+    };
+  }
 }
 
