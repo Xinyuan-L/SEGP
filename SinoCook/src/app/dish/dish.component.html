@@ -85,7 +85,7 @@
     </div>
     <div class="detail">
       <div><label id="detail">
-        <textarea placeholder=" your comment." [(ngModel)]="newComment.detail"></textarea>
+        <textarea placeholder=" your comment." [(ngModel)]="newComment.details"></textarea>
       </label></div>
       <div id="submit"><input type="button" value="Submit" (click)='postComment()'></div>
     </div>
@@ -94,7 +94,8 @@
   <div class="comment" *ngFor="let comment of comments">
     <span class="nickname">{{comment.nickname}}&nbsp;</span>
     <i class="time">{{comment.time | date:'yyyy-MM-dd'}}</i>
-    <img src="assets/dislike.svg" alt="like" width="20" (click)="addLike(comment)">
+    <img src="assets/dislike.svg" alt="dislike"
+         width="20" (click)="toggleLike(comment, $event)">
     <span class="likes">&nbsp;{{comment.likes}}</span>
     <br>
     <span class="reviews">{{comment.details}}</span>

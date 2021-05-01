@@ -55,10 +55,11 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
       }else{
         check4.style.display = 'none';
       }
-    }else{
+    }
+    else {
       console.log(this.data);
       this.comm.sendMessage(this.data);
-      window.location.href = '/slot';
+      // window.location.href = '/slot';
     }
   }
 
@@ -70,40 +71,32 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
     event.target.id === 'q3_1' ? this.data.q3 = true : this.data.q3 = false;
   }
   setValue(o: number): void {
+    console.log(this.data);
     switch (o) {
       case 1:
-        const q21 = document.getElementById('q2_1') as HTMLInputElement;
-        if (q21.checked) {
-          this.data.q2.option1 = true;
-        }
+        this.data.q2.option1 = true;
         break;
       case 2:
-        const q22 = document.getElementById('q2_2') as HTMLInputElement;
-        if (q22.checked) {
-          this.data.q2.option2 = true;
-        }
+        this.data.q2.option2 = true;
         break;
       case 3:
-        const q23 = document.getElementById('q2_3') as HTMLInputElement;
-        if (q23.checked) {
-          this.data.q2.option3 = true;
-        }
+        this.data.q2.option3 = true;
+        break;
+      case 4:
+        this.data.q2.option4 = true;
         break;
     }
-    const q24 = document.getElementById('q2_4') as HTMLInputElement;
-    q24.checked = false;
-    this.data.q2.option4 = false;
   }
-  noRestrict(): void {
-    console.log('ok');
-    const q24 = document.getElementById('q2_4') as HTMLInputElement;
-    if (q24.checked) {
-      const rs = document.getElementsByName('restrict');
-      for (const r of rs) {
-        (r as HTMLInputElement).checked = false;
-      }
-    }
-  }
+  // noRestrict(): void {
+  //   console.log('ok');
+  //   const q24 = document.getElementById('q2_4') as HTMLInputElement;
+  //   if (q24.checked) {
+  //     const rs = document.getElementsByName('restrict');
+  //     for (const r of rs) {
+  //       (r as HTMLInputElement).checked = false;
+  //     }
+  //   }
+  // }
   toggleCheckbox(event: any): void {
     switch (event.target.id){
       case 'q4_1':
