@@ -7,6 +7,14 @@
 * The database contains information of dishes, tastes, ingredients, cooking steps, users' comments and the related pictures;
 
 ***
+### April 16th
+#### Springboot+Mybatis build
+
+* Use springBoot and MyBatis build the project framework;
+
+* Set up the class based on the the front end;
+
+***
 ### April 10th
 #### Angular build
 
