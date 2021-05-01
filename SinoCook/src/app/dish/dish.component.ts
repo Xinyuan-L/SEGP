@@ -3,8 +3,7 @@ import { Injectable } from '@angular/core';
 import { Comment } from '../Comment';
 import { Step } from '../Step';
 import { Dish } from '../Dish';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {HttpParams} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { CommunicateService } from '../communicate.service';
 import { RequestsService } from '../requests.service';
 
@@ -15,7 +14,7 @@ import { RequestsService } from '../requests.service';
 })
 
 @Injectable()
-export class DishComponent implements OnInit, OnDestroy {
+export class DishComponent implements OnInit {
   public steps: any[] = [
     {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
     {picture: 'assets/麻婆豆腐.jpeg', detail: 'asdkljn n a dnas dnadkj ajk dkasb dka dnasnd adkj ajd jas djk.'},
@@ -23,7 +22,6 @@ export class DishComponent implements OnInit, OnDestroy {
   ];
   public mater: any[] = ['asddas', 'asddasdd', 'asdasdasdasdasd', 'd4as6d5', 'asdasd', 'asdcvsd'
   ];
-  private dishID = 0;
   public dish: any = {
     id: 0,
     name: 'mapo tofu',
@@ -38,12 +36,12 @@ export class DishComponent implements OnInit, OnDestroy {
     other: this.mater
   };
   public dishLike = false;
-  public newComment: any = {
+  public newComment: Comment = {
     nickname: '',
     time: 0,
-    detail: '',
+    details: '',
     likes: 0,
-    dish: this.dish.name
+    id: 0
   };
   now: number = new Date().getTime() as unknown as number;
   public comments: Array<Comment> = [
@@ -73,12 +71,9 @@ export class DishComponent implements OnInit, OnDestroy {
     console.log('views:' + this.dish.views);
     this.dish.views += 1;
     setTimeout(() => {
-      this.req = this.request.put('addViews',
-        {Did: this.dish.id, views: this.dish.views});
+      this.req = this.request.get('addViews',
+        {Did: this.dish.id});
     }, 100);
-  }
-  ngOnDestroy(): void {
-    // this.req.unsubscribe();
   }
 
   getInfo(): void {
@@ -124,56 +119,81 @@ export class DishComponent implements OnInit, OnDestroy {
   addDishLike(): void {
     this.dish.likes += 1;
     this.dishLike = true;
-    this.request.put('/addDishLike', {Did: this.dishID});
+    this.request.get('/addDishLike', {Did: this.dish.id});
   }
   cancelDishLike(): void {
     this.dish.likes -= 1;
     this.dishLike = false;
-    this.request.put('/addDishLike', {Did: this.dishID});
+    this.request.get('/reduceDishLike', {Did: this.dish.id});
   }
   addLike(comment: Comment): void {
     comment.likes += 1;
-    // this.request.put('/addLike', {time: comment.time});
+    this.request.get('/addComLike', {time: comment.time});
   }
   cancelLike(comment: Comment): void {
     comment.likes -= 1;
-    this.request.put('/cancelLike', {time: comment.time});
+    this.request.get('/reduceComLike', {time: comment.time});
   }
-  updateTime(comment: Comment): Comment {
+  toggleLike(comment: Comment, event: Event): void {
+    if (event.target !== null) {
+      const pic = event.target as HTMLImageElement;
+      console.log(pic);
+      if (pic.alt === 'dislike') {
+        pic.src = 'assets/like.svg';
+        pic.alt = 'like';
+        this.addLike(comment);
+        console.log('love this comment');
+      }else {
+        pic.src = 'assets/dislike.svg';
+        pic.alt = 'dislike';
+        this.cancelLike(comment);
+        console.log('cancel love of this comment');
+      }
+    }
+  }
+  updateTime(comment: Comment ): Comment {
     comment.time = new Date().getTime() as unknown as number;
-    comment.details = comment.details.trim();
     return comment;
   }
   isValidComment(detail: any): boolean {
-    detail = detail.trim();
-    return detail !== '';
+    let c: any;
+    for (c in detail) {
+      if (c !== ' ') {
+        return false;
+      }
+    }
+    return true;
   }
   postComment(): void {
     console.log('posting');
     if (this.newComment.nickname === '') {
       alert('Your nickname can\'t be empty.');
-    } else if (this.newComment.detail === '' &&
-      !this.isValidComment(this.newComment.detail)) {
+    } else if (this.newComment.details === '' &&
+      !this.isValidComment(this.newComment.details)) {
       alert('Your comment is not valid.');
     } else {
       const newCom = this.updateTime(this.newComment);
-      this.request.post('postComments', newCom).subscribe(() => {
-        this.comments.concat(newCom);
+      const data = {
+        dish: this.dish.name,
+        nickname: newCom.nickname,
+        time: newCom.time,
+        details: newCom.details,
+        likes: newCom.likes,
+      };
+      console.log(data);
+      // this.comments = this.comments.concat(newCom);
+      // this.newComment.nickname = '';
+      // this.newComment.detail = '';
+      this.request.post('postComments', data).subscribe((response: any) => {
+        newCom.id = response.id;
+        this.comments = this.comments.concat(newCom);
         this.newComment.nickname = '';
         console.log('renew name');
-        this.newComment.detail = '';
+        this.newComment.details = '';
         console.log('renew detail');
       });
-      // postComment.unsubscribe();
-      // const api = 'http://localhost:9090/postComments';
-      // const options = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
-      // this.http.post(api, JSON.stringify(this.newComment), options).subscribe((res: any) => {
-      //   console.log('ok');
-      // });
-      // this.request.post('/postComments', this.updateTime(this.newComment));
     }
   }
-
 
 }
 

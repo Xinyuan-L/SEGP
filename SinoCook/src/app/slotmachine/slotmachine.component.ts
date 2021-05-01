@@ -64,7 +64,7 @@ export class SlotmachineComponent implements OnInit {
   public disbutton: any;
   public requestData = {
     q1: false,
-    q2: [1, 2, 3],
+    q2: 0,
     q3: false,
     q4: 3
   };
@@ -84,8 +84,8 @@ export class SlotmachineComponent implements OnInit {
     this.shadow = (document.getElementsByClassName('shadow')[0] as HTMLImageElement);
     this.button = (document.getElementById('button')as HTMLImageElement);
     this.disbutton = (document.getElementById('disabled-button')as HTMLImageElement);
-    this.finalDish = this.list[4];
-    this.longList();
+    // this.finalDish = this.list[4];
+    // this.longList();
 
     const imageHeight = 156;
     const listHeight = this.firstImagesList.scrollHeight;
@@ -93,13 +93,52 @@ export class SlotmachineComponent implements OnInit {
     this.initPosition(startTranslateYHeight);
   }
   getCustomize(): void {
-    // 获取问卷页面的表单信息；
+    // get message from customize page;
     this.comm.getMessage().subscribe((msg: any) => {
-      // 将表单发给后端，获取响应；
-      this.request.post('/customize', msg).subscribe((response: any) => {
-        this.initList = response;
+      // format quiz data;
+      setTimeout(() => {
+        console.log(msg);
+        this.formattedData(msg);
       });
     });
+    // post to back-end, get the response;
+    setTimeout(() => {
+      console.log(this.requestData);
+      this.request.post('/customize', this.requestData).subscribe((response: any) => {
+        this.initList = response;
+        this.finalDish = this.list[4];
+        this.longList();
+      });
+    });
+  }
+  formattedData(msg: any): void {
+    this.requestData.q1 = msg.q1;
+    this.requestData.q3 = msg.q3;
+    if (!this.requestData.q1) {
+      if (msg.q2.option1 === true) {
+        this.requestData.q2 = 1;
+      }
+      else if (msg.q2.option2 === true) {
+        this.requestData.q2 = 2;
+      }
+      else if (msg.q2.option3 === true) {
+        this.requestData.q2 = 3;
+      }
+      else if (msg.q2.option4 === true) {
+        this.requestData.q2 = 4;
+      }
+    }else {
+      this.requestData.q2 = 0;
+    }
+    if (msg.q4.option1) {
+      this.requestData.q4 = 1;
+    }else if (msg.q4.option2) {
+      this.requestData.q4 = 2;
+    }else if (msg.q4.option3) {
+      this.requestData.q4 = 3;
+    }else if (msg.q4.option4) {
+      this.requestData.q4 = 4;
+    }
   }
   reserve(): void {
     this.stick = -this.stick;
@@ -109,60 +148,54 @@ export class SlotmachineComponent implements OnInit {
       this.stickPic = 'assets/stick-down.png';
     }
   }
-
   initPosition(startTranslateYHeight: number): void {
     this.firstImagesList.style.transform = `translateY(${startTranslateYHeight}px)`;
     this.secondsImagesList.style.transform = `translateY(${startTranslateYHeight}px)`;
     this.thirdImagesList.style.transform = `translateY(${startTranslateYHeight}px)`;
  }
-
   start(resultNum: number): void {
-  let isEnd = false;
-  let random: number;
-  const imageHeight = 156;
-  this.reserve();
-  this.button.style.display = 'none';
-  this.disbutton.style.display = 'block';
-  this.addTranstion();
-  do{
-    random = Math.floor(Math.random() * resultNum);
-  }while (this.index === random);
-  // let radom1 = Math.floor(Math.random()*resultNum);
-  // let radom2 = Math.floor(Math.random()*resultNum);
-  this.finalDish = this.list[random];
-  this.index = random;
-  this.firstImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
-  setTimeout(() => {
-    this.secondsImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
-  }, 500);
-  setTimeout(() => {
-    this.thirdImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
-    isEnd = true;
-  }, 1000);
-  setTimeout(() => {
-    if (isEnd){
-      this.openWindow();
-    }
-  }, 3000);
-}
-
+    let isEnd = false;
+    let random: number;
+    const imageHeight = 156;
+    this.reserve();
+    this.button.style.display = 'none';
+    this.disbutton.style.display = 'block';
+    this.addTranstion();
+    do{
+      random = Math.floor(Math.random() * resultNum);
+    }while (this.index === random);
+    // let radom1 = Math.floor(Math.random()*resultNum);
+    // let radom2 = Math.floor(Math.random()*resultNum);
+    this.finalDish = this.list[random];
+    this.index = random;
+    this.firstImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
+    setTimeout(() => {
+      this.secondsImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
+    }, 500);
+    setTimeout(() => {
+      this.thirdImagesList.style.transform = `translateY(${-imageHeight * random}px)`;
+      isEnd = true;
+    }, 1000);
+    setTimeout(() => {
+      if (isEnd){
+        this.openWindow();
+      }
+    }, 3000);
+  }
   addTranstion(): void {
   this.firstImagesList.classList.add('transtion');
   this.secondsImagesList.classList.add('transtion');
   this.thirdImagesList.classList.add('transtion');
 }
-
   removeTranstion(): void {
   this.firstImagesList.classList.remove('transtion');
   this.secondsImagesList.classList.remove('transtion');
   this.thirdImagesList.classList.remove('transtion');
 }
-
   openWindow(): void {
   this.window.style.display = 'block';
   this.shadow.style.display = 'block';
 }
-
   closeWindow(): void {
   this.window.style.display = 'none';
   this.shadow.style.display = 'none';
@@ -170,12 +203,10 @@ export class SlotmachineComponent implements OnInit {
   this.button.style.display = 'block';
   this.disbutton.style.display = 'none';
 }
-
   jumpToDish(): void {
+    console.log(this.finalDish.name);
     this.comm.sendMessage(this.finalDish.name);
-    window.location.href = '/dish';
 }
-
   longList(): void {
     let i = 0;
     do{

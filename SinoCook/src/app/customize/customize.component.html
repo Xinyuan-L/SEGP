@@ -27,13 +27,13 @@
     <tr class="option" *ngIf="!data.q1">
       <th></th>
       <th>
-       <input type="checkbox" id="q2_1" name="restrict" (click)="setValue(1)"><label for="q2_1">Beef</label>
+       <input type="radio" id="q2_1" name="restrict" (click)="setValue(1)"><label for="q2_1">Beef</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_2" name="restrict" (click)="setValue(2)"><label for="q2_2">Lamb</label>
+       <input type="radio" id="q2_2" name="restrict" (click)="setValue(2)"><label for="q2_2">Lamb</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_3" name="restrict" (click)="setValue(3)"><label for="q2_3">Pork</label>
+       <input type="radio" id="q2_3" name="restrict" (click)="setValue(3)"><label for="q2_3">Pork</label>
        &nbsp;&nbsp;
-       <input type="checkbox" id="q2_4" (click)="noRestrict()"><label for="q2_4">No restriction</label>
+       <input type="radio" id="q2_4" name="restrict" (click)="setValue(4)"><label for="q2_4">No restriction</label>
       </th>
     </tr>
     <br>
@@ -79,7 +79,8 @@
     <br>
   </table>
   <br>
-  <img (click)=doSubmit() src="assets/customize-button.png" alt="button" id="submit">
+  <img (click)=doSubmit() src="assets/customize-button.png"
+       alt="button" id="submit" routerLink="/slot">
 </div>
 
 <!-- <pre>

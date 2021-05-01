@@ -41,7 +41,7 @@
     <h2>You have gotten {{finalDish.name}}!</h2>
     <div class="buttons">
         <button id="left-button" (click)=closeWindow()>Try again</button>
-        <button id="right-button" (click)=jumpToDish()>Get this dish</button>
+        <button id="right-button" (click)=jumpToDish() routerLink="/dish">Get this dish</button>
     </div>
   </div>
 </div>
