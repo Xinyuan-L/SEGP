@@ -128,12 +128,12 @@ public class FoodController {
     @PostMapping("/postComments")
     @CrossOrigin
     @ResponseBody
-    public void postComments(@RequestBody JSONObject s){
+    public int postComments(@RequestBody JSONObject s){
         Com com = (Com)JSONObject.toJavaObject(s,Com.class);
         HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("nickname",com.getNickname());
         map.put("likes",com.getLikes());
-        map.put("detail",com.getDetail());
+        map.put("detail",com.getDetails());
         String cTime=Long.toString(com.getTime());
         map.put("time",cTime);
         map.put("dish",com.getDish());
@@ -142,6 +142,8 @@ public class FoodController {
         int cid=foodMapper.getCid()+1;
         map.put("Cid",cid);
         foodMapper.postComments(map);
+        int id=cid;
+        return id;
     }
 
     @PostMapping("/customize")

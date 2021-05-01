@@ -6,7 +6,7 @@ import lombok.Data;
 public class Com {
     String nickname;
     int likes;
-    String detail;
+    String details;
     long time;
     String dish;
 }
