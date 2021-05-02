@@ -1220,6 +1220,9 @@ d) 根据项目的maven依赖配置，Spring boot自动配置Spring,SpringMVC等
 e) 提供程序的健康检查等功能。（检查内部的运行状态等）
 f) 基本可以完全不使用xml配置文件，采用注解配置。（或者默认约定的配置，代码中已经实现）
 
+![image](https://user-images.githubusercontent.com/45390078/116830197-74f0fe80-aba0-11eb-99e3-c02351786ba3.png)
+
+
 一、主要目录
 
 | 目录名称| 相对路径       |  主要用途                      |
