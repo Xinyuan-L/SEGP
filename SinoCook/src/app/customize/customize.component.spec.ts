@@ -101,4 +101,21 @@ describe('CustomizeComponent', () => {
     expect(component.data.q4.option4).toBeTrue();
   });
   
+  it('should really submit', () => {
+    de = fixture.debugElement;
+    const submit = de.nativeElement.querySelector('#submit');
+    el = de.nativeElement.querySelector('#q1_1');
+    el.click();
+    expect(component.data.q1).toBeTrue();
+    expect(de.nativeElement.querySelector('#q2')).toBeNull;
+    submit.click();
+    expect(component.isSubmitted).toBeFalse;
+    el = de.nativeElement.querySelector('#q3_2');
+    el.click();
+    expect(component.data.q3).toBeFalse();
+    el = de.nativeElement.querySelector('#q4_1');
+    el.click();
+    submit.click();
+    expect(component.isSubmitted).toBeTrue;
+  });
 });

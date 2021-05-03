@@ -84,6 +84,7 @@ export class SlotmachineComponent implements OnInit {
     this.shadow = (document.getElementsByClassName('shadow')[0] as HTMLImageElement);
     this.button = (document.getElementById('button')as HTMLImageElement);
     this.disbutton = (document.getElementById('disabled-button')as HTMLImageElement);
+    //这我先不注释掉，为了测试
     // this.finalDish = this.list[4];
     // this.longList();
 
@@ -106,6 +107,7 @@ export class SlotmachineComponent implements OnInit {
       console.log(this.requestData);
       this.request.post('/customize', this.requestData).subscribe((response: any) => {
         this.initList = response;
+        //为啥要把这两项写到这儿，我先屏蔽一下为了测试方便
         this.longList();
         this.finalDish = this.list[4];
       });

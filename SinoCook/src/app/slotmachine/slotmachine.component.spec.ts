@@ -1,6 +1,10 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommunicateService } from '../communicate.service';
+import { RequestsService } from '../requests.service';
 
 import { SlotmachineComponent } from './slotmachine.component';
+
 
 describe('SlotmachineComponent', () => {
   let component: SlotmachineComponent;
@@ -8,7 +12,8 @@ describe('SlotmachineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlotmachineComponent ]
+      declarations: [ SlotmachineComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });
@@ -20,6 +25,9 @@ describe('SlotmachineComponent', () => {
   });
 
   it('should create', () => {
+    // const request: RequestsService = new RequestsService();
+    const comm: CommunicateService = new CommunicateService();
+    expect(comm).toBeTruthy();
     expect(component).toBeTruthy();
   });
 });

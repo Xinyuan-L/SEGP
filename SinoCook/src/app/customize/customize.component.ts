@@ -26,6 +26,8 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
     }
   };
 
+  public isSubmitted: boolean = false;
+
   constructor(private comm: CommunicateService) { }
 
   ngOnInit(): void {
@@ -60,6 +62,7 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
       console.log(this.data);
       this.comm.sendMessage(this.data);
       // window.location.href = '/slot';
+      this.isSubmitted = true;
     }
   }
 

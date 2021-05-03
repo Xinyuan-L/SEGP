@@ -1,8 +1,10 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -31,5 +33,18 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('SinoCook app is running!');
+  });
+
+  it('should jump right', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    let el = fixture.debugElement.query(By.css('#logo-tb')).nativeElement.getAttribute('href');
+    expect(el).toEqual('/home');
+    el = fixture.debugElement.query(By.css('#home-tb')).nativeElement.getAttribute('href');
+    expect(el).toEqual('/home');
+    el = fixture.debugElement.query(By.css('#cust-tb')).nativeElement.getAttribute('href');
+    expect(el).toEqual('/cust');
+    el = fixture.debugElement.query(By.css('#about-tb')).nativeElement.getAttribute('href');
+    expect(el).toEqual('https://github.com/Xinyuan-L/SEGP');
   });
 });
