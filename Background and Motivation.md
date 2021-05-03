@@ -21,46 +21,60 @@ There were so many cuisines to choose from that the Chinese student was confused
 
 ## State of the art survey
 
-据调查，随着人们对健康饮食及视频安全问题的广泛关注，相比点外卖和外出就餐，人们开始注重于在家下厨，因此对于不会做饭但是有做饭需求的用户群体来说，菜谱的需求越来越强烈。
-
-根据面向30人的问卷调查，我们发现在英中国留学生群体有86.67%存在“不知道今天吃什么”的选择困难症，有83.33%希望有一个网站教他们如何烹饪正宗的中国美食。
+According to a questionnaire survey covering 30 people, we found that 86.67% of Chinese students in the UK had difficulty in choosing "don't know what to eat today" and 83.33% wanted a website to teach them how to cook authentic Chinese food.
 
 ![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
 ![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
 
 
-因此我们初步拟定了the overarching aim of this project：菜谱推荐。
+Therefore, we preliminarily formulated the overarching aim of our project is recipe recommendation.
 
-为解决这一问题，文章设计了一种菜谱个性化推荐系统，提供每日三餐菜谱的推荐，来帮助用户解决他们对于三餐的纠结。
+In order to solve this problem, we designed a personalized menu recommendation system to provide users with daily recipes to solve their struggle about three meals.
 
-考虑到不同群体有不同的饮食偏好，为了充分满足用户的喜好，我们设计了一些问题用于统计饮食偏好，并依据用户的回答进行菜单推荐。
+Considering that different groups have different dietary preferences, we designed some questions to collect users' preferences.
 
-WEB产品信息构建师从功能层面和情感层面提出产品的用户体验是“可用性用户期望值的超越（情感）” [[**2**]](#references)。
+In this way, we can recommend the recipe according to the user's answer, in order to fully meet the user's preferences.
 
-唐纳诺曼（从本能的、行为的及反思的三种设计水平的基础上，提出产品的情感价值可以使人们在使用产品中更加快乐、更富有创造性，他强调情感价值在产品设计中的重要性[[**3**]](#references)。
+Zhu, a Web product builder, puts forward that the user experience of a product is "the transcendence of user expectations of usability (emotion)" from the functional and emotional levels.[[**2**]](#references)。
 
-考虑到人性化的设计与服务将大大提高用户的使用体验，我们计划以老虎机游戏的形式针自动给出相应菜谱的推荐。
+Donnaumann, based on the three design levels of instinct, behavior and reflection, argues that the emotional value of products can make people happier and more creative in the use of products. 
 
-目前分享中国菜谱的美食网站主要有美食社区、美食天下、美食杰、豆果网、天天美食、好豆网等一些具有中餐特色的食谱网站。
+He also  emphasizes the importance of emotional value in product design.[[**3**]](#references)。
 
-以好豆网、豆果网、下厨房为代表的，分享菜谱、发现美食为主的社区型美食网站已经成为美食网站发展的主流趋势。
+Considering that user-friendly design and service will greatly improve the reviews of the site, we added a game element ———— a slot machine game will be used to recommend recipes.
 
-但是，这些美食社区网站的用户体验有待提高，其社区化所具备的交流、互动性没有得到充分的发展，用户使用起来依然存在着一些问题。
+Nowadays, there are some recipe websites that sharing Chinese recipes exist , such as meishishequ, meishitianxia, meishijie, xiachufang, haodouwang and so on. 
 
-易观国际月活跃用户数据排名显示，好豆菜谱移动端用户数超过2 000万，月活跃用户377.6万，位居第一；位列第二的下厨房移动端用户数超过1 300万，月活跃用户356.7万[[**4**]](#references)。
+Some community recipe websites have become the mainstream trend of recipe website development, such as the website of sharing recipes and discovering delicious food represented by Haodou and Xiachufang.
 
-我们选取其中比较有代表性的是xiachufang和haodou来分析，分析结果如下。
+However, the user experience of these food community sites still needs to be improved.
 
-![image](https://user-images.githubusercontent.com/45390078/116252836-d6136f00-a767-11eb-88b4-a1552ae2c7dc.png)
+The communication and interactivity of these sites is not sufficiently developed, so they fail to motivate users.
+
+According to the monthly active user data ranked by Netease Hao, the number of haodou 's users is over 20 million and the monthly active users are 3.776 million , which ranking the first.
+
+The xiachufang has more than 13 million users and 3.567 million monthly active users, which ranks second.[[**4**]](#references)。
+
+We selected two representative websites Xiachufang and Haodou to analyze .
+
+The analysis results are as follows:
+
+![image](https://user-images.githubusercontent.com/45390078/116937522-4555fb00-ac61-11eb-95d1-dd6785caa704.png)
 
 
 ## Problem definition
 
-通过以上对文献综述和现存的中国菜谱网站设计现状进行分析可以发现，其在用户体验、用户互动性、趣味性方面还有待加强，缺乏个性化推荐服务，用户的情感需求得不到满足。
+Through literature review and analysis of existing Chinese recipe websites, we find that these websites need to be strengthened in user experience, user interaction and interest.
 
-为了提高网站的用户体验、互动性，我们将游戏化设计概念贯穿于整个美食社区网站的设计过程中，在统计完用户的需求后，使用老虎机的形式将菜单推荐给用户。
+For example, these sites lack personalized recommendation services and gamification design, so users' emotional needs are not met.
 
-力图通过设计实践将游戏化设计所具有的趣味性、激励性、互动性融入美食社区网站中，以提高其用户体验，帮助用户更好、更快乐的使用美食网站，最终实现提髙用户粘性，产生稳定用户群的目的。
+In order to improve the user experience and interactivity of the website, we use the concept of gamification design throughout the design process of the website.
+
+For example, after the user's needs are counted, the menu is recommended to the user in the form of a slot machine.
+
+We want to bring the fun, motivation, and interactivity of gamification design to the site to improve the user experience.
+
+We want to bring fun and positive incentives to our users in order to increase their dependency on the site.
 
 ## References
 
