@@ -1,14 +1,20 @@
+import { HttpClientModule } from '@angular/common/http';
+import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      imports: [ RouterTestingModule, HttpClientModule ],
     })
     .compileComponents();
   });
@@ -21,5 +27,15 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should jump right', () => {
+    let el = fixture.nativeElement.querySelectorAll('a');
+    expect(el[0].getAttribute('href')).toEqual('/cust');
+    expect(el[1].getAttribute('href')).toEqual('/dish');
+    expect(el[2].getAttribute('href')).toEqual('/dish');
+    expect(el[3].getAttribute('href')).toEqual('/dish');
+    expect(el[4].getAttribute('href')).toEqual('/dish');
+    expect(el[5].getAttribute('href')).toEqual('/dish');
   });
 });
