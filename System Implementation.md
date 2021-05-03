@@ -9,75 +9,88 @@
 
 ## Stack architecture and system design
 
-所谓单页应用，指的是在一个页面上集成多种功能，甚至整个系统就只有一个页面，所有的业务功能都是它的子模块，通过特定的方式挂接到主界面上。
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages. 
 
-在我们的单页应用程序中，我们使用Angular处理前端客户端应用程序，MySQL处理后端数据库，Springboot处理中间层服务器。
+So we integrate multiple functions on one page.
+
+In our single-page application, we use Angular to handle the front-end client application, MySQL to manage the back-end database and SpringBoot to handle the back-end data and return information to the front-end.
 
 ![image](https://user-images.githubusercontent.com/45390078/116828557-59cdc100-ab97-11eb-9b82-6f4a4762b47e.png)
 
 
-SinoCook的开发环境如下。
+The development environment for Sinocook is as follows：
 
-（1）服务器端
+❑ The operating system：Windows 10。
 
-❑ 操作系统：Windows 10。
+❑ Web framework：Angular CLI version 11.2.1。
 
-❑ Web框架：Angular CLI version 11.2.1。
+❑ The Java development kit：JDK1.8。
 
-❑ Java开发包：JDK1.8。
+❑ The browser：not IE 11。
 
-❑ 开发工具：IntelliJ IDEA Community。
+We adopt B/S 3-tier architecture, including the user interface layer, the data access layer and the business logic layer.
 
-❑ 浏览器：不支持IE 11。
-
-❑ 显示器分辨率：最佳效果1024像素×768像素。
-
-（2）客户端
-
-❑ 浏览器：不支持IE 11。
-
-❑ 分辨率：最佳效果1024像素×768像素。
+Overall system architecture figure:
 
 ![image](https://user-images.githubusercontent.com/45390078/116828463-d01df380-ab96-11eb-8722-3aa5ff984617.png)
 
-Overall system architecture
+User interface layer of recipe recommendation refers to the the recommendation recipes users can see in the client (Web);
 
-本系统采用现今较为成熟的B/S三层架构模式，该三层架构分别是表示层、数据层、业务层。系统总体架构图如图所示，表示层的菜谱推荐是指普通用户在客户端（WEB）可看到的推荐列表；业务层的菜谱管理是对菜谱管理操作（增加、删除、修改、查询等操作）的具体业务处理；数据层的菜谱数据存储是存储实时更新的菜谱数据，实时更新的数据是通过表示层的菜谱管理提交菜谱信息到业务层的菜谱管理，经过业务层菜谱管理的处理，提交到数据层中数据库服务器的菜谱数据。系统分为客户端和服务器端。服务端存储用户数据、菜谱数据，当用户使用本系统时，须在问卷界面选择个人偏好。当用户选定偏好之后，系统会把用户提交的问卷信息提交到服务端，服务端依据这些信息会给该用户进行初步的推荐。服务器端由数据存储、Web service、推荐算法三部分组成。
+The recipe management of the business logic layer is the specific business processing of the recipe management operations (add, delete, modify, query, etc.);
 
-系统编码规范:
-由于本次开发，每个人负责不同的业务模块，为了使程序的结构与代码风格统一标准化，增加代码的可读性，我们在编码之前制定了一套统一的[编码规范](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-plan.docx)。
+The recipe data storage of the data access layer is to store the real-time updated recipe data, and the real-time updated data is to submit the information through the recipe recommendation of the user interface layer to the recipe management of the business logic layer. 
+
+After the processing of the recipe management of the business logic layer, the recipe data of the database server in the data layer will be recommended.
+
+The system is divided into client and server.
+
+User data and recipe data are stored on the server side. When using the system, users select their personal preferences on the questionnaire interface.
+
+Once the users choose the preference, the system will submit the questionnaire information to the server, then the server will make a preliminary recommendation to the user based on the questionnaire information.
+
+The server consists of three parts: data storage, Web Service and recommendation algorithm.
+
+System coding specification:
+
+In order to standardize the structure and code style of the program and increase the readability of the code, we formulated a set of unified [coding specification](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-plan.docx) before coding.
 
 
 ## Back End
 
-开发动态网站时数据库是必不可少的，它主要用来保存网站中需要的信息。考虑到网站的规模不大，我们选择MySQL。
+When developing dynamic website, database is essential that is mainly used to save the information needed in the website.
+
+Considering the small size of the site, we chose MySQL.
 
 ![image](https://user-images.githubusercontent.com/45390078/116626065-918ffb00-a942-11eb-8a97-8cbd5cfaa430.png)
 
-（1）	数据库
+Using naming conventions in a database helps other users better understand tables and the contents of fields in tables. 
 
-在数据库中使用命名规范，有助于其他用户更好地理解数据表及表中各字段的内容。
+So we formulated a set of unified coding specification:
 
-1.	菜谱图片分主图片（封面）和步骤图；
+1.	The recipe image includes the main image (cover) and the step diagram.
 
-a)	图片资源放在sinocook/src/assets/picture目录下；
+a)	Put the image in sinocook/src/assets/picture.
 
-b)	每道菜的图片放一个文件夹，命名：Did（数字）；
+b)	Put pictures of each dish in a folder and name it "Did(number)".
 
-c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
+c)	The main image (cover) ：cover.jpg，The step diagram：step1.jpg.
 
-2.	数据库、数据表、字段都采用相关英文单词或缩写进行命名，如找不到专业的英文单词或词组，可以用相同意义的英文单词或词组代替。如表所示。
+2.	Name databases, tables, and fields with relevant English words.
 
-为核心实体对象设计的E-R图如下。
+If you can't find a professional English word or phrase, you can substitute English words or phrases with the same meaning.
+
+The E-R diagram designed for the core entity object is as follows:
 
 ![image](https://user-images.githubusercontent.com/45390078/116004130-464fb280-a5f9-11eb-8e5c-2069fac7700e.png)
 
 
-创建的数据库名为sinocook，其中包含taste , steps , dishes , comments共4张数据表。下面将对数据表进行介绍。
+The database we created is called Sinocook, which contains four data tables, including taste , steps , dishes , comments。
+
+Then we will introduce the data table.
 
 （1）dishes
 
-该表用于保存菜谱的主要信息，其结构如表所示。
+Table Dishes are used to store the main information for the recipe and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none;
  mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
@@ -430,7 +443,7 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 
 （2）Taste
 
-该表用于保存食物的味道，其结构如表所示。
+Table Taste are used to store the taste of food and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="477" style="width:357.4pt;margin-left:18.0pt;border-collapse:collapse;border:none;
  mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
@@ -524,208 +537,256 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 
 （3）steps
 
-该表用于保存菜谱的具体步骤，其结构如表所示。
+Table steps are used to store the steps for a recipe and its structure is shown in the table：
 
-<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none;
- mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
- 0cm 5.4pt 0cm 5.4pt">
- <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+<table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none">
+ <tbody><tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Field name<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Field name</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Data type<o:p></o:p></span></p>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Data type</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Primary key<o:p></o:p></span></p>
+  <td width="94" valign="top" style="width:70.85pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Primary key</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Instruction<o:p></o:p></span></p>
+  <td width="208" valign="top" style="width:155.95pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Instruction</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:1">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Cid<o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Did</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">int<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">yes<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">yes</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Comments id<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dishes id</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:2">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Did<o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dname</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">int<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">varchar</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">no<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Dishes name<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dishes name</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:3">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span class="SpellE"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;
-  mso-bidi-theme-font:minor-bidi">Cnickname</span></span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:minor-bidi"><o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dvegan</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">varchar<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">no<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">The number of the anonymous user<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Vegetarian or not</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:4">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span class="SpellE"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;
-  mso-bidi-theme-font:minor-bidi">Ctime</span></span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:minor-bidi"><o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dtaste</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">varchar<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">no<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Time to comments<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">The taste of the Dishes</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:5">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span class="SpellE"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;
-  mso-bidi-theme-font:minor-bidi">Clikes</span></span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:minor-bidi"><o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dtime</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">varchar<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">no<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Number of likes<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Time to cook</span></p>
   </td>
  </tr>
- <tr style="mso-yfti-irow:6;mso-yfti-lastrow:yes">
+ <tr>
   <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
-  padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span class="SpellE"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;
-  mso-bidi-theme-font:minor-bidi">Cdetail</span></span><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:minor-bidi"><o:p></o:p></span></p>
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Main</span></p>
   </td>
   <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">varchar<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">varchar</span></p>
   </td>
-  <td width="88" valign="top" style="width:65.95pt;border-top:none;border-left:
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">no<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
   </td>
-  <td width="214" valign="top" style="width:160.85pt;border-top:none;border-left:
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
-  <p class="MsoListParagraph" style="text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif;mso-bidi-theme-font:
-  minor-bidi">Content of comments<o:p></o:p></span></p>
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">The main materials</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Others</span></p>
+  </td>
+  <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">varchar</span></p>
+  </td>
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
+  </td>
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">The other materials</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dlikes</span></p>
+  </td>
+  <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
+  </td>
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
+  </td>
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Number of likes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Dviews</span></p>
+  </td>
+  <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">int</span></p>
+  </td>
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
+  </td>
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Number of views</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Ddescription</span></p>
+  </td>
+  <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">varchar</span></p>
+  </td>
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
+  </td>
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Introduction of dishes</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="95" valign="top" style="width:71.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Daddress</span></p>
+  </td>
+  <td width="76" valign="top" style="width:56.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">varchar</span></p>
+  </td>
+  <td width="94" valign="top" style="width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">no</span></p>
+  </td>
+  <td width="208" valign="top" style="width:155.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+  <p class="MsoListParagraph" style="text-indent:0cm"><span lang="EN-US" style="font-family:&quot;Times New Roman&quot;,serif">Pictures of finished products</span></p>
   </td>
  </tr>
 </tbody></table>
@@ -733,7 +794,7 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 
 （4）comments
 
-该表用于保存菜谱的评论，其结构如表所示。
+Table comments are used to store comments of recipes and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none;
  mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:
@@ -1202,42 +1263,63 @@ c)	主图片命名cover.jpg，步骤图命名：step1.jpg；
 
 ## Middle Tier
 
-为了实现我们的程序开发更加简单，这里使用Springboot来帮助开发。
+To make our program development easier, we use SpringBoot.
 
-![image](https://user-images.githubusercontent.com/45390078/116625981-745b2c80-a942-11eb-99e5-1ce9d14e0c8b.png)
+![image](https://user-images.githubusercontent.com/45390078/116944136-ca92dd00-ac6c-11eb-9d6e-8f939673de99.png)
 
 
-什么是springBoot？
-Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化Spring应用的创建、运行、调试、部署等。使用Spring Boot可以做到专注于Spring应用的开发，而无需过多关注XML的配置。Spring Boot使用“习惯优于配置”的理念，简单来说，它提供了一堆依赖打包，并已经按照使用习惯解决了依赖问题。使用Spring Boot可以不用或者只需要很少的Spring配置就可以让企业项目快速运行起来。
-Spring Boot是开发者和Spring 本身框架的中间层，帮助开发者统筹管理应用的配置，提供基于实际开发中常见配置的默认处理（即习惯优于配置），简化应用的开发，简化应用的运维；总的来说，其目的Spring Boot就是为了对Java web 的开发进行“简化”和加“快”速度，简化开发过程中引入或启动相关Spring 功能的配置。这样带来的好处就是降低开发人员对于框架的关注点，可以把更多的精力放在自己的业务代码上。
+What is the springBoot:
 
-SpringBoot的特点？
+The Spring Framework is an application framework and inversion of control container for the Java platform. 
 
-a) 能够快速创建基于Spring的应用程序。（简化配置）
-b) 能够直接使用java的main方法启动内嵌的Tomcat，Jetty服务器运行Spring boot程序，不需要部署war包文件。
-c) 提供约定的starter POM来简化来简化Maven配置，让Maven配置变得简单。
-d) 根据项目的maven依赖配置，Spring boot自动配置Spring,SpringMVC等其它开源框架。
-e) 提供程序的健康检查等功能。（检查内部的运行状态等）
-f) 基本可以完全不使用xml配置文件，采用注解配置。（或者默认约定的配置，代码中已经实现）
+Spring Boot is a new framework from the Pivotal team designed to make it easy to create, run, debug, deploy.
+
+With Spring Boot, we can focus on the development of Spring applications without worrying too much about XML configuration.
+
+In short, Spring Boot provides a bunch of dependency packages that have been solved the dependency problems.
+
+With Spring Boot, we can get our enterprise project up and running quickly with little configuration.
+
+Spring Boot is an intermediate layer between the developer and the Spring framework itself.
+
+It helps developers manage the configuration of their applications, providing default processing based on common configuration in real development (habit over configuration), simplifying the development of applications and simplifying the operation of applications.
+
+In general, the purpose of Spring Boot is to "simplify" and "speed up" Java Web development by simplifying the configuration of introducing or starting relevant Spring functions during development.
+
+The benefit of this is that developers can focus less on the framework and more on their own code.
+
+Features of SpringBoot:
+
+Create stand-alone Spring applications.
+
+Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files).
+
+Provide opinionated 'starter' dependencies to simplify your build configuration.
+
+Automatically configure Spring and 3rd party libraries whenever possible.
+
+Provide production-ready features such as metrics, health checks, and externalized configuration.
+
+Absolutely no code generation and no requirement for XML configuration.
 
 ![image](https://user-images.githubusercontent.com/45390078/116830197-74f0fe80-aba0-11eb-99e3-c02351786ba3.png)
 
+1.The main directory
 
-一、主要目录
-
-| 目录名称| 相对路径       |  主要用途                      |
-| --------   | -----:            | :----:                            |
-| 源码目录| src\main\java     |存储源码                        |
-| 资源目录| src\main\resources |存储静态资源、动态页面、配置文件|
-| 测试目录| src\test\java      |存储单元测试、测试程序          |
+| directory name    | relative path      |  main purpose                                             |
+| -------           | -----:             | :----:                                                    |
+| source directory  | src\main\java      |Store the source code                                      |
+| resource directory| src\main\resources |Stores static resources, dynamic pages, configuration files|
+| test directory    | src\test\java      |storage unit testing, test procedure                       |
 
 java目录是进行编程和开发的主要目录，业务逻辑代码在这里完成。
 
-SinocookApplication.java 主程序入口类
+SinocookApplication.java是主程序入口类。
 
-resources目录是资源放置目录，yml为属性配置文件
+resources目录是资源放置目录，yml为属性配置文件。
 
 二、.mvn
+
 maven相关文件
 
 自动生成的项目会自动添加mvnw （maven wrapper文件）,此文件是为了保证各个开发人员在自己使用maven构建时保证maven的版本一致生成的。
