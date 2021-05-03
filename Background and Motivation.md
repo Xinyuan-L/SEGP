@@ -9,9 +9,13 @@
 
 ## Background literature
 
-The history of traditional Chinese food can be traced back to the Peking Man around 400,000 years ago. Some other accounts of the history of Chinese cuisine take the beginning to the Chinese stone age, where the cultivation of rice and the production of noodles began, both of them are typical representations of Chinese cuisine as we know today originated from archaeological findings. 
+The history of traditional Chinese food can be traced back to the Peking Man around 400,000 years ago. 
 
-China covers a large territory and has has a very diverse landscape including deserts, mountains, plateaus and fertile river basins and each region has its own regional climates. These differences of geography and climate give rise to the various regional cultural and culinary practices among people in the whole nation , hence a variety of Chinese food with different but fantastic and mouthwatering flavor. 
+Some other accounts of the history of Chinese cuisine take the beginning to the Chinese stone age, where the cultivation of rice and the production of noodles began, both of them are typical representations of Chinese cuisine as we know today originated from archaeological findings. 
+
+China covers a large territory and has has a very diverse landscape including deserts, mountains, plateaus and fertile river basins and each region has its own regional climates. 
+
+These differences of geography and climate give rise to the various regional cultural and culinary practices among people in the whole nation , hence a variety of Chinese food with different but fantastic and mouthwatering flavor. 
 
 Since China's local dishes have their own typicalcharacteristics, generally, Chinese people have named eight major cuisines according to their geographical locations , including the Su System (Jiangsu province) , the Wan System (Anhui province), the Min System (Fujian province),  the Xiang System (Hunan province), the Yue System (Cantonese province) , the Chuan System (Sichuan province) , the Lu System (Shandong province) and the Zhe System (Zhejiang province). [[**1**]](#references).
 
