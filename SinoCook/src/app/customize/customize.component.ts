@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommunicateService } from '../communicate.service';
+import { Router } from '@angular/router';
 import {iterator} from 'rxjs/internal-compatibility';
 
 @Component({
@@ -26,7 +27,8 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
     }
   };
 
-  constructor(private comm: CommunicateService) { }
+  constructor(private comm: CommunicateService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -59,7 +61,9 @@ export class CustomizeComponent implements OnInit, AfterViewInit {
     else {
       console.log(this.data);
       this.comm.sendMessage(this.data);
+      const r = this.router.navigate(['/slot']);
       // window.location.href = '/slot';
+      console.log(r);
     }
   }
 
