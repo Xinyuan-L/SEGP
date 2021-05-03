@@ -78,8 +78,8 @@ export class DishComponent implements OnInit {
 
   getInfo(): void {
     this.comm.getMessage().subscribe((msg: any) => {
-      console.log(msg);
-      msg = msg.trim();
+      console.log('dish:' + msg);
+      // msg = msg.trim();
       const data: any = {name: msg};
       this.request.get('getDish', data).subscribe((response: any) => {
         this.dish.id = response.id;

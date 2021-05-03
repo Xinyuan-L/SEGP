@@ -85,7 +85,7 @@ export class SlotmachineComponent implements OnInit {
     this.button = (document.getElementById('button')as HTMLImageElement);
     this.disbutton = (document.getElementById('disabled-button')as HTMLImageElement);
     // 这我先不注释掉，为了测试
-    // this.finalDish = this.list[4];
+    this.finalDish = this.list[4];
     // this.longList();
 
     const imageHeight = 156;
@@ -100,18 +100,18 @@ export class SlotmachineComponent implements OnInit {
       setTimeout(() => {
         console.log(msg);
         this.formattedData(msg);
-      });
+      }, 100);
     });
     // post to back-end, get the response;
     setTimeout(() => {
       console.log(this.requestData);
-      this.request.post('/customize', this.requestData).subscribe((response: any) => {
+      this.request.post('customize', this.requestData).subscribe((response: any) => {
         this.initList = response;
         // 为啥要把这两项写到这儿，我先屏蔽一下为了测试方便
         this.longList();
         this.finalDish = this.list[4];
       });
-    });
+    }, 200);
   }
   formattedData(msg: any): void {
     this.requestData.q1 = msg.q1;
@@ -206,7 +206,7 @@ export class SlotmachineComponent implements OnInit {
   this.disbutton.style.display = 'none';
 }
   jumpToDish(): void {
-    console.log(this.finalDish.name);
+    console.log('final:' + this.finalDish.name);
     this.comm.sendMessage(this.finalDish.name);
 }
   longList(): void {

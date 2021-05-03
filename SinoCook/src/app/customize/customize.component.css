@@ -1,8 +1,10 @@
 
   .survey{
     width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    /*margin-left: 120px;*/
+    padding-bottom: 120px;
     border: 1px #eee;
 
     text-align: center;
@@ -51,4 +53,12 @@
     font-size: 1.2em;
     color: #FF0000;
     display: none;
+  }
+
+  app-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
   }

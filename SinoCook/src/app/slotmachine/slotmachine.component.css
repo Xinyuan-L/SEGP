@@ -203,3 +203,9 @@ h2{
   border-radius: 10px;
   display: none;
 }
+app-footer{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -15,7 +15,7 @@
   /*a:hover {*/
   /*  color: #d0a974;*/
   /*}*/
-  
+
   h1,
   h2{
     color: #ffaa46;
@@ -29,15 +29,15 @@
   h6 {
     margin: 8px 0;
   }
-  
+
   p {
     margin: 0;
   }
-  
+
   .spacer {
     flex: 1;
   }
-  
+
   .toolbar {
     position: absolute;
     top: 0;
@@ -51,6 +51,7 @@
     font-family: Calibri,sans-serif;
     font-size: x-large;
     font-weight: 600;
+    flex: 0 0 auto;
   }
   .toolbar a{
     color: #ffaa46;
@@ -98,11 +99,15 @@
   .toolbar #aboutus-logo:hover{
     fill-opacity: 0.8;
   }
-  
+
   .pages{
     position: absolute;
     top: 80px;
     left: 0;
     right: 0;
     margin-top: 0;
+    height: 100%;
+    flex: 1 0 auto;
   }
+
+

@@ -10,6 +10,10 @@
   padding: 10px;
   width: inherit;
   text-align: center;
+  /*position: relative;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
 }
 .bottom a{
   color: inherit;

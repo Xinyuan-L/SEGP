@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+  height: 100%;
+  /*display: flex;*/
+  /*position: relative;*/
+  /*width: 100%;*/
+  /*min-height: 100%;*/
+  /*padding-bottom: 100px;*/
+  /*box-sizing: border-box;*/
+}
+*{
+  margin: 0;
+  padding: 0;
+}
