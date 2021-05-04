@@ -18,10 +18,15 @@
 ## Unit testing / Functional testing
 ### Overview
 首先要知道，代码的终极目标有两个，第一个是实现需求，第二个是提高代码质量和可维护性。
+
 单元测试是为了提高代码质量和可维护性，是实现代码的第二个目标的一种方法。
+
 单元测试对框架的设计要求非常高，数据与代码与界面要尽可能分离，还涉及到接口定义，输出与输出预期，代码覆盖度等要素。我们作为新手来说，肯定无法将我们的代码进行更为系统地规划。作为前端开发者，我们只能尽可能尝试完成更多的单元测试来最大程度的发挥单元测试的效益。同时不得不说的是，单元测试对我们逆向优化代码起到了很大的作用。
+
 First of all, we must know that there are two ultimate goals of code. The first is to achieve requirements, and the second is to improve code quality and maintainability.
+
 Unit testing is to improve code quality and maintainability, and is a way to achieve the second goal of the code.
+
 Unit testing has very high requirements for the design of the framework. Data and code should be separated as much as possible from the interface. It also involves interface definition, output and output expectations, code coverage and other elements. As a novice, we certainly cannot plan our code more systematically. We can only try to complete as many unit tests as possible to maximize the benefits of unit testing. At the same time, I have to say that unit testing has played a big role in our reverse optimization of the code.
 ### Front end
 #### Toolbar and footer test
