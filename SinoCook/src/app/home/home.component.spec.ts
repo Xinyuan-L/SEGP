@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -38,4 +38,15 @@ describe('HomeComponent', () => {
     expect(el[4].getAttribute('href')).toEqual('/dish');
     expect(el[5].getAttribute('href')).toEqual('/dish');
   });
+  
+  it('should get data', fakeAsync(() => {
+    spyOn(component,'getPopular');
+    spyOn(component,'getTodayFood');
+    spyOn(component,'getTopComment');
+    component.ngOnInit();
+    tick();
+    expect(component.getPopular).toHaveBeenCalled();
+    expect(component.getTodayFood).toHaveBeenCalled();
+    expect(component.getTopComment).toHaveBeenCalled();
+  }));
 });
