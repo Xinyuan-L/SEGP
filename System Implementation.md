@@ -17,7 +17,6 @@ In our single-page application, we use Angular to handle the front-end client ap
 
 ![image](https://user-images.githubusercontent.com/45390078/116828557-59cdc100-ab97-11eb-9b82-6f4a4762b47e.png)
 
-
 The development environment for Sinocook is as follows：
 
 ❑ The operating system：Windows 10。
@@ -1304,7 +1303,7 @@ Absolutely no code generation and no requirement for XML configuration.
 
 ![image](https://user-images.githubusercontent.com/45390078/116830197-74f0fe80-aba0-11eb-99e3-c02351786ba3.png)
 
-1.The main directory
+(1)The main directory
 
 | directory name    | relative path      |  main purpose                                             |
 | -------           | -----:             | :----:                                                    |
@@ -1312,76 +1311,86 @@ Absolutely no code generation and no requirement for XML configuration.
 | resource directory| src\main\resources |Stores static resources, dynamic pages, configuration files|
 | test directory    | src\test\java      |storage unit testing, test procedure                       |
 
-java目录是进行编程和开发的主要目录，业务逻辑代码在这里完成。
+java is the main directory for programming and development where we put our code.
 
-SinocookApplication.java是主程序入口类。
+SinocookApplication.java is the main program entry class.
 
-resources目录是资源放置目录，yml为属性配置文件。
+yml is a properties configuration file.
 
-二、.mvn
+(2).mvn
 
-maven相关文件
+The maven relevant documents.
 
-自动生成的项目会自动添加mvnw （maven wrapper文件）,此文件是为了保证各个开发人员在自己使用maven构建时保证maven的版本一致生成的。
+(3)target：the directory where the compiled files are stored
 
-三、target：编译文件存放的目录
-项目编译后自动生成的项目文件，使用maven打包后的文件也在此处。
+This is where the project files are automatically generated after the project is compiled, as well as files that are packaged using Maven.
 
-四、.gitignore
-git配置文件
-gitignore文件实现对远程仓库的管理。
+(4).gitignore
 
-六、pom.xml
-pom文件为maven工程的主要项目构建文件，以及相关配置文件.
+git configuration file
 
-七、*.iml文件
+gitignore realizes the management of remote warehouse.
+
+(5)pom.xml
+
+The pom is the main project build files for the Maven project, along with the associated configuration files.
+
+(6)*.iml
 groupwork.iml
 
-这是记录项目目录、项目的maven、所有的依赖以及相应的版本号的文件
-
-此文件为idea的工程文件和maven文件，开发的时候不会提交到服务器。
+This is the file that records the project directory, the Maven of the project, all the dependencies, and the corresponding version number.
 
 ## Front End
 
-首层目录：
-node_modules		第三方依赖包存放目录
-e2e  				端到端的测试目录  用来做自动测试的
-src   				应用源代码目录  
-angular.json   Angular命令行工具的配置文件。后期可能会去修改它，引一些其他的第三方的包  比如jquery等
-karma.conf.js  		karma是单元测试的执行器，karma.conf.js是karma的配置文件
-package.json   		这是一个标准的npm工具的配置文件，这个文件里面列出了该应用程序所使用的第三方依赖包。实际上我们在新建项目的时候，等了半天就是在下载第三方依赖包。下载完成后会放在node_modules这个目录中，后期我们可能会修改这个文件。
-README.md           说明文件
-tslint.json       	是tslint的配置文件，用来定义TypeScript代码质量检查的规则，不用管它
-browserslist       配置浏览器兼容性的文件
-.editorconfig      不同编译器统一代码风格
-package-lock.json    依赖包版本锁定文件
-tsconfig.app.json    app项目的TypeScript的配置文件
-tsconfig.json    整个工作区的TypeScript配置文件
-tsconfig.spec.json   用于测试的TypeScript配置文件
-tslint.json    TypeScript的代码静态扫描配置
+(1)Outer Directory:
 
-src目录：
-app目录				包含应用的组件和模块，我们写的代码都在这个目录
-assets目录  			资源目录，存储静态资源的  比如图片
-environments目录   	环境配置。Angular是支持多环境开发的，我们可以在不同的环境下（开发环境，测试环境，生产环境）共用一套代码，主要用来配置环境的
-index.html  		整个应用的根html，程序启动就是访问这个页面
-main.ts    			整个项目的入口点，Angular通过这个文件来启动项目
-polyfills.ts   		主要是用来导入一些必要库，为了让Angular能正常运行在老版本下
-styles.css   		主要是放一些全局的样式
-test.ts    			也是自动化测试用的
+| directory name    |  main purpose                                                                        |
+| -------           | :----:                                                                               |
+| node_modules      |Stores third-party dependency packages.                                               |
+| e2e               |End-to-end test directory for automated testing.                                      |
+| src               |Application code directory                                                            |
+| angular.json      |The configuration file for the Angular command line tool.                             |
+| karma.conf.js     |Karma is the unit test executor and karma.conf.js is the configuration file for karma.|
+| package.json      |This is a standard NPM tool configuration file.                                       |
+| README.md         |Description                                                                           |
+| tslint.json       |A configuration file for tslint that defines rules for TypeScript code quality checks.|
+| browserslist      |A file to configure browser compatibility.                                            |
+| .editorconfig     |Uniform code styles for different compilers.                                          |
+| package-lock.json |Lock the dependent package version.                                                   |
+| tsconfig.app.json |The TypeScript configuration file for the app project.                                |
+| tsconfig.json     |The TypeScript configuration files for the entire workspace.                          |
+| tsconfig.spec.json|The TypeScript configuration files for testing.                                       |
 
-app目录：
-app目录是我们要编写的代码目录。我们写的代码都是放在这个目录。
+(2)src Directory：
+				
+| directory name        |  main purpose                                                                        |
+| -------               | :----:                                                                               |
+| app Directory         |Stores the code we write, including the components and modules of the application.    |
+| assets Directory      |A resource directory used to store static resources.                                  |
+| environments Directory|Configure the environment                                                             |
+| index.html            |The root HTML of the application.                                                     |
+| main.ts               |The entry point for the entire project from which Angular starts the project.         |
+| polyfills.ts          |Import the necessary libraries.                                                       |
+| styles.css            |Put the global style.                                                                 |
+| test.ts               |For automated testing.                                                                |
 
+(3)app Directory：
+
+The code we write is put in this directory.
 
 ## Additional elements and components
 
+Our video.
+
+[part1](https://www.youtube.com/watch?v=xelUfsx15lM)
+
+[part2](https://www.youtube.com/watch?v=79Ki0TsgJh0)
+
 ## Deployment details
 
-Maven+Git搭建持续集成和自动化部署
+We used Maven+Git to build continuous integration and automated deployment.
 
-    1. Maven做项目管理；
-    2. Git做代码管理；
-    3. Springboot+Mybatis搭建程序框架；
-    4. MySQL作为数据存储；
-
+    1. Maven for project management;
+    2.  Git for code management;
+    3. Springboot+Mybatis build program framework;
+    4. MySQL for data storage;
