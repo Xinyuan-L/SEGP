@@ -64,9 +64,11 @@ The site also includes a comment section where users can post their comments ano
 
 Primary Objectives:
 
-建立一个中国菜谱推荐的网站，帮助“有选择恐惧症”的留学生解决一日三餐的选择问题。
+Set up a website recommending Chinese recipes to help overseas students who do not know "what to eat today" to choose three meals a day.
 
-传播并发扬中国美食文化，为对中国美食文化感兴趣的外国人讲解中国菜肴的做法。
+To explain Chinese cuisine to foreigners who are interested in it.
+
+Let more people know about Chinese cuisine, Disseminate and develop Chinese food culture.
 
 Secondary Objectives:
 
@@ -75,6 +77,10 @@ Apply game thinking and game mechanics to the design process on the premise of r
 Make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
 
 ### Video
+
+[part1](https://www.youtube.com/watch?v=xelUfsx15lM)
+
+[part2](https://www.youtube.com/watch?v=79Ki0TsgJh0)
 
 ## [Background and Motivation](https://github.com/Xinyuan-L/SEGP/blob/main/Background%20and%20Motivation.md)
 
