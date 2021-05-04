@@ -1,5 +1,5 @@
 # SinoCook - Chinese Food recommendation Every Day!
-![image](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-logo-v2.png)
+
 Today’s Chinese Food: Have no idea what cook? Use this app!
 
 Chinese students who are studying in the UK sometime have no idea what to cook. Especially with the lack of traditional ingredient. Our system will recommend you a recipe for cooking with your selection today.  
