@@ -23,7 +23,7 @@ We mainly focus on the desktop and may adapt the mobile.
 * [**Background and Motivation**](#background-and-motivation)
 * [**System Implementation**](#system-implementation)
 * [**UX Design**](#ux-design)
-* [**Sprints & Project Management**](#sprints-&-project-management)
+* [**Sprints& Project Management**](#sprints&-project-management)
 * [**Evaluation**](#evaluation)
 * [**Conclusion**](#conclusion)
 
@@ -88,7 +88,7 @@ Make use of gamified design to improve the user experience of the website and cr
 
 ## [UX Design](https://github.com/Xinyuan-L/SEGP/blob/main/UX%20Design.md)
 
-## [Sprints & Project Management](https://github.com/Xinyuan-L/SEGP/blob/main/Sprints%20%26%20Project%20Management.md)
+## [Sprints& Project Management](https://github.com/Xinyuan-L/SEGP/blob/main/Sprints%20%26%20Project%20Management.md)
 
 ## [Evaluation](https://github.com/Xinyuan-L/SEGP/blob/main/Evaluation.md)
 
