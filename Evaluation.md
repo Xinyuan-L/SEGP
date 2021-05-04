@@ -16,5 +16,71 @@
 通过不断的积累，我们还定期对在软件测试中发现的问题进行分析和总结，并发布软件质量的评估报告，将一段时期内搜集的所有软件问题进行不同角度的分类统计，例如文档问题和程序问题的对比分析，重要问题和一般问题的对比分析，软件的千行 BUG 密度的对比分析，这些对比分析的数据有助于软件的设计人员和编码人员逐步提高其业务水平，从而提高软件质量。
 
 ## Unit testing / Functional testing
+### Overview
+首先要知道，代码的终极目标有两个，第一个是实现需求，第二个是提高代码质量和可维护性。
+单元测试是为了提高代码质量和可维护性，是实现代码的第二个目标的一种方法。
+单元测试对框架的设计要求非常高，数据与代码与界面要尽可能分离，还涉及到接口定义，输出与输出预期，代码覆盖度等要素。我们作为新手来说，肯定无法将我们的代码进行更为系统地规划。作为前端开发者，我们只能尽可能尝试完成更多的单元测试来最大程度的发挥单元测试的效益。同时不得不说的是，单元测试对我们逆向优化代码起到了很大的作用。
+First of all, we must know that there are two ultimate goals of code. The first is to achieve requirements, and the second is to improve code quality and maintainability.
+Unit testing is to improve code quality and maintainability, and is a way to achieve the second goal of the code.
+Unit testing has very high requirements for the design of the framework. Data and code should be separated as much as possible from the interface. It also involves interface definition, output and output expectations, code coverage and other elements. As a novice, we certainly cannot plan our code more systematically. We can only try to complete as many unit tests as possible to maximize the benefits of unit testing. At the same time, I have to say that unit testing has played a big role in our reverse optimization of the code.
+### Front end
+#### Toolbar and footer test
+1. 我们测试了顶部工具栏的logo跳转功能，以及home，customize，about的跳转功能。
+2. 我们测试了footer中home和about的跳转功能。
 
+1. We have tested the **logo** jump function of the top toolbar, and the jump functison of **Home**, **Customize**, and **About**.
+2. We have tested the jump function of **Home** and **About** in footer.
+#### Home page test
+1. 我们测试了首页顶部"CUSTOMIZE"按钮和"THAT IS IT!!"按钮的跳转功能。
+2. 我们测试了"THE MOST POPULAR DISHES"中三个被展示dish的点击跳转功能。
+3. 我们测试了"Top Comments"中被展示的comment的点击跳转功能。
+
+1. We have tested the jump function of the **"CUSTOMIZE" button** and the **"THAT IS IT!!" button** at the top of the homepage.
+2. We have tested the click and jump function of the three **displayed dishes** in **"THE MOST POPULAR DISHES"**.
+3. We have tested the click-to-jump function of the **comment** displayed in **"Top Comments"**.
+#### Customize page test
+1. 我们测试了页面中问卷样式展示是否完整。
+2. 我们测试了问题1，问题2，问题3以及问题4的选项是否是单选模式，以及我们是否成功获得了数据。
+3. 我们测试了当问题1选择"Yes"选项时问题2会被隐藏的功能。
+4. 我们测试了页面底部"Customize"按钮的提交以及跳转功能。
+5. 我们测试了如果问卷填写不完整，在点击页面底部"Customize"按钮会跳出提示的功能。
+
+1. We have tested whether the **survey style display** on the page is complete.
+2. We have tested whether the options in *question 1*, *question 2*, *question 3* and *question 4* are in **single-select mode**, and whether we have successfully obtained the **data**.
+3. We have tested the function that *question 2* will be **hidden** when *question 1* selects the **"Yes" option**.
+4. We have tested the **submit and jump functions** of the **"Customize" button** at the bottom of the page.
+5. We have tested that if the survey is not completely filled out, the **prompt** would pop up after clicking **the "Customize" button** at the bottom of the page.
+#### Slotmachine page test
+1. 我们测试了老虎机样式是否展示完整。
+2. 我们测试了当按动"Play"按钮时，老虎机是否会按照预期运行。
+3. 我们测试了当按动摇杆是，老虎机是否会按照预期运行。
+4. 我们测试了在老虎机运行过程中，按钮及摇杆是否切换成了无法点击的样式，以防止用户连续进行点击。
+5. 我们测试了在老虎机运行结束后,是否会有全屏阴影遮罩以及弹窗出现。
+6. 我们测试了点击阴影遮罩，弹窗及遮罩消失的功能。
+7. 我们测试了弹窗演示展示是否完整。
+8. 我们测试了弹窗左边"Try again"按钮的点击后弹窗及遮罩消失的功能。
+9. 我们测试了弹窗右边"Get this dish"按钮的点击后跳转及传输数据的功能。
+
+1. We have tested whether the slot machine format is **displayed completely**.
+2. We have tested whether the slot machine would **operate** as expected when the **"Play" button** is pressed.
+3. We have tested whether the slot machine would **operate** as expected when the **stick** is pressed.
+4. We have tested whether **the button and stick** are switched to **unclickable styles** during the operation of the slot machine to *prevent users from clicking continuously*.
+5. We have tested whether there would be a **full-screen shadow mask** and a **pop-up window** after the slot machine runs.
+6. We have tested the function of *clicking the shadow mask*, the pop-up window and the mask **disappear**.
+7. We have tested whether the pop-up demo display is complete.
+8. We have tested the function of *the pop-up window and the mask disappearing* after **clicking the "Try again" button** on the left side of the pop-up window.
+9. We have tested the function of *jumping and transferring data* after **clicking the "Get this dish" button** on the right side of the pop-up window.
+#### Dish page test
+1. 我们测试了页面加载是否完整。
+2. 我们测试了页面左侧点击图标收藏dish，再次点击取消收藏的功能。
+3. 我们测试了页面底部文本框获得匿名和评论的功能。
+4. 我们测试了点击"Submit"按钮后是否成功提交数据。
+5. 我们测试了被展示评论的点赞功能，点击图标点赞，再次点击取消赞。
+
+1. We have tested whether the page load is **complete**.
+2. We have tested the function of *clicking the heart icon*, which is on the left side of the page, to **favorite dish** and then clicking again to cancel the favorite.
+3. We have tested the function of **inputting nickname and comments** in the text box at the bottom of the page.
+4. We have tested whether the data is successfully **submitted** after *clicking the "Submit" button*.
+5. We have tested the **like function** of **the displayed comment**.
+#### Service test
 ## User acceptance testing
