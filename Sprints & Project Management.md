@@ -188,55 +188,67 @@ Due to the difficulties of COVID-19 for offline meetings, we mainly used 微信 
 
 Sprint 1 : Analysis and Design（3.18-4.8）
 
-这次冲刺，我们通过多种途径进行需求分析，并根据目标用户的反馈来确定是否要添加某一项新功能，leader对需求进行评审，确保需求的合理性和重要程度，将需求拆分到各个开发人员，通过估时来确定每个人具体完成的任务。
+During this Sprint, we performed requirements analysis in a variety of ways and decided whether to add a new feature or not based on feedback from the target audience.
 
-在此阶段我们就产品的概念和设计达成了一致。
+In addition, the leader will review the requirements to ensure the rationality and importance of the requirements.
 
-阶段成果：
+The requirements are then broken down to individual developers, and the time estimates are used to determine what specific tasks each person has accomplished.
 
-我们分配好了任务；
+At this stage we agreed on the concept and design of the product.
 
-设置GitHub存储库并熟悉平台；
+Stage Achievements:
 
-创建了UI设计原型。
+Tasks were initially assigned;
 
-我们将构造的[原型](https://q4r9fc.axshare.com/#id=sbwg5b&p=home)展示给用户，获得了第一轮反馈。
+Set up your GitHub repository and familiarize yourself with the platform;
+
+Created a UI design prototype.
+
+We will construct the [prototype] (https://q4r9fc.axshare.com/#id=sbwg5b&p=home) to show to the user, won the first round of feedback.
+
+We show our[prototype](https://q4r9fc.axshare.com/#id=sbwg5b&p=home) to the user and collect the first round of feedback.
 
 | User         | Feedback                                                |                                                     
 | --------     | -----:                                                  |
-| Miss wang    | 我觉得看太多评论引发我的选择恐惧症，希望可以只看最高赞评论  |
-| Anne         | 希望每个步骤都能有图片。                                  |
-| Titus        | 希望老虎机能推送多道菜供挑选。                            |
-| Mr. Zhang    |我觉得最好匿名使用，我比较注重个人隐私，不想被平台手收集数据. |
+| Miss wang    | Can I just read the top reviews so that I can choose quickly?|
+| Anne         | I'd like to see pictures for every step of the cooking process.|
+| Titus        | I hope the dish from the slot machine can be replaced. |
+| Mr. Zhang    |I think it's better to use it anonymously. I don't want to be collected information by the platform. |
 
-Reflections:在第一个sprint中，我们构建出了产品的模型视图，获得了第一轮用户反馈。
+Reflections:
+
+During the first sprint, we built a model view of the product and got the first round of user feedback.
 
 2、Sprint 2 : Development -Alpha Version Release（4.9-4.19）
 
-任务拆分和评估完成后，进入开发阶段。
+After the task split and evaluation is complete, we officially enter the development phase.
 
-在开发过程中，必要的沟通会议是不可或缺的。如何减少不必要的会议，提高会议的效率是我们一直努力的方向。
+In the development process, necessary communication meetings are indispensable.
 
-我们的会议采用 微软outlook  Calendar 邀约的方式，被邀请者可以根据自己的时间和会议的重要性来选择要不要参加，同时会议的组织者也可以清楚的查看其他人的时间防止安排冲突。
+How to reduce unnecessary meetings and improve the efficiency of the meeting is the direction of our efforts.
 
-阶段目标：
+Our conference adopts the method of Microsoft Calendar invitation and the invitees can choose whether to attend or not according to their own time and the importance of the meeting. 
 
-	根据原型上线一个版本；
+Meanwhile, the conference organizer can also clearly check the time of others to avoid scheduling conflicts.
 
-	找用户测试并反馈意见。
+Stage objectives:
 
-阶段成果：
+Launch a version based on a prototype;
 
-发布了Alpha Version。
+Find users to test and give feedback.
 
-在该版本中，主页随机推荐每日菜谱，用户也可以根据自己需要个性化推荐，可以对菜谱进行评论。
+Stage Achievements:
 
-| User      | Feedback                              |
-| --------     | -----:                                  |
-| Miss wang  | 手滑点赞能否取消。                    |
-| Anne      |匿名可以自己设定吗？系统生成的我记不住。|
-| Titus      |我觉得很好。                            |
-| Mr. Zhang  |我觉得很好。                            |
+Alpha Version has been released.
+
+In this version, the home page randomly recommends daily recipes, and users can personalize recommendations according to their own needs, and can comment on recipes.
+
+| User       | Feedback                              |
+| --------   | -----:                                |
+| Miss wang  |点赞能否取消？                      |
+| Anne       |匿名可以自己设定吗？系统生成的我记不住。  |
+| Titus      |Very good.                            |
+| Mr. Zhang  |Very good.                            |
 
 Reflections:在这个sprint中，我们发布了第一个版本。
 
@@ -244,22 +256,22 @@ Reflections:在这个sprint中，我们发布了第一个版本。
 
 阶段目标：
 
-	根据sprint2得到的用户反馈改进我们的产品；
+根据sprint2得到的用户反馈改进我们的产品；
 
-	找用户测试并反馈意见。
+找用户测试并反馈意见。
 
-阶段成果：
+Stage Achievements:
 
 发布了Beta Version。
 
 在该版本中，增加了点赞和取消点赞的功能。
 
-| User      | Feedback     |
-| --------     | -----:         |
-| Miss wang  |我觉得很好。 |
-| Anne      |我觉得很好。 |
-| Titus      |我觉得很好。 |
-| Mr. Zhang  |我觉得很好。 |
+| User       | Feedback  |
+| --------   | -----:    |
+| Miss wang  |Very good. |
+| Anne       |Very good. |
+| Titus      |Very good. |
+| Mr. Zhang  |Very good. |
 
 Reflections:在这个sprint中，我们发布了第二个版本。
 
