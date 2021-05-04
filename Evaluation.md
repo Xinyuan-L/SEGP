@@ -87,5 +87,20 @@ Unit testing has very high requirements for the design of the framework. Data an
 3. We have tested the function of **inputting nickname and comments** in the text box at the bottom of the page.
 4. We have tested whether the data is successfully **submitted** after *clicking the "Submit" button*.
 5. We have tested the **like function** of **the displayed comment**.
-#### Service test
+#### CommunicationService test
+该服务主要是为各个组件之间提供数据发送以及数据接收功能，即各个组件间的数据交互。  
+This service provides two functions, getMessage() and sendMessage(), for all components to get message from other components and send message to others.
+
+* we have tested that whether a component can get the message using **getMessage()** after an another component send message by **sendMessage()**;
+#### RequsetService tests
+该服务主要是为各个组件提供向后端服务器发送HTTP请求的功能。  
+This service provides HTTP request methods including GET, POST, PUT, DELETE, for components to get response data from backend API with at most parameters, URL and request data(JOSN format);  
+We have tested that whether component can get response:
+
+* from API '/getTodayFood' using GET method.
+* from API '/getPopular' using GET method.
+* from API '/getTopComment' using GET method.
+* from API '/getDish' using GET method with dish name as request data.
+* from API '/getComments' using GET method with dish id as request data.
+* from API '/customize' using POST method with questionnaire answer as request data.
 ## User acceptance testing
