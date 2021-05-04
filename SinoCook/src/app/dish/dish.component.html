@@ -4,8 +4,8 @@
   <div class="photo">
     <img id="dish_img" [src]="dish.pic" [alt]="dish.name">
     <div class="likes">
-      <img src="assets/dislike.svg" alt="like" width="28" (click)='addDishLike()' *ngIf="!dishLike">
-      <img src="assets/like.svg" alt="like" width="28" (click)='cancelDishLike()' *ngIf="dishLike">
+      <img id="like-dish" src="assets/dislike.svg" alt="like" width="28" (click)='addDishLike()' *ngIf="!dishLike">
+      <img id="dislike-dish" src="assets/like.svg" alt="like" width="28" (click)='cancelDishLike()' *ngIf="dishLike">
       <span>&nbsp;&nbsp;{{dish.likes}}&nbsp;&nbsp;</span>
       <svg class="icon" viewBox="0 0 1578 1024" xmlns="http://www.w3.org/2000/svg" width="36" >\
         <defs><style type="text/css"></style></defs>
@@ -94,7 +94,7 @@
   <div class="comment" *ngFor="let comment of comments">
     <span class="nickname">{{comment.nickname}}&nbsp;</span>
     <i class="time">{{comment.time | date:'yyyy-MM-dd'}}</i>
-    <img src="assets/dislike.svg" alt="dislike"
+    <img id="like" src="assets/dislike.svg" alt="dislike"
          width="20" (click)="toggleLike(comment, $event)">
     <span class="likes">&nbsp;{{comment.likes}}</span>
     <br>
