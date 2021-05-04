@@ -2,7 +2,7 @@
 ## Contents
 
 * [**Details of how we evaluated our designs**](#details-of-how-we-evaluated-our-designs)
-* [**Unit testing / Functional testing**](#Unit-testing-\/-Functional-testing)
+* [**Unit testing / Functional testing**](#user-content-unit-testing--functional-testing)
 * [**User acceptance testing**](#user-acceptance-testing)
 
 ## Details of how we evaluated our designs
