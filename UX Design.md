@@ -8,78 +8,125 @@
 
 ## Design Process and Early prototyping and ideation
 
-最初我们提出了很多有趣的设想，resturant recommend、university selection recommend、how to cook chinese food、stock prediction等等，最终选定了菜谱推荐网站。
-我们首先通过头脑风暴初步确定了功能。
+At first we came up with a lot of interesting ideas , such as resturant recommend , university selection recommend , how to cook chinese food , stock prediction and so on.
+
+In the end, we agreed to create a Chinese recipe recommendation website.
+
+We initially identified the functionality through brainstorming.
 
 ![image](https://user-images.githubusercontent.com/45390078/115632326-5f0d4f00-a2ff-11eb-84d9-de662149768b.png)
 
-1.菜谱分类
-根据菜谱的类型进行分类，方便用户查找，例如：肉类、鱼类、蔬菜、菜式、菜系、特色等等，让用户可以轻松依据分类找到自己想做的任何菜。
+1. Classification of recipes
 
-2.菜谱搜索
-菜谱搜索的功能，支持模糊搜索，这样更加方便用户查找菜谱，让用户一键查找到自己想做的菜谱。
+We categorize recipes according to their type, for example: meat, fish, vegetables, dishes, cuisines, etc.
 
-3.菜品教程
-提供各种菜品的教程，文字和图片结合，并列出需要的主料、辅料，步骤，口味等，帮助用户很快学会做菜。
+We want to make it very easy for users to use this feature to find whatever they want to cook.
 
-4.菜谱圈子
-大家可以在这里发布自己做的菜肴，也可以发布自己在外面的特色小吃等，提高用户活跃度。
+3. Recipe search
 
-5.上传菜谱
-用户注册以后实名上传自己设计的菜谱。
+Users can use this to search for recipes and they can easily find the recipes that they want to make.
 
-考虑到网站可以推荐菜谱，所以我们最终删除了菜谱分类和搜索功能，这会使得用户难以抉择今日食谱。
-考虑到隐私问题，我们删除了注册登录和社交功能，改成了匿名分享。
-确定了主要功能后，我们使用[axure](https://q4r9fc.axshare.com/)构建了网站的原型。
+4. Dishes tutorial
+
+Our website provides tutorials on various dishes, including text and pictures.
+
+In the tutorial, we list the main ingredients, accessories, steps, which will help the user learn to cook quickly.
+
+5. The Recipe Circle
+
+Users can post their own dishes as well as special snacks they find outside.
+
+5. Upload recipes
+
+Users register and upload their own recipes with real names.
+
+Because our site can recommend recipes to users, we eventually removed the category and search function, which made it difficult for users to choose a recipe of the day.
+
+For privacy reasons, we removed sign-in and social features and switched to anonymous sharing.
+
+Having identified the main functions , we use [axure](https://q4r9fc.axshare.com/) to built the prototype of the site。
 
 ![image](https://user-images.githubusercontent.com/45390078/115631402-a72b7200-a2fd-11eb-8145-11205ec7db40.png)
 
-主logo设计釆用具有中国特色的美食相关元素“碗”、“筷”，结合英文字母进行图形创意，组合成一个具有一定幽默、趣味成分的图形。
-餐具在这里点明美食主题，在视觉表现上，遵循视觉潮流，釆用立体扁平化处理，符合目标用户人群的审美特征、追求新鲜有趣的事物，引领潮流的心理特点。
+We use the Chinese characteristics of food related elements "bowl", "chopsticks", combined with English letters to design our logo, combined into a certain humor, interesting components of the graphic.
+
+Tableware here point out the theme of food, we adopt three-dimensional flat processing.
+
+This design is in line with the aesthetic characteristics and psychological characteristics of the target user group.
 
 ## Interacting users and broader stakeholders
 
-在进行功能分析过程中，我们首先初步确定了我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人。
+In the process of functional analysis, we preliminarily determined that our users are mainly Chinese students studying in English language environment and foreigners interested in Chinese food culture.
 
-为了进一步分析，我们对haodou这个菜谱网站进行了调研。
+For further analysis, we researched the recipe site haodou.
 
-1.haodou网站用户数据分析
+1.haodou 's user data analysis
 
-从haodou网站的用户性别上可以看出：用户类型主要为女性，占比达到63.73%。
+According to the gender ratio of haodou's users, we find that the majority of users are female, accounting for 63.73%.
 
-在传统观念及习惯的影响下，大多中国家庭中，仍是女性下厨为主。女性相较男性更为细致、更加关注生活细节的特点也决定了菜谱网站的主流用户会是女性。
+Under the influence of traditional concepts and habits, most Chinese families are still dominated by women cooking.
 
-随着经济的发展，也有越来越多的男性不再“远庖厨”，注重饮食品质、享受烹饪过程的男性也占据了好豆用户的36.27%。
+The fact that women are more meticulous and pay more attention to the details of life than men also means that the mainstream users of recipe sites are women.
+
+With the development of economy, more and more men are no longer "far away from cooking". 
+
+Men who pay attention to food quality and enjoy the cooking process also account for 36.27% of the users of haodou.
 
 ![image](https://user-images.githubusercontent.com/45390078/116471365-7b177000-a86c-11eb-9da2-9124fea2ddb4.png)
 
-从haodou的年龄层来看，用户年龄主要分布在25-40岁之间，占比达到83.76%。在此年龄区间的用户拥有家庭及子女，工作基本稳定，在观念上更倾向于经济健康的饮食，并且厨房设备完善，追求下厨体验，愿意钻研厨艺，因而使用产品的比例较高。
+From the perspective of haodou's age group, users are mainly between 25 and 40 years old that accounting for 83.76%.
 
-在25岁以下的用户基本是95后，大多为学生或刚步入社会群体，在校学生由于学校的烹饪条件不足，或烹饪技巧不足基本上不会自己动手做菜。刚步入社会的群体大多租房或与父母同住，做菜所需的条件不足以及没必要做饭，主要通过外卖、食堂、餐馆以及父母做饭来解决用餐。
+Users in this age range have families and children, what's more, their jobs are basically stable.
 
-在40岁以上用户由于对APP具有一定的学习成本，不太适应边看APP内容边做菜而且也有自己的烹饪经验，不太需要通过美食类软件来提升厨艺，故而用户占比最少。
+They are more inclined to eat economically healthy food.
+
+They also have perfect kitchen equipment and are willing to study cooking skills, so the proportion of using products is relatively high.
+
+Users under the age of 25 are students or just entering the social group.
+
+Students in school usually lack cooking conditions or cooking skills ,so they will not do their own cooking.
+
+Most of the new social group rent a house or live with their parents, so they don't have enough conditions or need to cook.
+
+Users over the age of 40 are not accustomed to cooking while reading the content of the web , because they are not familiar with the Internet.
+
+Moreover, they also have their own cooking experience and do not need to improve their cooking skills through recipes, so the proportion of users is the least.
 
 ![image](https://user-images.githubusercontent.com/45390078/116472898-663bdc00-a86e-11eb-9607-93f280b44294.png)
 
-从好豆的用户使用地域分布来看，东部和南部沿海城市以及中部地区使用占比较高。在中国，这部分城市经济水平较为发达，人们的生活水平较高，比较追求生活质量。
+In terms of geographical distribution of users of Good Bean, there are more users in eastern and southern coastal cities and central regions.
+
+In China, the economic level of these cities is relatively developed.
+
+So people have a higher standard of living and pursue the quality of life.
 
 ![image](https://user-images.githubusercontent.com/45390078/116476969-e3b61b00-a873-11eb-976e-6124f200f7db.png)
 
-2.留学生群体数据分析
+2.Data analysis of international students
 
-考虑到我们的用户主体是英语语言环境的中国留学生及对中国美食文化感兴趣的外国人，我们又对留学生群体的年龄和户籍所在地进行调研。
+Considering that the majority of our users are Chinese students studying in English language environment and foreigners interested in Chinese food culture, we conducted a survey on the age and domicile location of the students.
 
 ![image](https://user-images.githubusercontent.com/45390078/116475608-fdeef980-a871-11eb-9324-cc7c75bf54c6.png)
 
-根据《2020中国留学生白皮书》，我们得到结论，目前出国留学的主力人群年龄分布于18-28岁，来自于北上广深、江浙等经济发达的地区。
+According to the White Paper on Chinese Overseas Students in 2020, we can draw the following conclusions:
 
-根据以上数据，我们进一步细化了用户群体。据此，我们打算数据库中存储的菜谱更多迎合北上广深、江浙地区18-28岁学生群体的口味。
+At present, the main group of people studying abroad are 18-28 years old and come from economically developed regions such as Beijing, Shanghai, Guangzhou and Shenzhen, Jiangsu and Zhejiang.
+
+According to the above data, we further refine the user groups.
+
+The recipes stored in our database will cater more to the tastes of people aged 18-28 in Beijing, Shanghai, Guangzhou and Shenzhen and Jiangsu and Zhejiang regions.
 
 ## UX approach
 
-我们对30名布里斯托大学在读学生进行了[问卷调查](https://www.surveymonkey.co.uk/r/VFX5QBK)。
-调查和问卷调查可以让研究人员获得更多的反馈，这可以为更详细的分析提供基础。这种类型的研究成本相对较低。这种方法的缺点是与受访者没有直接的互动，因此不可能更深入地探究他们提出的答案。
-调查结果如下：
+We conducted a [questionnaire survey](https://www.surveymonkey.co.uk/r/VFX5QBK) among 30 students currently studying at the University of Bristol.
+
+Surveys and questionnaires allow researchers to get more feedback, which can provide the basis for more detailed analysis.
+
+This type of research is relatively inexpensive.
+
+The disadvantage of this method is that there is no direct interaction with the interviewees, so it is not possible to delve deeper into the answers they proposed.
+
+The findings are as follows:
 
 ![image](https://user-images.githubusercontent.com/45390078/115630985-e2797100-a2fc-11eb-9a69-b6a10efdfcf5.png)
 ![image](https://user-images.githubusercontent.com/45390078/115631034-f6bd6e00-a2fc-11eb-9069-188df2e098c1.png)
@@ -87,47 +134,78 @@
 ![image](https://user-images.githubusercontent.com/45390078/116478392-e6197480-a875-11eb-841f-41b2845a36e3.png)
 ![image](https://user-images.githubusercontent.com/45390078/116478404-ea459200-a875-11eb-8cf9-99b76f9a9243.png)
 
-通过初步调研，我们发现很多人都存在对今天吃什么的“选择恐惧症”，并希望有一个网站可以推荐今日食谱。
+Through preliminary investigation, we found that:
 
-绝大多数人不希望有登录功能，他们认为这很麻烦而且存在暴露隐私的危险，更倾向于在desktop端使用我们的网站。
+1. Many people are confused about what to eat today and wish there was a website that recommended recipes for the day.
 
-为了对问卷调查进行补充，我们选择其中四名有代表性的用户进行访谈调研。
+2. The vast majority of people don't want to have a login function because they think it's a hassle and a risk of privacy.
 
-这确保我们的产品以用户为中心，并定义了测试用例和需求，这些需求是我们系统开发的基础。
+3. Most people prefer to use our website on the Desktop side.
+
+In order to supplement the questionnaire survey, we selected four representative users for interview and research.
+
+This ensures that our products are user-centric, which is the foundation of our system development.
 
 ## Understanding of user group
 
-用户A：
-王女士，23岁，布里斯托大学中国留学生，有宗教信仰，不吃猪肉。王女士平时比较喜欢健身，比较注重身材，周末经常会自己做减肥热量比较低的菜。
-当谈到为什么不需要登录功能，王女士表示，每次都要登录，这会很麻烦。
+User A:
+
+Miss Wang, 23, is a Chinese student at the University of Bristol.
+
+She is religious, so she doesn't eat pork.
+
+She usually likes to keep fit and pays attention to her figure.
+
+On weekends, she often cooks dishes with low calories to lose weight.
+
+When it comes to why she doesn't need to log in, Wang said it would be troublesome to log in every time.
 
 ![image](https://user-images.githubusercontent.com/45390078/115634131-e27b7000-a300-11eb-9431-5f8fcbce83bf.png)
 
-用户B：
-Anne，24岁，对中国美食感兴趣的美国人，喜欢分享自己做好的美食到食谱网站上。
-Anne也不需要登录功能，她希望能通过匿名分享自己做好的美食到食谱网站上获得关注。
+User B:
+
+Anne, 24, is an American who is interested in Chinese cuisine.
+
+She likes to share her recipes on recipe websites.She also doesn't need a login function and she wants to get noticed by anonymously sharing her recipes on recipe sites.
 
 ![image](https://user-images.githubusercontent.com/45390078/115632779-61bc7400-a300-11eb-947d-8981376a9d44.png)
 
-用户C：
-Titus，24岁，英国籍华裔，非常喜欢中国菜，但有“选择困难症”，永远不知道今天吃什么。
-考虑到隐私问题，Titus也表示不需要登录功能。
+User C:
+
+Titus, 24, is a British citizen of Chinese descent.
+
+He likes Chinese food very much, but has "difficulty choosing".
+
+So he never knows what to eat today.
+
+Titus also says he doesn't need a login feature because of privacy concerns.
 
  ![image](https://user-images.githubusercontent.com/45390078/115634098-d2fc2700-a300-11eb-8856-429fab4c3551.png)
 
-用户D：
-张先生，24岁，布里斯托大学中国留学生，由于过度肥胖，有脂肪肝趋势，医生建议多吃蔬菜，少吃肉。
-当谈到为什么不需要登录功能，张先生表示，他不希望被网站收集数据，这会个人隐私。
+User D:
+
+Mr Zhang, 24, is a Chinese student at the University of Bristol.
+
+As a result of excessive obesity, Mr. Zhang has the tendency of fatty liver.
+
+So the doctor advised him to eat more vegetables and less meat.
+
+When it comes to why he doesn't need the login function, Mr. Zhang said he doesn't want the data collected by the website.
 
 ![image](https://user-images.githubusercontent.com/45390078/115632397-87954900-a2ff-11eb-9045-d9a9bf23996d.png)
 
 ## Wireframes and interaction flow diagrams for final key subsystems
 
-根据用户提出的需求点，我们确定了网站的主要功能，并设计出网站[原型](https://q4r9fc.axshare.com/)。
+According to the user's demand points, we have determined the main functions of the website and design a website [prototype.](https://q4r9fc.axshare.com/)。
 
-1.展示中式烹饪步骤；
-2.匿名评论中式食谱；
-3.能够根据用户需求推荐中式菜肴；
-4.老虎机选择了用户对当今中国菜的最终推荐。
+Our idea is:
+
+1.Put the Chinese dishes recommended today in the most prominent place on the homepage of the website.
+
+2.The homepage provides a button for users to answer some set questions. According to the answers, we recommend Chinese dishes to users today.
+
+3.The homepage shows some user comments.
+
+4.The recipe page is displayed according to the cooking steps. The user reviews of this dish are displayed at the end of the recipe, displayed in descending order of the number of likes.
 
 ![image](https://user-images.githubusercontent.com/45390078/115633614-b2cc6800-a300-11eb-865c-b0ada78a8bf6.png)
