@@ -10,15 +10,15 @@ export class CommunicateService {
   constructor() { }
 
   /**
-   * 向其他组件发送信息
-   * @param msg 需要发送的信息
+   * sent msg to other component;
+   * @param msg msg the component want to send;
    */
   public sendMessage(msg: any): void {
     this.message.next(msg);
   }
 
   /**
-   * 订阅其他组件发送来的消息
+   * get msg from other component;
    * @return Observable<any>
    */
 

@@ -28,11 +28,16 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('SinoCook');
   });
 
-  it('should render title', () => {
+  it('should render toolbar title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('SinoCook app is running!');
+    let span = compiled.querySelector('#home-tb span');
+    expect(span.textContent).toEqual('Home');
+    span = compiled.querySelector('#cust-tb span');
+    expect(span.textContent).toEqual('Customize');
+    span = compiled.querySelector('#about-tb span');
+    expect(span.textContent).toEqual('About us');
   });
 
   it('should jump right', () => {

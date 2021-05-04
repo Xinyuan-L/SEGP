@@ -14,4 +14,10 @@ describe('CommunicateService', () => {
     expect(service).toBeTruthy();
   });
 
+  it('should send the message and get the message', () => {
+    service.sendMessage('hello');
+    service.getMessage().subscribe((msg: any) => {
+      expect(msg).toEqual('hello');
+    });
+  });
 });
