@@ -86,7 +86,7 @@ export class SlotmachineComponent implements OnInit {
     this.disbutton = (document.getElementById('disabled-button')as HTMLImageElement);
     // 这我先不注释掉，为了测试
     this.finalDish = this.list[4];
-    // this.longList();
+    this.longList();
 
     const imageHeight = 156;
     const listHeight = this.firstImagesList.scrollHeight;
@@ -108,8 +108,8 @@ export class SlotmachineComponent implements OnInit {
       this.request.post('customize', this.requestData).subscribe((response: any) => {
         this.initList = response;
         // 为啥要把这两项写到这儿，我先屏蔽一下为了测试方便
-        this.longList();
-        this.finalDish = this.list[4];
+        // this.longList();
+        // this.finalDish = this.list[4];
       });
     }, 200);
   }
