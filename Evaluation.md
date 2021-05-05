@@ -63,9 +63,9 @@ Unit testing has very high requirements for the design of the framework. Data an
 #### Toolbar and footer test
 
 1. We have tested the **logo** jump function of the top toolbar, and the jump functison of **Home**, **Customize**, and **About**.
- 
+
 2. We have tested the jump function of **Home** and **About** in footer.
- 
+
 #### Home page test
 
 1. We have tested the jump function of the **"CUSTOMIZE" button** and the **"THAT IS IT!!" button** at the top of the homepage.
@@ -119,14 +119,14 @@ Unit testing has very high requirements for the design of the framework. Data an
 5. We have tested the **like function** of **the displayed comment**.
 
 #### CommunicationService test
-  
+
 This service provides two functions, getMessage() and sendMessage(), for all components to get message from other components and send message to others.
 
 * we have tested that whether a component can get the message using **getMessage()** after an another component send message by **sendMessage()**;
 
 #### RequsetService tests
 
-This service provides HTTP request methods including GET, POST, PUT, DELETE, for components to get response data from backend API with at most parameters, URL and request data(JOSN format);  
+This service provides HTTP request methods including GET, POST, PUT, DELETE, for components to get response data from backend API with at most two parameters, URL and request data(JOSN format);  
 
 We have tested that whether component can get response:
 
@@ -143,5 +143,3 @@ We have tested that whether component can get response:
 * from API '/customize' using POST method with questionnaire answer as request data.
 
 ## User acceptance testing
-
-
