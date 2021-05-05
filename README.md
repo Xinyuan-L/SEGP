@@ -28,13 +28,12 @@ We mainly focus on the desktop and may adapt the mobile.
 * [**Conclusion**](#conclusion)
 
 ## Team members
-|Name|Email|Role|
-|:-: | :-: | :-: |
-|Jie Li| nh20812@bristol.ac.uk| Database Developer|
-|Kang Zhao| mi20598@bristol.ac.uk| Frontend Developer|
-|Wanqing Zhang| um20379@bristol.ac.uk| Group Leader|
-|Xinyuan Li| ys20961@bristol.ac.uk| Backend Developer|
-|Yiyuan Chen| rf20401@bristol.ac.uk| Frontend Developer|
+|Jie Li| Kang Zhao|Wanqing Zhang|Xinyuan Li|Yiyuan Chen|
+|:--:|:--:|:--:|:--:|:--:|
+| ![yiyuan](./homepage/yiyuan_chen.jpg)| ![yiyuan](./homepage/yiyuan_chen.jpg)| ![yiyuan](./homepage/yiyuan_chen.jpg)| ![yiyuan](./homepage/yiyuan_chen.jpg)| ![yiyuan](./homepage/yiyuan_chen.jpg)|
+|nh20812@bristol.ac.uk|mi20598@bristol.ac.uk|um20379@bristol.ac.uk|ys20961@bristol.ac.uk|rf20401@bristol.ac.uk|
+|Database Developer|Frontend Developer|Group Leader|Backend Developer|Frontend Developer|
+
 
 ## Introduction
 
