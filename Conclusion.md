@@ -8,61 +8,59 @@
 
 ## Reflect on the working practices
 
-Early in the project, we set up a WhatsApp group as a chat platform and organized regular online meetings in Teams.
+Early in the project, we set up a WeChat group as a chat platform and organized regular online meetings in Teams.
 
 Under the supervision of the leader, everyone completes their tasks step by step.
 
 ## Reflective discussion of the success of the project
 
-Primary Objectives:
+##### Primary Objectives:
 
-Set up a website recommending Chinese recipes to help overseas students who do not know "what to eat today" to choose three meals a day.
+1. Set up a website recommending Chinese recipes to help overseas students who do not know "what to eat today" to choose three meals a day.
 
-To explain Chinese cuisine to foreigners who are interested in it.
+2. To explain Chinese cuisine to foreigners who are interested in it.
 
-Let more people know about Chinese cuisine, Disseminate and develop Chinese food culture.
+3. Let more people know about Chinese cuisine, Disseminate and develop Chinese food culture.
 
-Secondary Objectives:
+##### Secondary Objectives:
 
-Apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
+1. Apply game thinking and game mechanics to the design process on the premise of realizing the basic functions of the website.
 
-Make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
+2. Make use of gamified design to improve the user experience of the website and create more attractive products to active user groups.
 
-This project designed and developed a personalized recommendation system for people who have "difficulty in choosing food".
+3. This project designed and developed a personalized recommendation system for people who have "difficulty in choosing food".
 
-The system is divided into client and server. 
+4. The system is divided into client and server.
 
-The server carries out recommended calculation of the system. 
+5. The server carries out recommended calculation of the system.
 
-The application process is as follows:
+### The application process is as follows:
 
-Firstly, the user submits the preference attributes and basic information through a questionnaire survey.
+* Firstly, the user submits the preference attributes and basic information through a questionnaire survey.
 
-Secondly, the system submits the collected user basic information and user preference attributes to the server and the server makes recommendations through the information submitted by the user and selects five recipes.
+* Secondly, the system submits the collected user basic information and user preference attributes to the server and the server makes recommendations through the information submitted by the user and selects five recipes.
 
-Finally, the server feeds the results back to the client, which presents them to the user in the form of a slot machine.
+* Finally, the server feeds the results back to the client, which presents them to the user in the form of a slot machine.
 
 We have achieved our objectives.
 
 ## How coronavirus has affected your project
 
-The unexpected coronavirus pandemic and subsequent lockdown had a significant effect on our working practices. 
-
+The unexpected coronavirus pandemic and subsequent lockdown had a significant effect on our working practices.
 The most significant being the inability to engage in regular face-to-face meetings as we had before.
 
 However, we did our best to adapt and overcome it by utilising software and new work processes.
-
 In general, the Coronavirus pandemic has little impact on us.
 
 ## Discussion of Social and Ethical implications
 
-Famous for its abundance and exquisite, Chinese food culture has occupied an important part in the nation's tradition cultures. 
+Famous for its abundance and exquisite, Chinese food culture has occupied an important part in the nation's tradition cultures.
 
 China is of long history with a vast territory. Due to the diversity of the climate, products and customs, there are widely different food styles and taste in local regions.
 
 Through creation by past dynasties, the long standing cooking art has formed rich and colorful local dishes.
 
-Actually, Chinese dishes have earned world's fame. The Chinese eateries could be found everywhere throughout the world. 
+Actually, Chinese dishes have earned world's fame. The Chinese eateries could be found everywhere throughout the world.
 
 Many foreignersregard having a Chinese meal as a high honor.
 
@@ -74,20 +72,16 @@ Our project can not only help people who are interested in Chinese food to solve
 
 ## Discussion of future work
 
-After user testing and feedback, we expect to add a Q&A feature in the future.
-
+After user testing and feedback, we expect to **add a Q&A feature** in the future.
 Users can ask questions about cooking and choosing ingredients.
 
-Increase the Q&A community to promote the communication between users.
-
-It will give users a simple and convenient sense of participation. 
-
+**Increase the Q&A community** to promote the communication between users.
+It will give users a simple and convenient sense of participation.
 When users participate, they can publish problems, and only need to publish food puzzles.
-
 Users can also answer questions and input their own opinions on the questions.
 
 We think this feature can significantly increase the user's community activity and sense of identity when communicating with others.
 
-The user path diagram is shown below：
+##### The user path diagram is shown below：
 
 ![image](https://user-images.githubusercontent.com/45390078/115970758-708f6a80-a53c-11eb-8b68-8ebfef5773c3.png)
