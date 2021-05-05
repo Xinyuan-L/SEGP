@@ -9,7 +9,7 @@
 
 ## Stack architecture and system design
 
-A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages. 
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages.
 
 So we integrate multiple functions on one page.
 
@@ -17,7 +17,7 @@ In our single-page application, we use Angular to handle the front-end client ap
 
 ![image](https://user-images.githubusercontent.com/45390078/116828557-59cdc100-ab97-11eb-9b82-6f4a4762b47e.png)
 
-The development environment for Sinocook is as follows：
+##### The development environment for Sinocook is as follows：
 
 ❑ The operating system：Windows 10。
 
@@ -29,7 +29,7 @@ The development environment for Sinocook is as follows：
 
 We adopt B/S 3-tier architecture, including the user interface layer, the data access layer and the business logic layer.
 
-Overall system architecture figure:
+##### Overall system architecture figure:
 
 ![image](https://user-images.githubusercontent.com/45390078/116828463-d01df380-ab96-11eb-8722-3aa5ff984617.png)
 
@@ -37,7 +37,7 @@ User interface layer of recipe recommendation refers to the the recommendation r
 
 The recipe management of the business logic layer is the specific business processing of the recipe management operations (add, delete, modify, query, etc.);
 
-The recipe data storage of the data access layer is to store the real-time updated recipe data, and the real-time updated data is to submit the information through the recipe recommendation of the user interface layer to the recipe management of the business logic layer. 
+The recipe data storage of the data access layer is to store the real-time updated recipe data, and the real-time updated data is to submit the information through the recipe recommendation of the user interface layer to the recipe management of the business logic layer.
 
 After the processing of the recipe management of the business logic layer, the recipe data of the database server in the data layer will be recommended.
 
@@ -49,7 +49,7 @@ Once the users choose the preference, the system will submit the questionnaire i
 
 The server consists of three parts: data storage, Web Service and recommendation algorithm.
 
-System coding specification:
+##### System coding specification:
 
 In order to standardize the structure and code style of the program and increase the readability of the code, we formulated a set of unified [coding specification](https://github.com/Xinyuan-L/SEGP/blob/main/SinoCook-plan.docx) before coding.
 
@@ -62,19 +62,17 @@ Considering the small size of the site, we chose MySQL.
 
 ![image](https://user-images.githubusercontent.com/45390078/116626065-918ffb00-a942-11eb-8a97-8cbd5cfaa430.png)
 
-Using naming conventions in a database helps other users better understand tables and the contents of fields in tables. 
+Using naming conventions in a database helps other users better understand tables and the contents of fields in tables.
 
 So we formulated a set of unified coding specification:
 
-1.	The recipe image includes the main image (cover) and the step diagram.
+#### The recipe image includes the main image (cover) and the step diagram.
 
-a)	Put the image in sinocook/src/assets/picture.
+1. Put the image in sinocook/src/assets/picture.
+2.	Put pictures of each dish in a folder and name it "Did(number)".
+3.	The main image (cover) ：cover.jpg，The step diagram：step1.jpg.
 
-b)	Put pictures of each dish in a folder and name it "Did(number)".
-
-c)	The main image (cover) ：cover.jpg，The step diagram：step1.jpg.
-
-2.	Name databases, tables, and fields with relevant English words.
+#### Name databases, tables, and fields with relevant English words.
 
 If you can't find a professional English word or phrase, you can substitute English words or phrases with the same meaning.
 
@@ -87,8 +85,7 @@ The database we created is called Sinocook, which contains four data tables, inc
 
 Then we will introduce the data table.
 
-（1）dishes
-
+1. dishes   
 Table Dishes are used to store the main information for the recipe and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none;
@@ -440,8 +437,7 @@ Table Dishes are used to store the main information for the recipe and its struc
  </tr>
 </tbody></table>
 
-（2）Taste
-
+2. Taste   
 Table Taste are used to store the taste of food and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="477" style="width:357.4pt;margin-left:18.0pt;border-collapse:collapse;border:none;
@@ -534,8 +530,7 @@ Table Taste are used to store the taste of food and its structure is shown in th
 </tbody></table>
 
 
-（3）steps
-
+3. steps   
 Table steps are used to store the steps for a recipe and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none">
@@ -791,8 +786,7 @@ Table steps are used to store the steps for a recipe and its structure is shown 
 </tbody></table>
 
 
-（4）comments
-
+4. comments   
 Table comments are used to store comments of recipes and its structure is shown in the table：
 
 <table class="MsoTableGrid" border="1" cellspacing="0" cellpadding="0" width="474" style="width:355.25pt;margin-left:18.0pt;border-collapse:collapse;border:none;
@@ -1267,9 +1261,9 @@ To make our program development easier, we use SpringBoot.
 ![image](https://user-images.githubusercontent.com/45390078/116944136-ca92dd00-ac6c-11eb-9d6e-8f939673de99.png)
 
 
-What is the springBoot:
+**What is the springBoot:**
 
-The Spring Framework is an application framework and inversion of control container for the Java platform. 
+The Spring Framework is an application framework and inversion of control container for the Java platform.
 
 Spring Boot is a new framework from the Pivotal team designed to make it easy to create, run, debug, deploy.
 
@@ -1287,23 +1281,18 @@ In general, the purpose of Spring Boot is to "simplify" and "speed up" Java Web 
 
 The benefit of this is that developers can focus less on the framework and more on their own code.
 
-Features of SpringBoot:
+**Features of SpringBoot:**
 
-Create stand-alone Spring applications.
-
-Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files).
-
-Provide opinionated 'starter' dependencies to simplify your build configuration.
-
-Automatically configure Spring and 3rd party libraries whenever possible.
-
-Provide production-ready features such as metrics, health checks, and externalized configuration.
-
-Absolutely no code generation and no requirement for XML configuration.
+* Create stand-alone Spring applications.
+* Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files).
+* Provide opinionated 'starter' dependencies to simplify your build configuration.
+* Automatically configure Spring and 3rd party libraries whenever possible.
+* Provide production-ready features such as metrics, health checks, and externalized configuration.
+* Absolutely no code generation and no requirement for XML configuration.
 
 ![image](https://user-images.githubusercontent.com/45390078/116830197-74f0fe80-aba0-11eb-99e3-c02351786ba3.png)
 
-(1)The main directory
+1. **The main directory**
 
 | directory name    | relative path      |  main purpose                                             |
 | -------           | -----:             | :----:                                                    |
@@ -1311,42 +1300,34 @@ Absolutely no code generation and no requirement for XML configuration.
 | resource directory| src\main\resources |Stores static resources, dynamic pages, configuration files|
 | test directory    | src\test\java      |storage unit testing, test procedure                       |
 
-java is the main directory for programming and development where we put our code.
+* java is the main directory for programming and development where we put our code.
+* SinocookApplication.java is the main program entry class.
+* yml is a properties configuration file.
 
-SinocookApplication.java is the main program entry class.
-
-yml is a properties configuration file.
-
-(2).mvn
-
+2. **.mvn**  
 The maven relevant documents.
 
-(3)target：the directory where the compiled files are stored
-
+3. **target**：the directory where the compiled files are stored   
 This is where the project files are automatically generated after the project is compiled, as well as files that are packaged using Maven.
 
-(4).gitignore
-
-git configuration file
-
+4. **gitignore**  
+git configuration file;
 gitignore realizes the management of remote warehouse.
 
-(5)pom.xml
-
+5. **pom.xml**  
 The pom is the main project build files for the Maven project, along with the associated configuration files.
 
-(6)*.iml
-groupwork.iml
-
+6. **groupwork.iml**   
 This is the file that records the project directory, the Maven of the project, all the dependencies, and the corresponding version number.
 
 ## Front End
 
-(1)Outer Directory:
+#### (1) Outer Directory:
 
 | directory name    |  main purpose                                                                        |
 | -------           | :----:                                                                               |
 | node_modules      |Stores third-party dependency packages.                                               |
+| dist | Built files |
 | e2e               |End-to-end test directory for automated testing.                                      |
 | src               |Application code directory                                                            |
 | angular.json      |The configuration file for the Angular command line tool.                             |
@@ -1361,8 +1342,8 @@ This is the file that records the project directory, the Maven of the project, a
 | tsconfig.json     |The TypeScript configuration files for the entire workspace.                          |
 | tsconfig.spec.json|The TypeScript configuration files for testing.                                       |
 
-(2)src Directory：
-				
+#### (2) src Directory：
+
 | directory name        |  main purpose                                                                        |
 | -------               | :----:                                                                               |
 | app Directory         |Stores the code we write, including the components and modules of the application.    |
@@ -1374,13 +1355,13 @@ This is the file that records the project directory, the Maven of the project, a
 | styles.css            |Put the global style.                                                                 |
 | test.ts               |For automated testing.                                                                |
 
-(3)app Directory：
+#### (3) app Directory：
 
 The code we write is put in this directory.
 
 ## Additional elements and components
 
-Our video.
+##### Our video:
 
 [part1](https://www.youtube.com/watch?v=xelUfsx15lM)
 
@@ -1388,29 +1369,29 @@ Our video.
 
 Due to space limitation, we only show some functions.
 
-The homepage
+##### The homepage:  
 
 ![image](https://user-images.githubusercontent.com/45390078/117138035-6f630680-ada2-11eb-88df-0428d016c011.png)
 
-The questionnaire
+##### The questionnaire:
 
 ![image](https://user-images.githubusercontent.com/45390078/117138093-79850500-ada2-11eb-846e-3c3d5e5da586.png)
 
-Slot machine
+##### Slot machine:
 
 ![image](https://user-images.githubusercontent.com/45390078/117138138-84d83080-ada2-11eb-9a9a-ab6153c81e9a.png)
 
-The recipe
+##### The recipe
 
 ![image](https://user-images.githubusercontent.com/45390078/117138178-8efa2f00-ada2-11eb-970b-5dc03250ae3b.png)
 
 ![image](https://user-images.githubusercontent.com/45390078/117138552-13e54880-ada3-11eb-966e-56dc5b2c2434.png)
 
-Submit your comments
+##### Submit your comments:
 
 ![image](https://user-images.githubusercontent.com/45390078/117138203-991c2d80-ada2-11eb-886f-63943ebc3607.png)
 
-Like it
+##### Like it
 
 ![image](https://user-images.githubusercontent.com/45390078/117138405-e6989a80-ada2-11eb-957d-54f8415eb9cd.png)
 
