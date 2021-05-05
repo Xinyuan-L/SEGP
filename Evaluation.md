@@ -144,6 +144,12 @@ We have tested that whether component can get response:
 
 ## User acceptance testing
 
+Our video.
+
+[part1](https://www.youtube.com/watch?v=xelUfsx15lM)
+
+[part2](https://www.youtube.com/watch?v=79Ki0TsgJh0)
+
 SinoLook User Experience Test Survey
 
 Q1: Do you think our website opens smoothly?
