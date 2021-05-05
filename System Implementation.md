@@ -1388,7 +1388,7 @@ Our video.
 
 Due to space limitation, we only show some functions.
 
-The questionnairehomepage
+The homepage
 
 ![image](https://user-images.githubusercontent.com/45390078/117138035-6f630680-ada2-11eb-88df-0428d016c011.png)
 
@@ -1404,10 +1404,15 @@ The recipe
 
 ![image](https://user-images.githubusercontent.com/45390078/117138178-8efa2f00-ada2-11eb-970b-5dc03250ae3b.png)
 
+![image](https://user-images.githubusercontent.com/45390078/117138552-13e54880-ada3-11eb-966e-56dc5b2c2434.png)
+
 Submit your comments
 
 ![image](https://user-images.githubusercontent.com/45390078/117138203-991c2d80-ada2-11eb-886f-63943ebc3607.png)
 
+Like it
+
+![image](https://user-images.githubusercontent.com/45390078/117138405-e6989a80-ada2-11eb-957d-54f8415eb9cd.png)
 
 ## Deployment details
 
