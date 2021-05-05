@@ -39,9 +39,9 @@ Considering that different groups have different dietary preferences, we designe
 
 In this way, we can recommend the recipe according to the user's answer, in order to fully meet the user's preferences.
 
-Zhu, a Web product builder, puts forward that the user experience of a product is "the transcendence of user expectations of usability (emotion)" from the functional and emotional levels.[[**2**]](#references)。
+David, a Web product builder, puts forward that the user experience of a product is "the transcendence of user expectations of usability (emotion)" from the functional and emotional levels.[[**2**]](#references)。
 
-Donnaumann, based on the three design levels of instinct, behavior and reflection, argues that the emotional value of products can make people happier and more creative in the use of products. 
+Zichermann, based on the three design levels of instinct, behavior and reflection, argues that the emotional value of products can make people happier and more creative in the use of products. 
 
 He also  emphasizes the importance of emotional value in product design.[[**3**]](#references)。
 
@@ -84,8 +84,8 @@ We want to bring fun and positive incentives to our users in order to increase t
 
 [1]https://www.chinahighlights.com/travelguide/chinese-food/eight-cuisine.htm
 
-[2]朱征字等,网站界面设计用户体验[J],2010年,08:20-21。
+[2]Ahmed T, Mouratidis H, David Preston. Website Design and Localisation: A Comparison of Malaysia  and  Britain[J].  International  Journal  of  Cyber  Society  &  Education,  2008, 1(1):3--16. 
 
-[3]唐纳德.A:诺曼.情感化设计[M]。北京:电子工业出版社, 2005.
+[3]Gabe Zichermann. Gamification by Design:Implementing Game Mechanics in Web and Mobile Apps[M] New York:Basic Books. August2011.
 
-[4]邹声瑞，蔡阅林，赵越，等.美食类APP发展模式及盈利方式研究——以“美食地图”为例[J].科学导报，2015(20):201.
+[4]Zou, Cai, Zhao. Research on the development mode and profit mode of food APP: A case study of "food map" [J].Science Review, 2015(20):201.
