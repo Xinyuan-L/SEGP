@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.sinocook.SinocookApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.682 s - in com.sinocook.SinocookApplicationTests
