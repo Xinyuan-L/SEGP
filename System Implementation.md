@@ -1357,7 +1357,19 @@ This is the file that records the project directory, the Maven of the project, a
 
 #### (3) app Directory：
 
+![image](https://user-images.githubusercontent.com/45390078/117196018-e669c080-addd-11eb-8340-a64118bb8384.png)
+
 The code we write is put in this directory.
+
+In the Customiz component, the questionnaire information is used to recommend recipes for the user.
+
+Slotmachine is part of the Slotmachine.
+
+Home is the Home page.
+
+DISH is the recipe display page.
+
+The Footer of the document or part of the document.
 
 ## Additional elements and components
 
@@ -1394,6 +1406,9 @@ Due to space limitation, we only show some functions.
 ##### Like it
 
 ![image](https://user-images.githubusercontent.com/45390078/117138405-e6989a80-ada2-11eb-957d-54f8415eb9cd.png)
+
+![image](https://user-images.githubusercontent.com/45390078/117196633-9f2fff80-adde-11eb-856c-ce579d8eeec2.png)
+
 
 ## Deployment details
 
