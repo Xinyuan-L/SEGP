@@ -1386,6 +1386,29 @@ Our video.
 
 [part2](https://www.youtube.com/watch?v=79Ki0TsgJh0)
 
+Due to space limitation, we only show some functions.
+
+The questionnairehomepage
+
+![image](https://user-images.githubusercontent.com/45390078/117138035-6f630680-ada2-11eb-88df-0428d016c011.png)
+
+The questionnaire
+
+![image](https://user-images.githubusercontent.com/45390078/117138093-79850500-ada2-11eb-846e-3c3d5e5da586.png)
+
+Slot machine
+
+![image](https://user-images.githubusercontent.com/45390078/117138138-84d83080-ada2-11eb-9a9a-ab6153c81e9a.png)
+
+The recipe
+
+![image](https://user-images.githubusercontent.com/45390078/117138178-8efa2f00-ada2-11eb-970b-5dc03250ae3b.png)
+
+Submit your comments
+
+![image](https://user-images.githubusercontent.com/45390078/117138203-991c2d80-ada2-11eb-886f-63943ebc3607.png)
+
+
 ## Deployment details
 
 We used Maven+Git to build continuous integration and automated deployment.
