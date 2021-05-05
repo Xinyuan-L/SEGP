@@ -17,9 +17,12 @@
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
+DROP DATABASE IF EXISTS `sinocook2`;
+CREATE DATABASE `sinocook2`;
 -- ----------------------------
 -- Table structure for dishes
 -- ----------------------------
+
 DROP TABLE IF EXISTS `dishes`;
 CREATE TABLE `dishes`  (
   `Did` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
