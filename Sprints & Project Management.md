@@ -243,28 +243,30 @@ Alpha Version has been released.
 
 In this version, the home page randomly recommends daily recipes, and users can personalize recommendations according to their own needs, and can comment on recipes.
 
-| User       | Feedback                              |
-| --------   | -----:                                |
-| Miss wang  |点赞能否取消？                      |
-| Anne       |匿名可以自己设定吗？系统生成的我记不住。  |
+| User       | Feedback                             |
+| --------   | -----:                               |
+| Miss wang  |Can I cancel the likes?？             |
+| Anne       |Can I set the anonymity by myself?    |
 | Titus      |Very good.                            |
 | Mr. Zhang  |Very good.                            |
 
-Reflections:在这个sprint中，我们发布了第一个版本。
+Reflections:
+
+During this Sprint, we released the first release.
 
 3、Sprint 3 : Development -Beta Version Release（4.19-4.28）
 
-阶段目标：
+Stage objectives:
 
-根据sprint2得到的用户反馈改进我们的产品；
+Improve our products based on user feedback from Sprint2;
 
-找用户测试并反馈意见。
+Find users to test and give feedback.
 
 Stage Achievements:
 
-发布了Beta Version。
+During this Sprint, we released the second version.
 
-在该版本中，增加了点赞和取消点赞的功能。
+In this version, the ability to unlike has been added.
 
 | User       | Feedback  |
 | --------   | -----:    |
@@ -273,32 +275,37 @@ Stage Achievements:
 | Titus      |Very good. |
 | Mr. Zhang  |Very good. |
 
-Reflections:在这个sprint中，我们发布了第二个版本。
+Reflections:
 
+The users were happy with the release, so we were able to wrap up the development process and move on to the next phase.
 
 4、Sprint 4 : Test and Feedback（4.29-5.7）
 
-项目质量也是在开发过程中不可忽视的一环。
+Project quality is also in the development process can not be ignored a link.
 
-我们规定主要项目的代码提交前必须做 Code Review，并要求代码作者在每次提交之前都应该自己过一遍代码，走一遍功能测试，确保基本的功能是完整的。
+We have a rule that Code reviews for major projects must be done before they are submitted.
 
-进入测试阶段前，我们添加了 Show Case 环节。
+We require code authors to perform their own functional tests before each submission to ensure that the basic functionality is complete.
 
-其实 Show Case 就是产品在工程师提交给 QA 之前组织开发人员、设计师、测试人员简单过一遍功能点，发现逻辑上比较明显的一些问题交给开发人员再次修改，以及确保整体流程不会被严重的 Bug Block 住。
+Our tests are divided into functional tests and user tests.
 
-团队内部测试完毕后，会使用内部自动化发布工具发给用户升级，在一周内进行内测和灰度两次测试。我们自己作为内测用户。
+In the development process will inevitably encounter some online accidents.
 
-在开发过程中也难免会遇到线上的一些事故，比如服务器冗机、客户端出现严重质量问题等等，记录这些事件发生的原因、经过、结果以及对于整个事件的反思和总结，只有这样才能不断提升我们的能力，让团队在反思中成长。
+For example, the server is redundant, the client has serious quality problems and so on.
+
+We will record the reasons, processes and results of these events, as well as the reflections and summaries of the whole event.
+
+Only in this way can we constantly improve our ability, so that the team in the reflection of growth.
+
+You can see [Evaluation.md](https://github.com/Xinyuan-L/SEGP/blob/main/Evaluation.md)
 
 5、Sprint 5 : Documentation（5.7-5.13）
 
-迭代总结与复盘
+The last part is the summary and review at the end of the whole iteration.
 
-最后是整个迭代末期的总结和复盘。项目上线后，我们组织了一场线上会议，邀请了一些用户参加。
+In the final phase, the goal of this final sprint is to complete the document.
 
-将产品、技术功能点进行展示，根据他们的反馈进行分析和总结，验证之前的需求是否达到想要的目的。
-
-在最后阶段，此最终冲刺的目标是完成文档，为了展示我们的系统如何协同工作以及如何使用它们，我们拍摄了我们产品的简短演示视频。
+To show how our systems work together and how to use them, we shot short demo videos of our products.
 
 ## Team use of Git
 
