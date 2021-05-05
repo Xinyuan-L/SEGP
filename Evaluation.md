@@ -8,46 +8,40 @@
 ## Details of how we evaluated our designs
 
 Software testing ensures that the software we provide meets the expected functional requirements.
-
 In general, unexpected features, hidden bugs, and software bugs are tested from the user's perspective.
-
 From a developer's perspective, we want to develop software that is error-free, handles exceptions, meets customer requirements, and is easy to use.
 
 We use systems to regulate the design, coding, testing and delivery processes of software development.
-
 We use processes to constrain various parts of the software life cycle.
-
 By increasing the intervention intensity of software testing and increasing the intensity of software evaluation, we can fundamentally improve the software quality step by step.
 
 First, we improve the quality of software by standardizing all aspects of software development and their connections.
-
 We transform the actual needs of the customer into the specific needs of the software and document them.
 
 Then we decompose the requirements of the software to form a software design document.
-
 Software coders code the software according to the design document.
 
 In addition, we add software testing to each link of software development to test different functions.
+**Including:**
 
-Including:
+* Unit level testing for specific functions;
 
-Unit level testing for specific functions;
+* Conducting component-level testing (integration testing) on the calling relationships between functions;
 
-Conducting component-level testing (integration testing) on the calling relationships between functions;
+* Config item level testing against individual software;
 
-Config item level testing against individual software;
-
-System-level testing of a system formed by multiple pieces of software.
+* System-level testing of a system formed by multiple pieces of software.
 
 According to the specific situation of the software, different testing strategies are selected to carry out different levels of testing.
 
-The specific testing process is as follows:Testers write test plans and test instructions according to software design documents, forming test case sets.
+The specific **testing process** is as follows:
+1. Testers write test plans and test instructions according to software design documents, forming test case sets.
 
-The tester then executes all the use cases in the test case set against the software functionality, performance, interface, margin, and security required by the document.
+2. The tester then executes all the use cases in the test case set against the software functionality, performance, interface, margin, and security required by the document.
 
-Testers record the execution results of each use case and compare them with the expected results to evaluate whether they meet the design requirements.
+3. Testers record the execution results of each use case and compare them with the expected results to evaluate whether they meet the design requirements.
 
-At last, the tester classifies the problems found in the test and forms the final test report.
+4. At last, the tester classifies the problems found in the test and forms the final test report.
 
 ## Unit testing / Functional testing
 
@@ -144,82 +138,65 @@ We have tested that whether component can get response:
 
 ## User acceptance testing
 
-Our video.
+### Our video.
 
-[part1](https://www.youtube.com/watch?v=xelUfsx15lM)
+[part1: homepage display, get dish from homepage recommendation, dish page display](https://www.youtube.com/watch?v=xelUfsx15lM)
 
-[part2](https://www.youtube.com/watch?v=79Ki0TsgJh0)
+[part2: get dish from customize and Slotmachine display](https://www.youtube.com/watch?v=79Ki0TsgJh0)
 
-SinoLook User Experience Test Survey
+### SinoCook User Experience Test Survey
 
-Q1: Do you think our website opens smoothly?
+###### Q1: Do you think our website opens smoothly?
 
-yes
+* yes
+* no
 
-no
+###### Q2: Do you think our website has attractive content?
 
-Q2: Do you think our website has attractive content?
+* Very good
+* general
+* very poor
 
-Very good
+###### Q3: How do you feel about the interface design?
 
-general
+* Very good
+* general
+* very poor
 
-very poor
+###### Q4: Do you like the simple style of our pages?
 
-Q3: How do you feel about the interface design?
+* Very good
+* general
+* very poor
 
-Very good
+###### Q5: Do our pictures look beautiful?
 
-general
+* Very good
+* general
+* very poor
 
-very poor
+###### Q6: Do you think our website is fully functional?
 
-Q4: Do you like the simple style of our pages?
+* Very good
+* general
+* very poor
 
-Very good
+###### Q7: Do you think our navigation is clear and has an easy-to-understand structure?
 
-general
+* Very good
+* general
+* very poor
 
-very poor
+###### Q8: Will you recommend our website to your friends?
 
-Q5: Do our pictures look beautiful?
+* yes
+* no
 
-Very good
-
-general
-
-very poor
-
-Q6: Do you think our website is fully functional?
-
-Very good
-
-general
-
-very poor
-
-Q7: Do you think our navigation is clear and has an easy-to-understand structure?
-
-Very good
-
-general
-
-very poor
-
-Q8: Will you recommend our website to your friends?
-
-yes
-
-no
-
-Q9: How do you think our website could be improved to make it more attractive?
+###### Q9: How do you think our website could be improved to make it more attractive?
 
 
-
-Q10: Do you have any valuable comments on our website?
-
+###### Q10: Do you have any valuable comments on our website?
 
 
 All of our users have commented positively on our site, and some have suggested we add a [question-and-answer](https://github.com/Xinyuan-L/SEGP/blob/main/Conclusion.md) feature.
-
 After user testing, we officially launched our project.
