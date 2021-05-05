@@ -143,3 +143,75 @@ We have tested that whether component can get response:
 * from API '/customize' using POST method with questionnaire answer as request data.
 
 ## User acceptance testing
+
+SinoLook User Experience Test Survey
+
+Q1: Do you think our website opens smoothly?
+
+yes
+
+no
+
+Q2: Do you think our website has attractive content?
+
+Very good
+
+general
+
+very poor
+
+Q3: How do you feel about the interface design?
+
+Very good
+
+general
+
+very poor
+
+Q4: Do you like the simple style of our pages?
+
+Very good
+
+general
+
+very poor
+
+Q5: Do our pictures look beautiful?
+
+Very good
+
+general
+
+very poor
+
+Q6: Do you think our website is fully functional?
+
+Very good
+
+general
+
+very poor
+
+Q7: Do you think our navigation is clear and has an easy-to-understand structure?
+
+Very good
+
+general
+
+very poor
+
+Q8: Will you recommend our website to your friends?
+
+yes
+
+no
+
+Q9: How do you think our website could be improved to make it more attractive?
+
+    
+Q10: Do you have any valuable comments on our website?
+
+
+All of our users have commented positively on our site, and some have suggested we add a [question-and-answer](https://github.com/Xinyuan-L/SEGP/blob/main/Conclusion.md) feature.
+
+After user testing, we officially launched our project.
