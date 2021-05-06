@@ -1,4 +1,4 @@
-# SinoCook - Chinese Food recommendation Every Day!
+# SinoCook - Chinese Food Recommendation Every Day!
 
 Today’s Chinese Food: Have no idea what cook? Use this app!
 
